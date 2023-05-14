@@ -109,5 +109,20 @@ namespace Hostel_Management_System
             txt_password.Text = password_placeholder;
             
         }
+
+        private void gunaLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunaPictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunaLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

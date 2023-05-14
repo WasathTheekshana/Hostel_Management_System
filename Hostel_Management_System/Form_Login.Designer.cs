@@ -72,7 +72,7 @@
             this.gunaPanel1.Location = new System.Drawing.Point(936, 0);
             this.gunaPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(277, 29);
+            this.gunaPanel1.Size = new System.Drawing.Size(214, 29);
             this.gunaPanel1.TabIndex = 0;
             // 
             // gunaControlBox2
@@ -84,7 +84,7 @@
             this.gunaControlBox2.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MinimizeBox;
             this.gunaControlBox2.IconColor = System.Drawing.Color.Black;
             this.gunaControlBox2.IconSize = 15F;
-            this.gunaControlBox2.Location = new System.Drawing.Point(185, 0);
+            this.gunaControlBox2.Location = new System.Drawing.Point(122, 0);
             this.gunaControlBox2.Name = "gunaControlBox2";
             this.gunaControlBox2.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(73)))), ((int)(((byte)(240)))));
             this.gunaControlBox2.OnHoverIconColor = System.Drawing.Color.White;
@@ -101,7 +101,7 @@
             this.gunaControlBox1.AnimationSpeed = 0.03F;
             this.gunaControlBox1.IconColor = System.Drawing.Color.Black;
             this.gunaControlBox1.IconSize = 15F;
-            this.gunaControlBox1.Location = new System.Drawing.Point(231, 0);
+            this.gunaControlBox1.Location = new System.Drawing.Point(168, 0);
             this.gunaControlBox1.Name = "gunaControlBox1";
             this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.Red;
             this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
@@ -130,30 +130,32 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Poppins", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
-            this.gunaLabel1.Location = new System.Drawing.Point(143, 109);
+            this.gunaLabel1.Location = new System.Drawing.Point(143, 67);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(347, 106);
             this.gunaLabel1.TabIndex = 5;
             this.gunaLabel1.Text = "Welcome!";
+            this.gunaLabel1.Click += new System.EventHandler(this.gunaLabel1_Click);
             // 
             // gunaLabel2
             // 
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Poppins", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
-            this.gunaLabel2.Location = new System.Drawing.Point(101, 213);
+            this.gunaLabel2.Location = new System.Drawing.Point(101, 164);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(435, 51);
             this.gunaLabel2.TabIndex = 6;
             this.gunaLabel2.Text = "Hostel Management System";
+            this.gunaLabel2.Click += new System.EventHandler(this.gunaLabel2_Click);
             // 
             // gunaPictureBox1
             // 
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox1.Image = global::Hostel_Management_System.Properties.Resources.yellow;
-            this.gunaPictureBox1.Location = new System.Drawing.Point(0, 570);
+            this.gunaPictureBox1.Location = new System.Drawing.Point(0, 534);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(179, 183);
+            this.gunaPictureBox1.Size = new System.Drawing.Size(134, 142);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.gunaPictureBox1.TabIndex = 1;
             this.gunaPictureBox1.TabStop = false;
@@ -162,9 +164,9 @@
             // 
             this.gunaPictureBox2.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox2.Image = global::Hostel_Management_System.Properties.Resources.blue;
-            this.gunaPictureBox2.Location = new System.Drawing.Point(611, 0);
+            this.gunaPictureBox2.Location = new System.Drawing.Point(623, 0);
             this.gunaPictureBox2.Name = "gunaPictureBox2";
-            this.gunaPictureBox2.Size = new System.Drawing.Size(671, 720);
+            this.gunaPictureBox2.Size = new System.Drawing.Size(659, 620);
             this.gunaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.gunaPictureBox2.TabIndex = 2;
             this.gunaPictureBox2.TabStop = false;
@@ -173,19 +175,20 @@
             // 
             this.gunaPictureBox3.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox3.Image = global::Hostel_Management_System.Properties.Resources.login_img;
-            this.gunaPictureBox3.Location = new System.Drawing.Point(115, 212);
+            this.gunaPictureBox3.Location = new System.Drawing.Point(115, 166);
             this.gunaPictureBox3.Name = "gunaPictureBox3";
             this.gunaPictureBox3.Size = new System.Drawing.Size(411, 460);
             this.gunaPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.gunaPictureBox3.TabIndex = 4;
             this.gunaPictureBox3.TabStop = false;
+            this.gunaPictureBox3.Click += new System.EventHandler(this.gunaPictureBox3_Click);
             // 
             // gunaTransfarantPictureBox1
             // 
             this.gunaTransfarantPictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.gunaTransfarantPictureBox1.BaseColor = System.Drawing.Color.Black;
             this.gunaTransfarantPictureBox1.Image = global::Hostel_Management_System.Properties.Resources.login_panel;
-            this.gunaTransfarantPictureBox1.Location = new System.Drawing.Point(593, 64);
+            this.gunaTransfarantPictureBox1.Location = new System.Drawing.Point(578, 19);
             this.gunaTransfarantPictureBox1.Name = "gunaTransfarantPictureBox1";
             this.gunaTransfarantPictureBox1.Size = new System.Drawing.Size(563, 622);
             this.gunaTransfarantPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -198,7 +201,7 @@
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Poppins", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
-            this.gunaLabel3.Location = new System.Drawing.Point(825, 161);
+            this.gunaLabel3.Location = new System.Drawing.Point(813, 117);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(100, 51);
             this.gunaLabel3.TabIndex = 8;
@@ -209,7 +212,7 @@
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
-            this.gunaLabel4.Location = new System.Drawing.Point(723, 228);
+            this.gunaLabel4.Location = new System.Drawing.Point(708, 184);
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(307, 46);
             this.gunaLabel4.TabIndex = 9;
@@ -229,7 +232,7 @@
             this.txt_username.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_username.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
-            this.txt_username.Location = new System.Drawing.Point(684, 305);
+            this.txt_username.Location = new System.Drawing.Point(669, 261);
             this.txt_username.Name = "txt_username";
             this.txt_username.PasswordChar = '\0';
             this.txt_username.Radius = 8;
@@ -254,7 +257,7 @@
             this.txt_password.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_password.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
-            this.txt_password.Location = new System.Drawing.Point(684, 375);
+            this.txt_password.Location = new System.Drawing.Point(669, 331);
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '\0';
             this.txt_password.Radius = 8;
@@ -281,7 +284,7 @@
             this.btn_login.Image = null;
             this.btn_login.ImageSize = new System.Drawing.Size(20, 20);
             this.btn_login.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_login.Location = new System.Drawing.Point(684, 468);
+            this.btn_login.Location = new System.Drawing.Point(669, 424);
             this.btn_login.Name = "btn_login";
             this.btn_login.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_login.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -307,7 +310,7 @@
             this.gunaLabel5.AutoSize = true;
             this.gunaLabel5.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
-            this.gunaLabel5.Location = new System.Drawing.Point(728, 543);
+            this.gunaLabel5.Location = new System.Drawing.Point(713, 499);
             this.gunaLabel5.Name = "gunaLabel5";
             this.gunaLabel5.Size = new System.Drawing.Size(293, 44);
             this.gunaLabel5.TabIndex = 13;
@@ -323,7 +326,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1213, 742);
+            this.ClientSize = new System.Drawing.Size(1150, 650);
+            this.Controls.Add(this.gunaPanel1);
             this.Controls.Add(this.gunaLabel5);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.txt_password);
@@ -335,7 +339,6 @@
             this.Controls.Add(this.gunaLabel1);
             this.Controls.Add(this.gunaPanel2);
             this.Controls.Add(this.gunaPictureBox1);
-            this.Controls.Add(this.gunaPanel1);
             this.Controls.Add(this.gunaPictureBox2);
             this.Controls.Add(this.gunaPictureBox3);
             this.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
