@@ -117,17 +117,44 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\yellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="gunaElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="gunaDragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>134, 17</value>
+  </metadata>
+  <metadata name="gunaDragControl2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>287, 17</value>
+  </metadata>
+  <metadata name="err_username.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>440, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="err_username.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABMLAAATCwAAAAAAAAAA
+        AAAAAAAAAAAAAAAA/wAAAP8PAAD/QgAA/6AAAP/ZAAD/+gAA//0AAP/gAAD/oAAA/04AAP8OAAD/AAAA
+        AAAAAAAAAAAAAAAA/wAAAP8dAAD/jgAA/+wAAP/hAAD/tAAA/50AAP+bAAD/sgAA/9wAAP/uAAD/iwAA
+        /yEAAP8AAAAAAAAA/wAAAP8gAAD/oQAA/+0AAP+gAAD/RAAA/xUAAP8CAAD/AQAA/xUAAP8/AAD/nAAA
+        /+8AAP+iAAD/HQAA/wAAAP8NAAD/iwAA//AAAP9zAAD/EwAA/wAAAP8AAAD/EAAA/xAAAP8AAAD/AAAA
+        /xMAAP9zAAD/7QAA/44AAP8QAAD/TgAA/+4AAP+cAAD/EgAA/wAAAP8AAAD/AgAA/8AAAP/AAAD/AgAA
+        /wAAAP8AAAD/EgAA/6AAAP/rAAD/QgAA/6AAAP/cAAD/PwAA/wAAAP8AAAAAAAAA/wEAAP96AAD/egAA
+        /wEAAAAAAAD/AAAA/wAAAP9EAAD/4QAA/6AAAP/gAAD/swAA/xQAAP8AAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAP8AAAD/FQAA/7MAAP/ZAAD//wAA/5oAAP8AAAD/AAAAAAAAAAAAAAD/AgAA
+        /54AAP+eAAD/AgAAAAAAAAAAAAD/AAAA/wAAAP+cAAD//wAA//8AAP+cAAD/AAAA/wAAAAAAAAAAAAAA
+        /wIAAP/LAAD/ywAA/wIAAAAAAAAAAAAA/wAAAP8AAAD/mgAA//8AAP/ZAAD/swAA/xUAAP8AAAAAAAAA
+        AAAAAP8CAAD/ywAA/8sAAP8CAAAAAAAAAAAAAP8AAAD/FAAA/7MAAP/gAAD/oAAA/+EAAP9EAAD/AAAA
+        /wAAAAAAAAD/AgAA/8sAAP/LAAD/AgAAAAAAAP8AAAD/AAAA/z8AAP/cAAD/oAAA/0IAAP/rAAD/oAAA
+        /xIAAP8AAAD/AAAA/wIAAP+7AAD/uwAA/wIAAP8AAAD/AAAA/xIAAP+cAAD/7gAA/04AAP8QAAD/jgAA
+        /+0AAP9zAAD/EwAA/wAAAP8AAAD/EAAA/xAAAP8AAAD/AAAA/xMAAP9zAAD/7wAA/4oAAP8NAAD/AAAA
+        /xwAAP+hAAD/7wAA/5wAAP9AAAD/FQAA/wEAAP8CAAD/FQAA/0QAAP+gAAD/7QAA/6EAAP8gAAD/AAAA
+        AAAAAP8AAAD/IQAA/4sAAP/uAAD/3AAA/7IAAP+bAAD/nQAA/7QAAP/hAAD/7AAA/44AAP8dAAD/AAAA
+        AAAAAAAAAAAAAAAA/wAAAP8OAAD/TgAA/6AAAP/fAAD//QAA//kAAP/YAAD/nwAA/0IAAP8PAAD/AAAA
+        AAAAAAAA4AcAAMADAACAAQAABmAAAAwwAAAcOAAAH/gAADw8AAA8PAAAHDgAABw4AAAMMAAABmAAAIAB
+        AADAAwAA4AcAAA==
+</value>
   </data>
-  <data name="blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="login_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\login_img.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="login_panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\login_panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  <metadata name="gunaDragControl3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>565, 17</value>
+  </metadata>
 </root>
