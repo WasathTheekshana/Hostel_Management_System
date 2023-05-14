@@ -80,6 +80,7 @@ namespace Hostel_Management_System
             
             this.Hide();
             form1Test.Show();
+
         }
 
         private void form_login_Load(object sender, EventArgs e)
