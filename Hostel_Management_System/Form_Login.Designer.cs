@@ -212,7 +212,7 @@
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
-            this.gunaLabel4.Location = new System.Drawing.Point(708, 184);
+            this.gunaLabel4.Location = new System.Drawing.Point(708, 183);
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(307, 46);
             this.gunaLabel4.TabIndex = 9;
