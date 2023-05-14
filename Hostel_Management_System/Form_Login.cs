@@ -76,7 +76,10 @@ namespace Hostel_Management_System
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-
+            Form1Test form1Test = new Form1Test();
+            
+            this.Hide();
+            form1Test.Show();
         }
 
         private void form_login_Load(object sender, EventArgs e)
