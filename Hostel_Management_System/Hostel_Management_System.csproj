@@ -68,10 +68,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI">
-
       <HintPath>..\..\..\..\..\Downloads\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
-
-
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\..\Downloads\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -88,28 +88,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1Test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1Test.Designer.cs">
-      <DependentUpon>Form1Test.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="test.cs">
+    <Compile Include="Main_Form_Layout.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="test.Designer.cs">
-      <DependentUpon>test.cs</DependentUpon>
+    <Compile Include="Main_Form_Layout.Designer.cs">
+      <DependentUpon>Main_Form_Layout.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Form_Layout.resx">
+      <DependentUpon>Main_Form_Layout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -121,9 +118,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="test.resx">
-      <DependentUpon>test.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Hostel_Management_System_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
@@ -162,6 +156,51 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard.-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard-normal-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-normal-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-checked-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student-normal-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student-checked-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-normal-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-checked-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-normal-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-checked-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dummy-profile-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\navigation-drop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\side-img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\side-img-2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
