@@ -17,52 +17,29 @@ namespace Hostel_Management_System
         {
             InitializeComponent();
         }
-        
-       
-        private void gunaControlBox2_Click(object sender, EventArgs e)
+
+       private void container(object _form)
         {
-
-        }
-
-        private void gunaControlBox1_Click(object sender, EventArgs e)
-        {
-
+            Form fm = _form as Form;
+            fm.TopLevel = false;
+            fm.FormBorderStyle = FormBorderStyle.None;
+            fm.Dock = DockStyle.Fill;
+            panel_container.Controls.Add(fm);
+            panel_container.Tag = fm;
+            fm.Show();
         }
 
 
         private void Main_Form_Layout_Load(object sender, EventArgs e)
         {
-            
+            btn_dashboard.Checked = true;
+            container(new Form_Dashboard());
         }
 
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2PictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gunaLabel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2PictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2PictureBox5_Click(object sender, EventArgs e)
-        {
-
-        }
-
+      
         private void btn_dashboard_Click(object sender, EventArgs e)
         {
-           
+           container(new Form_Dashboard());
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
