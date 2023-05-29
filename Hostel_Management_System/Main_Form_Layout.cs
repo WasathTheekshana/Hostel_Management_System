@@ -24,11 +24,11 @@ namespace Hostel_Management_System
             fm.TopLevel = false;
             fm.FormBorderStyle = FormBorderStyle.None;
             fm.Dock = DockStyle.Fill;
+            panel_container.Controls.Clear();
             panel_container.Controls.Add(fm);
             panel_container.Tag = fm;
             fm.Show();
         }
-
 
         private void Main_Form_Layout_Load(object sender, EventArgs e)
         {
@@ -39,12 +39,27 @@ namespace Hostel_Management_System
       
         private void btn_dashboard_Click(object sender, EventArgs e)
         {
-           container(new Form_Dashboard());
+            container(new Form_Dashboard());
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void btn_food_Click(object sender, EventArgs e)
         {
-            
+            container(new Form_Food());
+        }
+
+        private void btn_studnetList_Click(object sender, EventArgs e)
+        {
+            container(new Form_StudentList());
+        }
+
+        private void btn_addNew_Click(object sender, EventArgs e)
+        {
+            container(new Form_AddNew());
+        }
+
+        private void btn_settings_Click(object sender, EventArgs e)
+        {
+            container(new Form_Settings());
         }
     }
 }

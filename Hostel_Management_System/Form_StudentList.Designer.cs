@@ -1,6 +1,6 @@
 ﻿namespace Hostel_Management_System
 {
-    partial class Form_Dashboard
+    partial class Form_StudentList
     {
         /// <summary>
         /// Required designer variable.
@@ -41,22 +41,21 @@
             // 
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel1.Location = new System.Drawing.Point(397, 317);
+            this.gunaLabel1.Location = new System.Drawing.Point(394, 328);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(99, 15);
-            this.gunaLabel1.TabIndex = 0;
-            this.gunaLabel1.Text = "This is Dashboard";
+            this.gunaLabel1.Size = new System.Drawing.Size(104, 15);
+            this.gunaLabel1.TabIndex = 1;
+            this.gunaLabel1.Text = "This is Student List";
             // 
-            // Form_Dashboard
+            // Form_StudentList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(897, 651);
             this.Controls.Add(this.gunaLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form_Dashboard";
-            this.Text = "Form_Dashboard";
+            this.Name = "Form_StudentList";
+            this.Text = "Form_StudentList";
             this.ResumeLayout(false);
             this.PerformLayout();
 
