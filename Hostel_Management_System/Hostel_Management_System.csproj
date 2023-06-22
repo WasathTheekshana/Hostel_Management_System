@@ -89,10 +89,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DetailForm_StudentDetails.cs">
+    <Compile Include="Student Details\DetailForm_StudentDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DetailForm_StudentDetails.Designer.cs">
+    <Compile Include="Student Details\DetailForm_StudentDetails.Designer.cs">
       <DependentUpon>DetailForm_StudentDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_AddNew.cs">
@@ -137,21 +137,21 @@
     <Compile Include="Main_Form_Layout.Designer.cs">
       <DependentUpon>Main_Form_Layout.cs</DependentUpon>
     </Compile>
-    <Compile Include="DetailForm_ParentDetails.cs">
+    <Compile Include="Student Details\DetailForm_ParentDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DetailForm_ParentDetails.Designer.cs">
+    <Compile Include="Student Details\DetailForm_ParentDetails.Designer.cs">
       <DependentUpon>DetailForm_ParentDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DetailForm.cs">
+    <Compile Include="Student Details\DetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DetailForm.Designer.cs">
+    <Compile Include="Student Details\DetailForm.Designer.cs">
       <DependentUpon>DetailForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DetailForm_StudentDetails.resx">
+    <EmbeddedResource Include="Student Details\DetailForm_StudentDetails.resx">
       <DependentUpon>DetailForm_StudentDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_AddNew.resx">
@@ -175,7 +175,7 @@
     <EmbeddedResource Include="Main_Form_Layout.resx">
       <DependentUpon>Main_Form_Layout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DetailForm_ParentDetails.resx">
+    <EmbeddedResource Include="Student Details\DetailForm_ParentDetails.resx">
       <DependentUpon>DetailForm_ParentDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -188,7 +188,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="DetailForm.resx">
+    <EmbeddedResource Include="Student Details\DetailForm.resx">
       <DependentUpon>DetailForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Hostel_Management_System_TemporaryKey.pfx" />

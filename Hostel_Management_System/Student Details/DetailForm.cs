@@ -29,9 +29,9 @@ namespace Hostel_Management_System
             DFM.Show();
         }
 
-        private void DetailForm_Load(object sender, EventArgs e)
+        private void Register_Load(object sender, EventArgs e)
         {
-            container(new DetailForm_StudentDetails());
+           container(new DetailForm_StudentDetails());
         }
     }
 }
