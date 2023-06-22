@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Hostel_Management_System/Program.cs
+/Hostel_Management_System/Form_StudentList.cs
+/Hostel_Management_System/Form_StudentList.Designer.cs
+/Hostel_Management_System/Form_StudentList.resx
