@@ -123,6 +123,16 @@ namespace Hostel_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap food_add_icon {
+            get {
+                object obj = ResourceManager.GetObject("food-add-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap food_checked_icon {
             get {
                 object obj = ResourceManager.GetObject("food-checked-icon", resourceCulture);
@@ -136,6 +146,26 @@ namespace Hostel_Management_System.Properties {
         internal static System.Drawing.Bitmap food_normal_icon {
             get {
                 object obj = ResourceManager.GetObject("food-normal-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap food_vector {
+            get {
+                object obj = ResourceManager.GetObject("food-vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap food_vew_more_arrow {
+            get {
+                object obj = ResourceManager.GetObject("food-vew-more-arrow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

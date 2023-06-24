@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -40,11 +41,13 @@ namespace Hostel_Management_System
         private void btn_dashboard_Click(object sender, EventArgs e)
         {
             container(new Form_Dashboard());
+     
         }
 
         private void btn_food_Click(object sender, EventArgs e)
         {
-            container(new Form_Food());
+            container(new Form_Food());            
+
         }
 
         private void btn_studnetList_Click(object sender, EventArgs e)

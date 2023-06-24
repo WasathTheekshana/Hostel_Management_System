@@ -68,10 +68,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI">
-      <HintPath>..\..\..\..\Downloads\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+      <HintPath>..\..\..\wnforms\guna\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2">
-      <HintPath>..\..\..\..\Downloads\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+      <HintPath>..\..\..\wnforms\guna\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -88,6 +88,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Food Management\Food_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Food Management\Food_List.Designer.cs">
+      <DependentUpon>Food_List.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_AddNew.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,10 +106,10 @@
     <Compile Include="Form_Dashboard.Designer.cs">
       <DependentUpon>Form_Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Food.cs">
+    <Compile Include="Food Management\Form_Food.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Food.Designer.cs">
+    <Compile Include="Food Management\Form_Food.Designer.cs">
       <DependentUpon>Form_Food.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Login.cs">
@@ -132,13 +138,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Food Management\Food_List.resx">
+      <DependentUpon>Food_List.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_AddNew.resx">
       <DependentUpon>Form_AddNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Dashboard.resx">
       <DependentUpon>Form_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Food.resx">
+    <EmbeddedResource Include="Food Management\Form_Food.resx">
       <DependentUpon>Form_Food.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
@@ -246,6 +255,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\side-img-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\addIcon.png" />
+    <Content Include="Resources\FoodVector.png" />
+    <Content Include="Resources\viewMoreArrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
