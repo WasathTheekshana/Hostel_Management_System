@@ -241,6 +241,7 @@
             this.txt_username.TabIndex = 10;
             this.txt_username.Text = "Enter the username";
             this.txt_username.TextOffsetX = 20;
+            this.txt_username.TextChanged += new System.EventHandler(this.txt_username_TextChanged);
             this.txt_username.Enter += new System.EventHandler(this.txt_username_Enter);
             this.txt_username.Leave += new System.EventHandler(this.txt_username_Leave);
             // 
