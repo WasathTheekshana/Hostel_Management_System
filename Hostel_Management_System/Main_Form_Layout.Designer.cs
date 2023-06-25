@@ -41,7 +41,7 @@
             this.btn_studnetList = new Guna.UI2.WinForms.Guna2Button();
             this.btn_food = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
+            this.lbl_privi = new Guna.UI.WinForms.GunaLabel();
             this.txt_logged_user = new Guna.UI.WinForms.GunaLabel();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -119,7 +119,7 @@
             this.guna2Panel1.Controls.Add(this.btn_studnetList);
             this.guna2Panel1.Controls.Add(this.btn_food);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox4);
-            this.guna2Panel1.Controls.Add(this.gunaLabel3);
+            this.guna2Panel1.Controls.Add(this.lbl_privi);
             this.guna2Panel1.Controls.Add(this.txt_logged_user);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox3);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox2);
@@ -286,17 +286,17 @@
             this.guna2PictureBox4.TabIndex = 11;
             this.guna2PictureBox4.TabStop = false;
             // 
-            // gunaLabel3
+            // lbl_privi
             // 
-            this.gunaLabel3.AutoSize = true;
-            this.gunaLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel3.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel3.Location = new System.Drawing.Point(113, 620);
-            this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(36, 16);
-            this.gunaLabel3.TabIndex = 10;
-            this.gunaLabel3.Text = "User";
+            this.lbl_privi.AutoSize = true;
+            this.lbl_privi.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_privi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_privi.ForeColor = System.Drawing.Color.White;
+            this.lbl_privi.Location = new System.Drawing.Point(113, 620);
+            this.lbl_privi.Name = "lbl_privi";
+            this.lbl_privi.Size = new System.Drawing.Size(36, 16);
+            this.lbl_privi.TabIndex = 10;
+            this.lbl_privi.Text = "User";
             // 
             // txt_logged_user
             // 
@@ -410,7 +410,7 @@
         private Guna.UI2.WinForms.Guna2Button btn_settings;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Guna.UI.WinForms.GunaLabel txt_logged_user;
-        private Guna.UI.WinForms.GunaLabel gunaLabel3;
+        private Guna.UI.WinForms.GunaLabel lbl_privi;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
         private Guna.UI2.WinForms.Guna2Panel panel_container;
     }

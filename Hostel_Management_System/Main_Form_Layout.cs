@@ -20,14 +20,14 @@ namespace Hostel_Management_System
             InitializeComponent();
 
 
-            
         }
 
         public string loggedInUser;
-
-        public void setUserName(string loggedInUser)
+        public string userPrivi;
+        public void setUserName(string loggedInUser, string userPrivi)
         {
             this.loggedInUser = loggedInUser;
+            this.userPrivi = userPrivi;
         } 
 
        private void container(object _form)
@@ -45,6 +45,8 @@ namespace Hostel_Management_System
         private void Main_Form_Layout_Load(object sender, EventArgs e)
         {
             txt_logged_user.Text = loggedInUser;
+            lbl_privi.Text = userPrivi;
+
             btn_dashboard.Checked = true;
             container(new Form_Dashboard());
         }

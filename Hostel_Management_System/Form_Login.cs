@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +35,7 @@ namespace Hostel_Management_System
             string userName = txt_username.Text;
             string password = txt_password.Text;
 
+            string userPrivi;
 
             string query = "SELECT CASE WHEN EXISTS (SELECT 1 FROM admin WHERE username = @Username AND password = @Password) THEN CAST(1 AS bit) ELSE CAST(0 AS bit) END AS authenticated;";
 
@@ -61,9 +63,8 @@ namespace Hostel_Management_System
                     {
                         this.Hide();
                         //userState.setUserName(userName);
-                        mainForm.setUserName(userName);
-                        mainForm.Show();
-                        logInSuccessfull.setPopup("You’ve logged in successfully!!");
+                        
+                        logInSuccessfull.setPopup("You’ve logged in successfully!");
                         logInSuccessfull.ShowDialog();
 
 
@@ -83,13 +84,26 @@ namespace Hostel_Management_System
                         SqlCommand rentalCmd = new SqlCommand(queryRental, conn);
                         rentalCmd.Parameters.AddWithValue("@Username", userName);
                         bool isRental = (bool)studentSettingsCmd.ExecuteScalar();
-                        
+
+
+                        if (isUserSettings && isStudentSettings && isUserSettings)
+                        {
+                            userPrivi = "Admin";
+                        }
+                        else
+                        {
+                            userPrivi = "Modarate";
+                        }
+                    mainForm.setUserName(userName, userPrivi);
+                    mainForm.Show();
                     }
                     if (!isAuthenticated)
                     {
                         error.setPopup("Username or Password Incorrect!");
                         error.ShowDialog();
                     }
+
+                    
                 }
                 catch (Exception ex)
                 {
