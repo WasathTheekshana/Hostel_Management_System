@@ -183,12 +183,6 @@
     <Compile Include="Popups\Logout_Popup.Designer.cs">
       <DependentUpon>Logout_Popup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Popups\Payment_Confirm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Popups\Payment_Confirm.Designer.cs">
-      <DependentUpon>Payment_Confirm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User Modals\Add_New_User.cs">
@@ -269,9 +263,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Popups\Logout_Popup.resx">
       <DependentUpon>Logout_Popup.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Popups\Payment_Confirm.resx">
-      <DependentUpon>Payment_Confirm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
