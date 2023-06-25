@@ -297,7 +297,6 @@
             this.label7.Size = new System.Drawing.Size(84, 37);
             this.label7.TabIndex = 13;
             this.label7.Text = "Dinner";
-
             // 
             // guna2PictureBox6
             // 
@@ -308,7 +307,6 @@
             this.guna2PictureBox6.Size = new System.Drawing.Size(17, 21);
             this.guna2PictureBox6.TabIndex = 0;
             this.guna2PictureBox6.TabStop = false;
-
             // 
             // guna2PictureBox5
             // 
@@ -319,7 +317,6 @@
             this.guna2PictureBox5.Size = new System.Drawing.Size(17, 21);
             this.guna2PictureBox5.TabIndex = 0;
             this.guna2PictureBox5.TabStop = false;
-
             // 
             // guna2PictureBox4
             // 
@@ -351,6 +348,7 @@
             this.guna2Button1.TabIndex = 13;
             this.guna2Button1.Text = "View More";
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2PictureBox2
             // 

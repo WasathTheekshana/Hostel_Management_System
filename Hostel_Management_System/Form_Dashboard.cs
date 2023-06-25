@@ -43,6 +43,10 @@ namespace Hostel_Management_System
 
         }
 
-        
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Pending_Payments pendingPayments = new Pending_Payments();
+            pendingPayments.ShowDialog();
+        }
     }
 }

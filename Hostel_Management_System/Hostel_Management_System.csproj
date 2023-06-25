@@ -140,6 +140,12 @@
       <DependentUpon>Main_Form_Layout.cs</DependentUpon>
     </Compile>
     <Compile Include="parent.cs" />
+    <Compile Include="Pending_Payments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pending_Payments.Designer.cs">
+      <DependentUpon>Pending_Payments.cs</DependentUpon>
+    </Compile>
     <Compile Include="Popups\Base_Error_Popup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Form_Layout.resx">
       <DependentUpon>Main_Form_Layout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pending_Payments.resx">
+      <DependentUpon>Pending_Payments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Popups\Base_Error_Popup.resx">
       <DependentUpon>Base_Error_Popup.cs</DependentUpon>
