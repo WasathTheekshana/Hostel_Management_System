@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Hostel_Management_System.Database_Connection;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,7 +21,33 @@ namespace Hostel_Management_System
 
         private void Form_StudentList_Load(object sender, EventArgs e)
         {
-            
+            Connection_Sting objConnectionString = new Connection_Sting();
+            string connStr = objConnectionString.getConnectionString();
+
+            SqlConnection conn = new SqlConnection(connStr);
+            string query = "SELECT NIC,FName,Lname,MobileNo,DOB from student";
+
+
+            try
+            {
+                conn.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                DataSet ds = new DataSet();
+
+                adapter.Fill(ds, "student");
+                guna2DataGridView1.DataSource = ds.Tables["student"];
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            finally
+            {
+                conn.Close();
+            }
         }
 
         private void hideAllUnderLines()
