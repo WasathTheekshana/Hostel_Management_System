@@ -8,9 +8,13 @@ namespace Hostel_Management_System
 {
     internal class student
     {
-        public string StudentName
+        public string StudentFName
         {
             get; set;
+        }
+        public string StudentLName
+        {
+            get;set;
         }
         public DateTime StudentBirthday
         {
@@ -54,7 +58,8 @@ namespace Hostel_Management_System
         }
 
         public student
-            (string name,
+            (string Fname,
+            string Lname,
             DateTime birthday,
             string NIC,
             char gender,
@@ -66,7 +71,8 @@ namespace Hostel_Management_System
             DateTime registerDate,
             int keyMoney)
         {
-            this.StudentName = name;
+            this.StudentFName = Fname;
+            this.StudentLName = Lname;
             this.StudentBirthday = birthday;
             this.StudentNIC = NIC;
             this.StudentGender = gender;
