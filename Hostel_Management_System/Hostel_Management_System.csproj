@@ -191,6 +191,12 @@
     <Compile Include="User Modals\Add_New_User.Designer.cs">
       <DependentUpon>Add_New_User.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Modals\Assing_Room.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Modals\Assing_Room.Designer.cs">
+      <DependentUpon>Assing_Room.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Modals\Delete_User.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -273,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Modals\Add_New_User.resx">
       <DependentUpon>Add_New_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Modals\Assing_Room.resx">
+      <DependentUpon>Assing_Room.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Modals\Delete_User.resx">
       <DependentUpon>Delete_User.cs</DependentUpon>
