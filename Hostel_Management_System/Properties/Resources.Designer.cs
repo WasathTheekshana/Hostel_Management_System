@@ -153,9 +153,15 @@ namespace Hostel_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+
         internal static System.Drawing.Bitmap food_vector {
             get {
                 object obj = ResourceManager.GetObject("food-vector", resourceCulture);
+
+        internal static System.Drawing.Bitmap Group_51 {
+            get {
+                object obj = ResourceManager.GetObject("Group 51", resourceCulture);
+
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +169,35 @@ namespace Hostel_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+
         internal static System.Drawing.Bitmap food_vew_more_arrow {
             get {
                 object obj = ResourceManager.GetObject("food-vew-more-arrow", resourceCulture);
+
+        internal static System.Drawing.Bitmap Group_51_2 {
+            get {
+                object obj = ResourceManager.GetObject("Group 51~2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Group_51_21 {
+            get {
+                object obj = ResourceManager.GetObject("Group 51~21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Line_blue {
+            get {
+                object obj = ResourceManager.GetObject("Line blue", resourceCulture);
+
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -206,6 +238,26 @@ namespace Hostel_Management_System.Properties {
         internal static System.Drawing.Bitmap navigation_drop {
             get {
                 object obj = ResourceManager.GetObject("navigation-drop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus_icon {
+            get {
+                object obj = ResourceManager.GetObject("plus-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search {
+            get {
+                object obj = ResourceManager.GetObject("search", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

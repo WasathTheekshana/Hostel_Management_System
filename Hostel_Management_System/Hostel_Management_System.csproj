@@ -76,6 +76,7 @@
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -88,12 +89,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+
     <Compile Include="Food Management\Food_List.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Food Management\Food_List.Designer.cs">
       <DependentUpon>Food_List.cs</DependentUpon>
     </Compile>
+
+    <Compile Include="Database Connection\Connection_Sting.cs" />
+    <Compile Include="Logged In Users\User_State.cs" />
+
     <Compile Include="Form_AddNew.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,11 +142,22 @@
     <Compile Include="Main_Form_Layout.Designer.cs">
       <DependentUpon>Main_Form_Layout.cs</DependentUpon>
     </Compile>
+    <Compile Include="parent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+
     <EmbeddedResource Include="Food Management\Food_List.resx">
       <DependentUpon>Food_List.cs</DependentUpon>
     </EmbeddedResource>
+
+    <Compile Include="Student Details\DetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student Details\DetailForm.Designer.cs">
+      <DependentUpon>DetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="student.cs" />
+
     <EmbeddedResource Include="Form_AddNew.resx">
       <DependentUpon>Form_AddNew.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,7 +189,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Hostel_Management_System_TemporaryKey.pfx" />
+    <EmbeddedResource Include="Student Details\DetailForm.resx">
+      <DependentUpon>DetailForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -257,9 +276,28 @@
     <None Include="Resources\side-img-2.png" />
   </ItemGroup>
   <ItemGroup>
+
     <EmbeddedResource Include="Resources\addIcon.png" />
     <Content Include="Resources\FoodVector.png" />
     <Content Include="Resources\viewMoreArrow.png" />
+
+    <None Include="Resources\Group 51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 51~2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 51~21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Line blue.png" />
+
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

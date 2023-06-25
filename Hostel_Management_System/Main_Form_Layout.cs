@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using Hostel_Management_System.Logged_In_Users;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +18,17 @@ namespace Hostel_Management_System
         public Main_Form_Layout()
         {
             InitializeComponent();
+
+
+            
         }
+
+        public string loggedInUser;
+
+        public void setUserName(string loggedInUser)
+        {
+            this.loggedInUser = loggedInUser;
+        } 
 
        private void container(object _form)
         {
@@ -33,6 +44,7 @@ namespace Hostel_Management_System
 
         private void Main_Form_Layout_Load(object sender, EventArgs e)
         {
+            txt_logged_user.Text = loggedInUser;
             btn_dashboard.Checked = true;
             container(new Form_Dashboard());
         }
@@ -63,6 +75,12 @@ namespace Hostel_Management_System
         private void btn_settings_Click(object sender, EventArgs e)
         {
             container(new Form_Settings());
+        }
+
+        private void gunaLabel2_Click(object sender, EventArgs e)
+        {
+            User_State user_State = new User_State();
+
         }
     }
 }
