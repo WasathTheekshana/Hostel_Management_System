@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace Hostel_Management_System
 {
-    public partial class Form_Food : Form
+    public partial class Food_List : Form
     {
-        public Form_Food()
+        public Food_List()
         {
             InitializeComponent();
         }
+
+       
     }
 }
