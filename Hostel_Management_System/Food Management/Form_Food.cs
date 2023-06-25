@@ -54,8 +54,6 @@ namespace Hostel_Management_System
             lbl_Tomorrow.Text = "| " + formattedTomorrowDate;
         }
 
-       
-
-       
+        
     }
 }

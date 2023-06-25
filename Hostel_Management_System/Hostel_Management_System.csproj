@@ -140,6 +140,18 @@
       <DependentUpon>Main_Form_Layout.cs</DependentUpon>
     </Compile>
     <Compile Include="parent.cs" />
+    <Compile Include="Popups\Base_Error_Popup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popups\Base_Error_Popup.Designer.cs">
+      <DependentUpon>Base_Error_Popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\Base_Successfull_Popup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popups\Base_Successfull_Popup.Designer.cs">
+      <DependentUpon>Base_Successfull_Popup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Food Management\Food_List.resx">
@@ -172,6 +184,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Form_Layout.resx">
       <DependentUpon>Main_Form_Layout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popups\Base_Error_Popup.resx">
+      <DependentUpon>Base_Error_Popup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popups\Base_Successfull_Popup.resx">
+      <DependentUpon>Base_Successfull_Popup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -270,8 +288,12 @@
     <None Include="Resources\side-img-2.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\wrong.png" />
     <EmbeddedResource Include="Resources\addIcon.png" />
     <Content Include="Resources\FoodVector.png" />
+    <None Include="Resources\success.png" />
+    <None Include="Resources\success_3.png" />
+    <None Include="Resources\success1.png" />
     <Content Include="Resources\viewMoreArrow.png" />
     <None Include="Resources\Group 51.png" />
   </ItemGroup>

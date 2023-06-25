@@ -1,5 +1,6 @@
 ﻿using Hostel_Management_System.Database_Connection;
 using Hostel_Management_System.Logged_In_Users;
+using Hostel_Management_System.Popups;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +28,8 @@ namespace Hostel_Management_System
         {
             Main_Form_Layout mainForm = new Main_Form_Layout();
             User_State userState = new User_State();
+            Base_Successfull_Popup logInSuccessfull = new Base_Successfull_Popup();
+            Base_Error_Popup error = new Base_Error_Popup();
 
             string userName = txt_username.Text;
             string password = txt_password.Text;
@@ -53,56 +56,39 @@ namespace Hostel_Management_System
 
                     conn.Open();
                     bool isAuthenticated = (bool)command.ExecuteScalar();
+
                     if (isAuthenticated)
                     {
                         this.Hide();
                         //userState.setUserName(userName);
                         mainForm.setUserName(userName);
                         mainForm.Show();
+                        logInSuccessfull.setPopup("You’ve logged in successfully!!");
+                        logInSuccessfull.ShowDialog();
 
 
                         string queryUserSettings = "SELECT privi_User_Settings FROM admin WHERE username = @Username;";
                         SqlCommand userSettingsCmd = new SqlCommand(queryUserSettings, conn);
                         userSettingsCmd.Parameters.AddWithValue("@Username", userName);
-
                         bool isUserSettings = (bool)userSettingsCmd.ExecuteScalar();
-                        if (isUserSettings)
-                        {
-                            MessageBox.Show("User settings are enabled.");
-                        }
-                        else
-                        {
-                            MessageBox.Show("User settings are disabled.");
-                        }
+                        
 
                         string queryStudentSettings = "SELECT privi_Student_Settings FROM admin WHERE username = @Username;";
                         SqlCommand studentSettingsCmd = new SqlCommand(queryStudentSettings, conn);
                         studentSettingsCmd.Parameters.AddWithValue("@Username", userName);
-
                         bool isStudentSettings = (bool)studentSettingsCmd.ExecuteScalar();
-                        if (isStudentSettings)
-                        {
-                            MessageBox.Show("Student settings are enabled.");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Student settings are disabled.");
-                        }
+                        
 
                         string queryRental = "SELECT privi_Collect_Rental FROM admin WHERE username = @Username;";
                         SqlCommand rentalCmd = new SqlCommand(queryRental, conn);
                         rentalCmd.Parameters.AddWithValue("@Username", userName);
-
                         bool isRental = (bool)studentSettingsCmd.ExecuteScalar();
-                        if (isRental)
-                        {
-                            MessageBox.Show("Rental settings are enabled.");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Rental settings are disabled.");
-                        }
-
+                        
+                    }
+                    if (!isAuthenticated)
+                    {
+                        error.setPopup("Username or Password Incorrect!");
+                        error.ShowDialog();
                     }
                 }
                 catch (Exception ex)
