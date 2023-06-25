@@ -42,7 +42,7 @@
             this.btn_food = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
+            this.txt_logged_user = new Guna.UI.WinForms.GunaLabel();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -120,7 +120,7 @@
             this.guna2Panel1.Controls.Add(this.btn_food);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox4);
             this.guna2Panel1.Controls.Add(this.gunaLabel3);
-            this.guna2Panel1.Controls.Add(this.gunaLabel2);
+            this.guna2Panel1.Controls.Add(this.txt_logged_user);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox3);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox2);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
@@ -298,17 +298,18 @@
             this.gunaLabel3.TabIndex = 10;
             this.gunaLabel3.Text = "User";
             // 
-            // gunaLabel2
+            // txt_logged_user
             // 
-            this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel2.Location = new System.Drawing.Point(112, 598);
-            this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(84, 18);
-            this.gunaLabel2.TabIndex = 9;
-            this.gunaLabel2.Text = "User Name";
+            this.txt_logged_user.AutoSize = true;
+            this.txt_logged_user.BackColor = System.Drawing.Color.Transparent;
+            this.txt_logged_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_logged_user.ForeColor = System.Drawing.Color.White;
+            this.txt_logged_user.Location = new System.Drawing.Point(112, 598);
+            this.txt_logged_user.Name = "txt_logged_user";
+            this.txt_logged_user.Size = new System.Drawing.Size(84, 18);
+            this.txt_logged_user.TabIndex = 9;
+            this.txt_logged_user.Text = "User Name";
+            this.txt_logged_user.Click += new System.EventHandler(this.gunaLabel2_Click);
             // 
             // guna2PictureBox3
             // 
@@ -408,7 +409,7 @@
         private Guna.UI2.WinForms.Guna2Button btn_addNew;
         private Guna.UI2.WinForms.Guna2Button btn_settings;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
-        private Guna.UI.WinForms.GunaLabel gunaLabel2;
+        private Guna.UI.WinForms.GunaLabel txt_logged_user;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
         private Guna.UI2.WinForms.Guna2Panel panel_container;
