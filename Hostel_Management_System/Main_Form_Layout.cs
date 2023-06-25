@@ -30,7 +30,7 @@ namespace Hostel_Management_System
             this.userPrivi = userPrivi;
         } 
 
-       private void container(object _form)
+       public void container(object _form)
         {
             Form fm = _form as Form;
             fm.TopLevel = false;
@@ -42,25 +42,30 @@ namespace Hostel_Management_System
             fm.Show();
         }
 
+
+            Form_Dashboard dashboard = new Form_Dashboard();
+
         private void Main_Form_Layout_Load(object sender, EventArgs e)
         {
             txt_logged_user.Text = loggedInUser;
             lbl_privi.Text = userPrivi;
 
+            dashboard.setUserName(loggedInUser);
             btn_dashboard.Checked = true;
-            container(new Form_Dashboard());
+            container(dashboard);
         }
 
       
         private void btn_dashboard_Click(object sender, EventArgs e)
         {
-            container(new Form_Dashboard());
+            dashboard.setUserName(loggedInUser);
+            container(dashboard);
      
         }
 
         private void btn_food_Click(object sender, EventArgs e)
         {
-            container(new Form_Food());            
+            container(new Form_Food());
 
         }
 
@@ -83,6 +88,11 @@ namespace Hostel_Management_System
         {
             User_State user_State = new User_State();
 
+        }
+
+        private void gunaControlBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

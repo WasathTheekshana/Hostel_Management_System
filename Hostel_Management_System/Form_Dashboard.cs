@@ -16,5 +16,33 @@ namespace Hostel_Management_System
         {
             InitializeComponent();
         }
+
+        private string userName;
+        public void setUserName(string userName)
+        {
+            this.userName = userName;
+        }
+
+        private void Form_Dashboard_Load(object sender, EventArgs e)
+        {
+            DateTime currentTime = DateTime.Now;
+            int hour = currentTime.Hour;
+
+            if (hour < 12)
+            {
+                lbl_greeting.Text = "Good Morning, " + userName;
+            }
+            else if (hour >= 12 && hour < 18)
+            {
+                lbl_greeting.Text = "Good Afternoon, " + userName;
+            }
+            else
+            {
+                lbl_greeting.Text = "Good Evening, " + userName;
+            }
+
+        }
+
+        
     }
 }

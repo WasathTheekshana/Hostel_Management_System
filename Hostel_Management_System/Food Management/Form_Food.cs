@@ -54,6 +54,11 @@ namespace Hostel_Management_System
             lbl_Tomorrow.Text = "| " + formattedTomorrowDate;
         }
 
-        
+        private void btn_today_breakfast_view_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+       
     }
 }
