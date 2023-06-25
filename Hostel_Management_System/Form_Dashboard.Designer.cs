@@ -33,39 +33,39 @@
             this.lbl_greeting = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel2 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.btn_today_dinner_view = new Guna.UI2.WinForms.Guna2Button();
             this.lbl_today_dinner_food = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel3 = new Guna.UI.WinForms.GunaShadowPanel();
             this.lbl_today_breakfast_food = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.gunaShadowPanel4 = new Guna.UI.WinForms.GunaShadowPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.gunaShadowPanel5 = new Guna.UI.WinForms.GunaShadowPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btn_today_dinner_view = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.gunaShadowPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.gunaShadowPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.gunaShadowPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             this.gunaShadowPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             this.gunaShadowPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,6 +112,28 @@
             this.gunaShadowPanel2.Size = new System.Drawing.Size(405, 232);
             this.gunaShadowPanel2.TabIndex = 53;
             // 
+            // btn_today_dinner_view
+            // 
+            this.btn_today_dinner_view.CheckedState.Parent = this.btn_today_dinner_view;
+            this.btn_today_dinner_view.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_today_dinner_view.CustomImages.Parent = this.btn_today_dinner_view;
+            this.btn_today_dinner_view.FillColor = System.Drawing.Color.Transparent;
+            this.btn_today_dinner_view.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_today_dinner_view.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
+            this.btn_today_dinner_view.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btn_today_dinner_view.HoverState.Parent = this.btn_today_dinner_view;
+            this.btn_today_dinner_view.Image = global::Hostel_Management_System.Properties.Resources.food_vew_more_arrow;
+            this.btn_today_dinner_view.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btn_today_dinner_view.ImageSize = new System.Drawing.Size(12, 8);
+            this.btn_today_dinner_view.Location = new System.Drawing.Point(54, 166);
+            this.btn_today_dinner_view.Name = "btn_today_dinner_view";
+            this.btn_today_dinner_view.ShadowDecoration.Parent = this.btn_today_dinner_view;
+            this.btn_today_dinner_view.Size = new System.Drawing.Size(112, 30);
+            this.btn_today_dinner_view.TabIndex = 13;
+            this.btn_today_dinner_view.Text = "View More";
+            this.btn_today_dinner_view.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_today_dinner_view.Click += new System.EventHandler(this.btn_today_dinner_view_Click);
+            // 
             // lbl_today_dinner_food
             // 
             this.lbl_today_dinner_food.AutoSize = true;
@@ -134,6 +156,17 @@
             this.label10.TabIndex = 13;
             this.label10.Text = "Available Slots";
             // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.Image = global::Hostel_Management_System.Properties.Resources.success_3;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(51, 46);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
+            this.guna2PictureBox3.Size = new System.Drawing.Size(17, 21);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 0;
+            this.guna2PictureBox3.TabStop = false;
+            // 
             // gunaShadowPanel1
             // 
             this.gunaShadowPanel1.BackColor = System.Drawing.Color.Transparent;
@@ -150,6 +183,28 @@
             this.gunaShadowPanel1.ShadowShift = 20;
             this.gunaShadowPanel1.Size = new System.Drawing.Size(405, 232);
             this.gunaShadowPanel1.TabIndex = 54;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
+            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Image = global::Hostel_Management_System.Properties.Resources.food_vew_more_arrow;
+            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.guna2Button1.ImageSize = new System.Drawing.Size(12, 8);
+            this.guna2Button1.Location = new System.Drawing.Point(54, 166);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(112, 30);
+            this.guna2Button1.TabIndex = 13;
+            this.guna2Button1.Text = "View More";
+            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // label1
             // 
@@ -172,6 +227,17 @@
             this.label2.Size = new System.Drawing.Size(212, 37);
             this.label2.TabIndex = 13;
             this.label2.Text = "Pending Payments";
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = global::Hostel_Management_System.Properties.Resources.payments;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(51, 46);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
+            this.guna2PictureBox2.Size = new System.Drawing.Size(17, 21);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 0;
+            this.guna2PictureBox2.TabStop = false;
             // 
             // gunaLabel2
             // 
@@ -222,6 +288,16 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Breakfast";
             // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.Image = global::Hostel_Management_System.Properties.Resources.food_vector;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(52, 52);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.ShadowDecoration.Parent = this.guna2PictureBox4;
+            this.guna2PictureBox4.Size = new System.Drawing.Size(17, 21);
+            this.guna2PictureBox4.TabIndex = 0;
+            this.guna2PictureBox4.TabStop = false;
+            // 
             // gunaShadowPanel4
             // 
             this.gunaShadowPanel4.BackColor = System.Drawing.Color.Transparent;
@@ -259,6 +335,16 @@
             this.label4.Size = new System.Drawing.Size(78, 37);
             this.label4.TabIndex = 13;
             this.label4.Text = "Lunch";
+            // 
+            // guna2PictureBox5
+            // 
+            this.guna2PictureBox5.Image = global::Hostel_Management_System.Properties.Resources.food_vector;
+            this.guna2PictureBox5.Location = new System.Drawing.Point(52, 52);
+            this.guna2PictureBox5.Name = "guna2PictureBox5";
+            this.guna2PictureBox5.ShadowDecoration.Parent = this.guna2PictureBox5;
+            this.guna2PictureBox5.Size = new System.Drawing.Size(17, 21);
+            this.guna2PictureBox5.TabIndex = 0;
+            this.guna2PictureBox5.TabStop = false;
             // 
             // gunaShadowPanel5
             // 
@@ -308,91 +394,6 @@
             this.guna2PictureBox6.TabIndex = 0;
             this.guna2PictureBox6.TabStop = false;
             // 
-            // guna2PictureBox5
-            // 
-            this.guna2PictureBox5.Image = global::Hostel_Management_System.Properties.Resources.food_vector;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(52, 52);
-            this.guna2PictureBox5.Name = "guna2PictureBox5";
-            this.guna2PictureBox5.ShadowDecoration.Parent = this.guna2PictureBox5;
-            this.guna2PictureBox5.Size = new System.Drawing.Size(17, 21);
-            this.guna2PictureBox5.TabIndex = 0;
-            this.guna2PictureBox5.TabStop = false;
-            // 
-            // guna2PictureBox4
-            // 
-            this.guna2PictureBox4.Image = global::Hostel_Management_System.Properties.Resources.food_vector;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(52, 52);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.ShadowDecoration.Parent = this.guna2PictureBox4;
-            this.guna2PictureBox4.Size = new System.Drawing.Size(17, 21);
-            this.guna2PictureBox4.TabIndex = 0;
-            this.guna2PictureBox4.TabStop = false;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Image = global::Hostel_Management_System.Properties.Resources.food_vew_more_arrow;
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button1.ImageSize = new System.Drawing.Size(12, 8);
-            this.guna2Button1.Location = new System.Drawing.Point(54, 166);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(112, 30);
-            this.guna2Button1.TabIndex = 13;
-            this.guna2Button1.Text = "View More";
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = global::Hostel_Management_System.Properties.Resources.payments;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(51, 46);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(17, 21);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 0;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // btn_today_dinner_view
-            // 
-            this.btn_today_dinner_view.CheckedState.Parent = this.btn_today_dinner_view;
-            this.btn_today_dinner_view.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_today_dinner_view.CustomImages.Parent = this.btn_today_dinner_view;
-            this.btn_today_dinner_view.FillColor = System.Drawing.Color.Transparent;
-            this.btn_today_dinner_view.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_today_dinner_view.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
-            this.btn_today_dinner_view.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btn_today_dinner_view.HoverState.Parent = this.btn_today_dinner_view;
-            this.btn_today_dinner_view.Image = global::Hostel_Management_System.Properties.Resources.food_vew_more_arrow;
-            this.btn_today_dinner_view.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btn_today_dinner_view.ImageSize = new System.Drawing.Size(12, 8);
-            this.btn_today_dinner_view.Location = new System.Drawing.Point(54, 166);
-            this.btn_today_dinner_view.Name = "btn_today_dinner_view";
-            this.btn_today_dinner_view.ShadowDecoration.Parent = this.btn_today_dinner_view;
-            this.btn_today_dinner_view.Size = new System.Drawing.Size(112, 30);
-            this.btn_today_dinner_view.TabIndex = 13;
-            this.btn_today_dinner_view.Text = "View More";
-            this.btn_today_dinner_view.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.Image = global::Hostel_Management_System.Properties.Resources.success_3;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(51, 46);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
-            this.guna2PictureBox3.Size = new System.Drawing.Size(17, 21);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 0;
-            this.guna2PictureBox3.TabStop = false;
-            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Image = global::Hostel_Management_System.Properties.Resources.dashboard_line;
@@ -425,19 +426,19 @@
             this.Load += new System.EventHandler(this.Form_Dashboard_Load);
             this.gunaShadowPanel2.ResumeLayout(false);
             this.gunaShadowPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.gunaShadowPanel1.ResumeLayout(false);
             this.gunaShadowPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.gunaShadowPanel3.ResumeLayout(false);
             this.gunaShadowPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             this.gunaShadowPanel4.ResumeLayout(false);
             this.gunaShadowPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
             this.gunaShadowPanel5.ResumeLayout(false);
             this.gunaShadowPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

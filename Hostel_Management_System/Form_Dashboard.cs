@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Hostel_Management_System.Popups;
+using Microsoft.VisualBasic.Devices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -47,6 +49,12 @@ namespace Hostel_Management_System
         {
             Pending_Payments pendingPayments = new Pending_Payments();
             pendingPayments.ShowDialog();
+        }
+
+        private void btn_today_dinner_view_Click(object sender, EventArgs e)
+        {
+            Available_Slots availableSlots = new Available_Slots();
+            availableSlots.ShowDialog();
         }
     }
 }

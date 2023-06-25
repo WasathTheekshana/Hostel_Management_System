@@ -165,6 +165,12 @@
     <Compile Include="Pending_Payments.Designer.cs">
       <DependentUpon>Pending_Payments.cs</DependentUpon>
     </Compile>
+    <Compile Include="Popups\Available_Slots.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popups\Available_Slots.Designer.cs">
+      <DependentUpon>Available_Slots.cs</DependentUpon>
+    </Compile>
     <Compile Include="Popups\Base_Error_Popup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,12 @@
     </Compile>
     <Compile Include="Popups\Payment_Confirm.Designer.cs">
       <DependentUpon>Payment_Confirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\Room_Available.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popups\Room_Available.Designer.cs">
+      <DependentUpon>Room_Available.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -261,6 +273,9 @@
     <EmbeddedResource Include="Pending_Payments.resx">
       <DependentUpon>Pending_Payments.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Popups\Available_Slots.resx">
+      <DependentUpon>Available_Slots.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Popups\Base_Error_Popup.resx">
       <DependentUpon>Base_Error_Popup.cs</DependentUpon>
     </EmbeddedResource>
@@ -272,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Popups\Payment_Confirm.resx">
       <DependentUpon>Payment_Confirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popups\Room_Available.resx">
+      <DependentUpon>Room_Available.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
