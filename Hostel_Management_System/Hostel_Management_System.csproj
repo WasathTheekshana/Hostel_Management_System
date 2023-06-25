@@ -178,6 +178,12 @@
     <Compile Include="User Modals\Edit_User.Designer.cs">
       <DependentUpon>Edit_User.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Modals\Edit_User_Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Modals\Edit_User_Profile.Designer.cs">
+      <DependentUpon>Edit_User_Profile.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Food Management\Food_List.resx">
       <DependentUpon>Food_List.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Modals\Edit_User.resx">
       <DependentUpon>Edit_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Modals\Edit_User_Profile.resx">
+      <DependentUpon>Edit_User_Profile.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">

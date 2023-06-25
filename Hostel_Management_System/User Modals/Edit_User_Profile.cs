@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Hostel_Management_System.User_Modals
 {
-    public partial class Edit_User : Form
+    public partial class Edit_User_Profile : Form
     {
-        public Edit_User()
+        public Edit_User_Profile()
         {
             InitializeComponent();
-        }
-
-        private void Edit_User_Load(object sender, EventArgs e)
-        {
-            guna2ShadowForm1.SetShadowForm(this);
         }
 
         private void gunaButton1_Click(object sender, EventArgs e)
@@ -27,10 +22,9 @@ namespace Hostel_Management_System.User_Modals
             this.Close();
         }
 
-        Edit_User_Profile userProfile = new Edit_User_Profile();    
-        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Edit_User_Profile_Load(object sender, EventArgs e)
         {
-            userProfile.ShowDialog();
+            guna2ShadowForm1.SetShadowForm(this);
         }
     }
 }

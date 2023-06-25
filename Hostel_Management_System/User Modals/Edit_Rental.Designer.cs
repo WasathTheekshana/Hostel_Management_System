@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.label10 = new System.Windows.Forms.Label();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_username = new Guna.UI2.WinForms.Guna2TextBox();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.btn_login = new Guna.UI.WinForms.GunaButton();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,17 +54,6 @@
             this.label10.Size = new System.Drawing.Size(127, 37);
             this.label10.TabIndex = 30;
             this.label10.Text = "Edit Rental";
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.Image = global::Hostel_Management_System.Properties.Resources.editdddd;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(18, 21);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
-            this.guna2PictureBox3.Size = new System.Drawing.Size(17, 21);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 29;
-            this.guna2PictureBox3.TabStop = false;
             // 
             // label1
             // 
@@ -105,7 +94,7 @@
             this.txt_username.ShadowDecoration.Parent = this.txt_username;
             this.txt_username.Size = new System.Drawing.Size(310, 35);
             this.txt_username.TabIndex = 31;
-            this.txt_username.TextOffset = new System.Drawing.Point(20, 0);
+            this.txt_username.TextOffset = new System.Drawing.Point(8, 0);
             // 
             // gunaButton1
             // 
@@ -166,6 +155,17 @@
             this.btn_login.Text = "Change Rental";
             this.btn_login.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_login.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.Image = global::Hostel_Management_System.Properties.Resources.editdddd;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(18, 21);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
+            this.guna2PictureBox3.Size = new System.Drawing.Size(17, 21);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 29;
+            this.guna2PictureBox3.TabStop = false;
             // 
             // Edit_Rental
             // 

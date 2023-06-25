@@ -37,15 +37,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_username = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.comBox_addFood_food = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaElipse1
@@ -151,7 +151,7 @@
             this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
             this.guna2TextBox2.Size = new System.Drawing.Size(310, 35);
             this.guna2TextBox2.TabIndex = 33;
-            this.guna2TextBox2.TextOffset = new System.Drawing.Point(20, 0);
+            this.guna2TextBox2.TextOffset = new System.Drawing.Point(8, 0);
             // 
             // label1
             // 
@@ -192,7 +192,7 @@
             this.txt_username.ShadowDecoration.Parent = this.txt_username;
             this.txt_username.Size = new System.Drawing.Size(310, 35);
             this.txt_username.TabIndex = 29;
-            this.txt_username.TextOffset = new System.Drawing.Point(20, 0);
+            this.txt_username.TextOffset = new System.Drawing.Point(8, 0);
             // 
             // label10
             // 
@@ -204,17 +204,6 @@
             this.label10.Size = new System.Drawing.Size(259, 37);
             this.label10.TabIndex = 28;
             this.label10.Text = "Add / Delete Food Item";
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.Image = global::Hostel_Management_System.Properties.Resources.addadsfad;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(25, 30);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
-            this.guna2PictureBox3.Size = new System.Drawing.Size(17, 21);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 27;
-            this.guna2PictureBox3.TabStop = false;
             // 
             // gunaButton2
             // 
@@ -286,17 +275,6 @@
             this.label2.TabIndex = 43;
             this.label2.Text = "Change Food Price";
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::Hostel_Management_System.Properties.Resources.editdddd1;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(25, 275);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(17, 21);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 42;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // comBox_addFood_food
             // 
             this.comBox_addFood_food.BackColor = System.Drawing.Color.Transparent;
@@ -322,6 +300,28 @@
             this.comBox_addFood_food.StartIndex = 0;
             this.comBox_addFood_food.TabIndex = 44;
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::Hostel_Management_System.Properties.Resources.editdddd1;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(25, 275);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(17, 21);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 42;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.Image = global::Hostel_Management_System.Properties.Resources.addadsfad;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(25, 30);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
+            this.guna2PictureBox3.Size = new System.Drawing.Size(17, 21);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 27;
+            this.guna2PictureBox3.TabStop = false;
+            // 
             // Delete_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -346,8 +346,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Delete_User";
             this.Load += new System.EventHandler(this.Delete_User_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
