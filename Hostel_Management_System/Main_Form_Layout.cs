@@ -89,5 +89,10 @@ namespace Hostel_Management_System
             User_State user_State = new User_State();
 
         }
+
+        private void gunaControlBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -128,11 +128,11 @@
             // lbl_tomorrow_dinner_food
             // 
             this.lbl_tomorrow_dinner_food.AutoSize = true;
-            this.lbl_tomorrow_dinner_food.Font = new System.Drawing.Font("Poppins SemiBold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tomorrow_dinner_food.Font = new System.Drawing.Font("Poppins", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tomorrow_dinner_food.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
             this.lbl_tomorrow_dinner_food.Location = new System.Drawing.Point(33, 81);
             this.lbl_tomorrow_dinner_food.Name = "lbl_tomorrow_dinner_food";
-            this.lbl_tomorrow_dinner_food.Size = new System.Drawing.Size(52, 51);
+            this.lbl_tomorrow_dinner_food.Size = new System.Drawing.Size(49, 51);
             this.lbl_tomorrow_dinner_food.TabIndex = 14;
             this.lbl_tomorrow_dinner_food.Text = "10";
             // 
@@ -168,11 +168,11 @@
             // lbl_today_dinner_food
             // 
             this.lbl_today_dinner_food.AutoSize = true;
-            this.lbl_today_dinner_food.Font = new System.Drawing.Font("Poppins SemiBold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_today_dinner_food.Font = new System.Drawing.Font("Poppins", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_today_dinner_food.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
             this.lbl_today_dinner_food.Location = new System.Drawing.Point(33, 81);
             this.lbl_today_dinner_food.Name = "lbl_today_dinner_food";
-            this.lbl_today_dinner_food.Size = new System.Drawing.Size(52, 51);
+            this.lbl_today_dinner_food.Size = new System.Drawing.Size(49, 51);
             this.lbl_today_dinner_food.TabIndex = 14;
             this.lbl_today_dinner_food.Text = "10";
             // 
@@ -208,11 +208,11 @@
             // lbl_tomorrow_lunch_food
             // 
             this.lbl_tomorrow_lunch_food.AutoSize = true;
-            this.lbl_tomorrow_lunch_food.Font = new System.Drawing.Font("Poppins SemiBold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tomorrow_lunch_food.Font = new System.Drawing.Font("Poppins", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tomorrow_lunch_food.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
             this.lbl_tomorrow_lunch_food.Location = new System.Drawing.Point(33, 81);
             this.lbl_tomorrow_lunch_food.Name = "lbl_tomorrow_lunch_food";
-            this.lbl_tomorrow_lunch_food.Size = new System.Drawing.Size(52, 51);
+            this.lbl_tomorrow_lunch_food.Size = new System.Drawing.Size(49, 51);
             this.lbl_tomorrow_lunch_food.TabIndex = 14;
             this.lbl_tomorrow_lunch_food.Text = "10";
             // 
@@ -248,11 +248,11 @@
             // lbl_tomorrow_breakfast_food
             // 
             this.lbl_tomorrow_breakfast_food.AutoSize = true;
-            this.lbl_tomorrow_breakfast_food.Font = new System.Drawing.Font("Poppins SemiBold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tomorrow_breakfast_food.Font = new System.Drawing.Font("Poppins", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tomorrow_breakfast_food.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
             this.lbl_tomorrow_breakfast_food.Location = new System.Drawing.Point(33, 81);
             this.lbl_tomorrow_breakfast_food.Name = "lbl_tomorrow_breakfast_food";
-            this.lbl_tomorrow_breakfast_food.Size = new System.Drawing.Size(52, 51);
+            this.lbl_tomorrow_breakfast_food.Size = new System.Drawing.Size(49, 51);
             this.lbl_tomorrow_breakfast_food.TabIndex = 14;
             this.lbl_tomorrow_breakfast_food.Text = "10";
             // 
@@ -288,11 +288,11 @@
             // lbl_today_lunch_food
             // 
             this.lbl_today_lunch_food.AutoSize = true;
-            this.lbl_today_lunch_food.Font = new System.Drawing.Font("Poppins SemiBold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_today_lunch_food.Font = new System.Drawing.Font("Poppins", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_today_lunch_food.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
             this.lbl_today_lunch_food.Location = new System.Drawing.Point(33, 81);
             this.lbl_today_lunch_food.Name = "lbl_today_lunch_food";
-            this.lbl_today_lunch_food.Size = new System.Drawing.Size(52, 51);
+            this.lbl_today_lunch_food.Size = new System.Drawing.Size(49, 51);
             this.lbl_today_lunch_food.TabIndex = 14;
             this.lbl_today_lunch_food.Text = "10";
             // 
@@ -339,11 +339,11 @@
             // lbl_today_breakfast_food
             // 
             this.lbl_today_breakfast_food.AutoSize = true;
-            this.lbl_today_breakfast_food.Font = new System.Drawing.Font("Poppins SemiBold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_today_breakfast_food.Font = new System.Drawing.Font("Poppins", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_today_breakfast_food.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
             this.lbl_today_breakfast_food.Location = new System.Drawing.Point(33, 81);
             this.lbl_today_breakfast_food.Name = "lbl_today_breakfast_food";
-            this.lbl_today_breakfast_food.Size = new System.Drawing.Size(52, 51);
+            this.lbl_today_breakfast_food.Size = new System.Drawing.Size(49, 51);
             this.lbl_today_breakfast_food.TabIndex = 14;
             this.lbl_today_breakfast_food.Text = "10";
             // 
