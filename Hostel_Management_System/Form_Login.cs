@@ -127,13 +127,6 @@ namespace Hostel_Management_System
 
         
 
-
-        }
-
-        private void txt_username_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
     }
 }
