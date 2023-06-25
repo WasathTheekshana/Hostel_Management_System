@@ -127,14 +127,8 @@
   <data name="yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\yellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="line1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\line1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="add-checked-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add-checked-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="succussfullicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\succussfullicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="login_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login_img.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,10 +145,6 @@
   <data name="side-img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\side-img.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-
-  <data name="food-normal-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\food-normal-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-
   <data name="Group 51~2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group 51~2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -163,7 +153,6 @@
   </data>
   <data name="dashboard-normal-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashboard-normal-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-
   </data>
   <data name="blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -174,39 +163,21 @@
   <data name="side-img-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\side-img-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="side-img-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\side-img-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="student-normal-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\student-normal-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-
-  <data name="settings-checked-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings-checked-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-
   <data name="Group 51~21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group 51~21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-
   </data>
   <data name="student-checked-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\student-checked-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dashboard-normal-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dashboard-normal-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="line1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\line1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="login_panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login_panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-
-  <data name="dashboard.-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dashboard.-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Group 47" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Group 47.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="wrongicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wrongicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-
   <data name="Group 51" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group 51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -221,6 +192,5 @@
   </data>
   <data name="Line blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Line blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-
   </data>
 </root>

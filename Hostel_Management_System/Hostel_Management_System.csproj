@@ -141,20 +141,6 @@
     <Compile Include="parent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-
-    <Compile Include="succussfull popup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="succussfull popup.Designer.cs">
-      <DependentUpon>succussfull popup.cs</DependentUpon>
-    </Compile>
-    <Compile Include="wrong popup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="wrong popup.Designer.cs">
-      <DependentUpon>wrong popup.cs</DependentUpon>
-    </Compile>
-
     <Compile Include="Student Details\DetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,7 +148,6 @@
       <DependentUpon>DetailForm.cs</DependentUpon>
     </Compile>
     <Compile Include="student.cs" />
-
     <EmbeddedResource Include="Form_AddNew.resx">
       <DependentUpon>Form_AddNew.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,16 +179,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-
-    <EmbeddedResource Include="succussfull popup.resx">
-      <DependentUpon>succussfull popup.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="wrong popup.resx">
-      <DependentUpon>wrong popup.cs</DependentUpon>
-
     <EmbeddedResource Include="Student Details\DetailForm.resx">
       <DependentUpon>DetailForm.cs</DependentUpon>
-
     </EmbeddedResource>
     <None Include="Hostel_Management_System_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
@@ -290,12 +267,6 @@
     <None Include="Resources\side-img-2.png" />
   </ItemGroup>
   <ItemGroup>
-
-    <None Include="Resources\Group 47.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\succussfullicon.png" />
-
     <None Include="Resources\Group 51.png" />
   </ItemGroup>
   <ItemGroup>
@@ -312,7 +283,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Line blue.png" />
-
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

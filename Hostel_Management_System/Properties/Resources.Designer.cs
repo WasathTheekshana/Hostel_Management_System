@@ -143,11 +143,6 @@ namespace Hostel_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-
-        internal static System.Drawing.Bitmap Group_47 {
-            get {
-                object obj = ResourceManager.GetObject("Group 47", resourceCulture);
-
         internal static System.Drawing.Bitmap Group_51 {
             get {
                 object obj = ResourceManager.GetObject("Group 51", resourceCulture);
@@ -181,7 +176,6 @@ namespace Hostel_Management_System.Properties {
         internal static System.Drawing.Bitmap Line_blue {
             get {
                 object obj = ResourceManager.GetObject("Line blue", resourceCulture);
-
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -302,26 +296,6 @@ namespace Hostel_Management_System.Properties {
         internal static System.Drawing.Bitmap student_normal_icon {
             get {
                 object obj = ResourceManager.GetObject("student-normal-icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap succussfullicon {
-            get {
-                object obj = ResourceManager.GetObject("succussfullicon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap wrongicon {
-            get {
-                object obj = ResourceManager.GetObject("wrongicon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
