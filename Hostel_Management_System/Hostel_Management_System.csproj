@@ -290,10 +290,12 @@
   <ItemGroup>
     <None Include="Resources\wrong.png" />
     <EmbeddedResource Include="Resources\addIcon.png" />
+    <None Include="Resources\dashboard_line.png" />
     <Content Include="Resources\FoodVector.png" />
     <None Include="Resources\success.png" />
     <None Include="Resources\success_3.png" />
     <None Include="Resources\success1.png" />
+    <None Include="Resources\payments.png" />
     <Content Include="Resources\viewMoreArrow.png" />
     <None Include="Resources\Group 51.png" />
   </ItemGroup>

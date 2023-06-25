@@ -103,6 +103,16 @@ namespace Hostel_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dashboard_line {
+            get {
+                object obj = ResourceManager.GetObject("dashboard_line", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dashboard_normal_icon {
             get {
                 object obj = ResourceManager.GetObject("dashboard-normal-icon", resourceCulture);
@@ -246,6 +256,16 @@ namespace Hostel_Management_System.Properties {
         internal static System.Drawing.Bitmap navigation_drop {
             get {
                 object obj = ResourceManager.GetObject("navigation-drop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap payments {
+            get {
+                object obj = ResourceManager.GetObject("payments", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

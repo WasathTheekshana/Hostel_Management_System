@@ -31,6 +31,8 @@ namespace Hostel_Management_System
             User_State userState = new User_State();
             Base_Successfull_Popup logInSuccessfull = new Base_Successfull_Popup();
             Base_Error_Popup error = new Base_Error_Popup();
+            
+
 
             string userName = txt_username.Text;
             string password = txt_password.Text;
@@ -62,6 +64,7 @@ namespace Hostel_Management_System
                     if (isAuthenticated)
                     {
                         this.Hide();
+                        
                         //userState.setUserName(userName);
                         
                         logInSuccessfull.setPopup("You’ve logged in successfully!");
