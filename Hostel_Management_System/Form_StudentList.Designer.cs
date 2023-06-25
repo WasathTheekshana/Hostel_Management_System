@@ -120,7 +120,7 @@
             // 
             // guna2PictureBox1
             // 
-            this.guna2PictureBox1.Image = global::Hostel_Management_System.Properties.Resources.Group_51_2;
+            this.guna2PictureBox1.Image = global::Hostel_Management_System.Properties.Resources.Group_51_21;
             this.guna2PictureBox1.Location = new System.Drawing.Point(38, 40);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
@@ -186,7 +186,7 @@
             // 
             // guna2PictureBox2
             // 
-            this.guna2PictureBox2.Image = global::Hostel_Management_System.Properties.Resources.Group_51_2;
+            this.guna2PictureBox2.Image = global::Hostel_Management_System.Properties.Resources.Group_51_21;
             this.guna2PictureBox2.Location = new System.Drawing.Point(37, 40);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
