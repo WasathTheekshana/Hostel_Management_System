@@ -76,6 +76,7 @@
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -88,6 +89,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database Connection\Connection_Sting.cs" />
+    <Compile Include="Logged In Users\User_State.cs" />
+    <Compile Include="Student Details\DetailForm_StudentDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student Details\DetailForm_StudentDetails.Designer.cs">
+      <DependentUpon>DetailForm_StudentDetails.cs</DependentUpon>
     <Compile Include="Form_AddNew.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,8 +138,10 @@
     <Compile Include="Main_Form_Layout.Designer.cs">
       <DependentUpon>Main_Form_Layout.cs</DependentUpon>
     </Compile>
+    <Compile Include="parent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+
     <Compile Include="succussfull popup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +154,15 @@
     <Compile Include="wrong popup.Designer.cs">
       <DependentUpon>wrong popup.cs</DependentUpon>
     </Compile>
+
+    <Compile Include="Student Details\DetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student Details\DetailForm.Designer.cs">
+      <DependentUpon>DetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="student.cs" />
+
     <EmbeddedResource Include="Form_AddNew.resx">
       <DependentUpon>Form_AddNew.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,11 +194,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+
     <EmbeddedResource Include="succussfull popup.resx">
       <DependentUpon>succussfull popup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="wrong popup.resx">
       <DependentUpon>wrong popup.cs</DependentUpon>
+
+    <EmbeddedResource Include="Student Details\DetailForm.resx">
+      <DependentUpon>DetailForm.cs</DependentUpon>
+
     </EmbeddedResource>
     <None Include="Hostel_Management_System_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
@@ -266,10 +290,29 @@
     <None Include="Resources\side-img-2.png" />
   </ItemGroup>
   <ItemGroup>
+
     <None Include="Resources\Group 47.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\succussfullicon.png" />
+
+    <None Include="Resources\Group 51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 51~2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 51~21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Line blue.png" />
+
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

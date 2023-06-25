@@ -42,7 +42,7 @@
             this.btn_food = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
+            this.txt_logged_user = new Guna.UI.WinForms.GunaLabel();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -120,7 +120,7 @@
             this.guna2Panel1.Controls.Add(this.btn_food);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox4);
             this.guna2Panel1.Controls.Add(this.gunaLabel3);
-            this.guna2Panel1.Controls.Add(this.gunaLabel2);
+            this.guna2Panel1.Controls.Add(this.txt_logged_user);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox3);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox2);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
@@ -145,7 +145,7 @@
             this.btn_dashboard.CustomBorderColor = System.Drawing.Color.Transparent;
             this.btn_dashboard.CustomImages.Parent = this.btn_dashboard;
             this.btn_dashboard.FillColor = System.Drawing.Color.Transparent;
-            this.btn_dashboard.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_dashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_dashboard.ForeColor = System.Drawing.Color.White;
             this.btn_dashboard.HoverState.Parent = this.btn_dashboard;
             this.btn_dashboard.Image = global::Hostel_Management_System.Properties.Resources.dashboard_normal_icon;
@@ -174,7 +174,7 @@
             this.btn_settings.CheckedState.Parent = this.btn_settings;
             this.btn_settings.CustomImages.Parent = this.btn_settings;
             this.btn_settings.FillColor = System.Drawing.Color.Transparent;
-            this.btn_settings.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_settings.ForeColor = System.Drawing.Color.White;
             this.btn_settings.HoverState.Parent = this.btn_settings;
             this.btn_settings.Image = global::Hostel_Management_System.Properties.Resources.settings_normal_icon;
@@ -202,7 +202,7 @@
             this.btn_addNew.CheckedState.Parent = this.btn_addNew;
             this.btn_addNew.CustomImages.Parent = this.btn_addNew;
             this.btn_addNew.FillColor = System.Drawing.Color.Transparent;
-            this.btn_addNew.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_addNew.ForeColor = System.Drawing.Color.White;
             this.btn_addNew.HoverState.Parent = this.btn_addNew;
             this.btn_addNew.Image = global::Hostel_Management_System.Properties.Resources.add_normal_icon;
@@ -230,7 +230,7 @@
             this.btn_studnetList.CheckedState.Parent = this.btn_studnetList;
             this.btn_studnetList.CustomImages.Parent = this.btn_studnetList;
             this.btn_studnetList.FillColor = System.Drawing.Color.Transparent;
-            this.btn_studnetList.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_studnetList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_studnetList.ForeColor = System.Drawing.Color.White;
             this.btn_studnetList.HoverState.Parent = this.btn_studnetList;
             this.btn_studnetList.Image = global::Hostel_Management_System.Properties.Resources.student_normal_icon;
@@ -258,7 +258,7 @@
             this.btn_food.CheckedState.Parent = this.btn_food;
             this.btn_food.CustomImages.Parent = this.btn_food;
             this.btn_food.FillColor = System.Drawing.Color.Transparent;
-            this.btn_food.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_food.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_food.ForeColor = System.Drawing.Color.White;
             this.btn_food.HoverState.Parent = this.btn_food;
             this.btn_food.Image = global::Hostel_Management_System.Properties.Resources.food_normal_icon;
@@ -290,25 +290,26 @@
             // 
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLabel3.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel3.ForeColor = System.Drawing.Color.White;
             this.gunaLabel3.Location = new System.Drawing.Point(113, 620);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(39, 23);
+            this.gunaLabel3.Size = new System.Drawing.Size(36, 16);
             this.gunaLabel3.TabIndex = 10;
             this.gunaLabel3.Text = "User";
             // 
-            // gunaLabel2
+            // txt_logged_user
             // 
-            this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLabel2.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel2.Location = new System.Drawing.Point(112, 598);
-            this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(94, 26);
-            this.gunaLabel2.TabIndex = 9;
-            this.gunaLabel2.Text = "User Name";
+            this.txt_logged_user.AutoSize = true;
+            this.txt_logged_user.BackColor = System.Drawing.Color.Transparent;
+            this.txt_logged_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_logged_user.ForeColor = System.Drawing.Color.White;
+            this.txt_logged_user.Location = new System.Drawing.Point(112, 598);
+            this.txt_logged_user.Name = "txt_logged_user";
+            this.txt_logged_user.Size = new System.Drawing.Size(84, 18);
+            this.txt_logged_user.TabIndex = 9;
+            this.txt_logged_user.Text = "User Name";
+            this.txt_logged_user.Click += new System.EventHandler(this.gunaLabel2_Click);
             // 
             // guna2PictureBox3
             // 
@@ -347,11 +348,11 @@
             // 
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLabel1.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.White;
             this.gunaLabel1.Location = new System.Drawing.Point(32, 36);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(230, 74);
+            this.gunaLabel1.Size = new System.Drawing.Size(204, 50);
             this.gunaLabel1.TabIndex = 0;
             this.gunaLabel1.Text = "Hostel Management\r\nSystem";
             this.gunaLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -408,7 +409,7 @@
         private Guna.UI2.WinForms.Guna2Button btn_addNew;
         private Guna.UI2.WinForms.Guna2Button btn_settings;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
-        private Guna.UI.WinForms.GunaLabel gunaLabel2;
+        private Guna.UI.WinForms.GunaLabel txt_logged_user;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
         private Guna.UI2.WinForms.Guna2Panel panel_container;
