@@ -1,5 +1,6 @@
 ﻿using Guna.UI2.WinForms;
 using Hostel_Management_System.Logged_In_Users;
+using Hostel_Management_System.Popups;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -94,6 +95,12 @@ namespace Hostel_Management_System
         private void gunaControlBox1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void guna2PictureBox4_Click(object sender, EventArgs e)
+        {
+            Logout_Popup logout = new Logout_Popup();
+            logout.ShowDialog();
         }
     }
 }

@@ -152,6 +152,12 @@
     <Compile Include="Popups\Base_Successfull_Popup.Designer.cs">
       <DependentUpon>Base_Successfull_Popup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Popups\Logout_Popup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popups\Logout_Popup.Designer.cs">
+      <DependentUpon>Logout_Popup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User Modals\Add_New_User.cs">
@@ -220,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Popups\Base_Successfull_Popup.resx">
       <DependentUpon>Base_Successfull_Popup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popups\Logout_Popup.resx">
+      <DependentUpon>Logout_Popup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
