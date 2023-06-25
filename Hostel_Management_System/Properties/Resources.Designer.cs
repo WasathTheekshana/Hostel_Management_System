@@ -63,6 +63,16 @@ namespace Hostel_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add {
+            get {
+                object obj = ResourceManager.GetObject("add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_checked_icon {
             get {
                 object obj = ResourceManager.GetObject("add-checked-icon", resourceCulture);
@@ -76,6 +86,16 @@ namespace Hostel_Management_System.Properties {
         internal static System.Drawing.Bitmap add_normal_icon {
             get {
                 object obj = ResourceManager.GetObject("add-normal-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap addadsfad {
+            get {
+                object obj = ResourceManager.GetObject("addadsfad", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +146,36 @@ namespace Hostel_Management_System.Properties {
         internal static System.Drawing.Bitmap dummy_profile_icon {
             get {
                 object obj = ResourceManager.GetObject("dummy-profile-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit {
+            get {
+                object obj = ResourceManager.GetObject("edit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap editdddd {
+            get {
+                object obj = ResourceManager.GetObject("editdddd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap editdddd1 {
+            get {
+                object obj = ResourceManager.GetObject("editdddd1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

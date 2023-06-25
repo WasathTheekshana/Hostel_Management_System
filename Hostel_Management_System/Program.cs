@@ -1,4 +1,5 @@
 ﻿using Hostel_Management_System.Popups;
+using Hostel_Management_System.User_Modals;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace Hostel_Management_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Food_List());
+            Application.Run(new Main_Form_Layout());
 
         }
     }

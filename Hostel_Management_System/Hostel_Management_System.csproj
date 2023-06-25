@@ -154,6 +154,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User Modals\Add_New_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Modals\Add_New_User.Designer.cs">
+      <DependentUpon>Add_New_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Modals\Delete_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Modals\Delete_User.Designer.cs">
+      <DependentUpon>Delete_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Modals\Edit_Rental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Modals\Edit_Rental.Designer.cs">
+      <DependentUpon>Edit_Rental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Modals\Edit_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Modals\Edit_User.Designer.cs">
+      <DependentUpon>Edit_User.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Food Management\Food_List.resx">
       <DependentUpon>Food_List.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +227,18 @@
     </Compile>
     <EmbeddedResource Include="Student Details\DetailForm.resx">
       <DependentUpon>DetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Modals\Add_New_User.resx">
+      <DependentUpon>Add_New_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Modals\Delete_User.resx">
+      <DependentUpon>Delete_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Modals\Edit_Rental.resx">
+      <DependentUpon>Edit_Rental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Modals\Edit_User.resx">
+      <DependentUpon>Edit_User.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
@@ -291,6 +327,11 @@
     <None Include="Resources\wrong.png" />
     <EmbeddedResource Include="Resources\addIcon.png" />
     <None Include="Resources\dashboard_line.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\editdddd.png" />
+    <None Include="Resources\addadsfad.png" />
+    <None Include="Resources\editdddd1.png" />
     <Content Include="Resources\FoodVector.png" />
     <None Include="Resources\success.png" />
     <None Include="Resources\success_3.png" />

@@ -30,7 +30,7 @@ namespace Hostel_Management_System
             this.userPrivi = userPrivi;
         } 
 
-       private void container(object _form)
+       public void container(object _form)
         {
             Form fm = _form as Form;
             fm.TopLevel = false;
@@ -65,7 +65,7 @@ namespace Hostel_Management_System
 
         private void btn_food_Click(object sender, EventArgs e)
         {
-            container(new Form_Food());            
+            container(new Form_Food());
 
         }
 

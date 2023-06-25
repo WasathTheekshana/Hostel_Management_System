@@ -703,6 +703,7 @@
             this.btn_today_breakfast_view.TabIndex = 13;
             this.btn_today_breakfast_view.Text = "View More";
             this.btn_today_breakfast_view.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_today_breakfast_view.Click += new System.EventHandler(this.btn_today_breakfast_view_Click);
             // 
             // btn_today_breakfast_add
             // 
