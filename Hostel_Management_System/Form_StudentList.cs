@@ -27,6 +27,7 @@ namespace Hostel_Management_System
             groundUnderLine.Visible = false;
             FirstUnderLine.Visible = false;
             secondUnderLine.Visible = false;
+           
         }
 
         private void firstTab_Click(object sender, EventArgs e)
