@@ -76,7 +76,8 @@ namespace Hostel_Management_System
 
         private void btn_addNew_Click(object sender, EventArgs e)
         {
-            container(new Form_AddNew());
+            DetailForm detailForm = new DetailForm(); 
+            detailForm.ShowDialog();
         }
 
         private void btn_settings_Click(object sender, EventArgs e)

@@ -63,7 +63,7 @@ namespace Hostel_Management_System
 
                     if (isAuthenticated)
                     {
-                        this.Hide();
+                        
                         
                         //userState.setUserName(userName);
                         
@@ -99,6 +99,7 @@ namespace Hostel_Management_System
                         }
                     mainForm.setUserName(userName, userPrivi);
                     mainForm.Show();
+                        this.Hide();
                     }
                     if (!isAuthenticated)
                     {

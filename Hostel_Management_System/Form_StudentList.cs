@@ -69,5 +69,17 @@ namespace Hostel_Management_System
         {
 
         }
+
+            DetailForm detailForm = new DetailForm();
+        private void guna2ShadowPanel2_Click(object sender, EventArgs e)
+        {
+            detailForm.ShowDialog();
+        }
+
+        private void guna2PictureBox3_Click(object sender, EventArgs e)
+        {
+            detailForm.ShowDialog();
+
+        }
     }
 }

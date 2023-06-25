@@ -38,7 +38,6 @@
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtStudentFName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -62,6 +61,9 @@
             this.DateBirthDay = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.DateStudentRegisterDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.ComboStudentGender = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtStudentFName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.txtStudentLName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnNext = new Guna.UI2.WinForms.Guna2Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -90,8 +92,7 @@
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.btnAccept = new Guna.UI2.WinForms.Guna2Button();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.txtStudentLName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -227,35 +228,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.92194F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(705, 508);
             this.tableLayoutPanel1.TabIndex = 4;
-            // 
-            // txtStudentFName
-            // 
-            this.txtStudentFName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtStudentFName.BorderRadius = 5;
-            this.tableLayoutPanel1.SetColumnSpan(this.txtStudentFName, 2);
-            this.txtStudentFName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtStudentFName.DefaultText = "";
-            this.txtStudentFName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtStudentFName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtStudentFName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtStudentFName.DisabledState.Parent = this.txtStudentFName;
-            this.txtStudentFName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtStudentFName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStudentFName.FocusedState.Parent = this.txtStudentFName;
-            this.txtStudentFName.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStudentFName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.txtStudentFName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStudentFName.HoverState.Parent = this.txtStudentFName;
-            this.txtStudentFName.Location = new System.Drawing.Point(6, 100);
-            this.txtStudentFName.Margin = new System.Windows.Forms.Padding(6);
-            this.txtStudentFName.Name = "txtStudentFName";
-            this.txtStudentFName.PasswordChar = '\0';
-            this.txtStudentFName.PlaceholderText = "";
-            this.txtStudentFName.SelectedText = "";
-            this.txtStudentFName.ShadowDecoration.Parent = this.txtStudentFName;
-            this.txtStudentFName.Size = new System.Drawing.Size(457, 36);
-            this.txtStudentFName.TabIndex = 0;
-            this.txtStudentFName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NameKeyPress);
             // 
             // label2
             // 
@@ -543,7 +515,7 @@
             this.txtStudentHomeNo.Margin = new System.Windows.Forms.Padding(6);
             this.txtStudentHomeNo.Name = "txtStudentHomeNo";
             this.txtStudentHomeNo.PasswordChar = '\0';
-            this.txtStudentHomeNo.PlaceholderText = "";
+            this.txtStudentHomeNo.PlaceholderText = "Optional";
             this.txtStudentHomeNo.SelectedText = "";
             this.txtStudentHomeNo.ShadowDecoration.Parent = this.txtStudentHomeNo;
             this.txtStudentHomeNo.Size = new System.Drawing.Size(224, 36);
@@ -668,6 +640,75 @@
             this.ComboStudentGender.ShadowDecoration.Parent = this.ComboStudentGender;
             this.ComboStudentGender.Size = new System.Drawing.Size(230, 36);
             this.ComboStudentGender.TabIndex = 3;
+            // 
+            // txtStudentFName
+            // 
+            this.txtStudentFName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtStudentFName.BorderRadius = 5;
+            this.tableLayoutPanel1.SetColumnSpan(this.txtStudentFName, 2);
+            this.txtStudentFName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtStudentFName.DefaultText = "";
+            this.txtStudentFName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtStudentFName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtStudentFName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtStudentFName.DisabledState.Parent = this.txtStudentFName;
+            this.txtStudentFName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtStudentFName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtStudentFName.FocusedState.Parent = this.txtStudentFName;
+            this.txtStudentFName.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStudentFName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.txtStudentFName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtStudentFName.HoverState.Parent = this.txtStudentFName;
+            this.txtStudentFName.Location = new System.Drawing.Point(6, 100);
+            this.txtStudentFName.Margin = new System.Windows.Forms.Padding(6);
+            this.txtStudentFName.Name = "txtStudentFName";
+            this.txtStudentFName.PasswordChar = '\0';
+            this.txtStudentFName.PlaceholderText = "";
+            this.txtStudentFName.SelectedText = "";
+            this.txtStudentFName.ShadowDecoration.Parent = this.txtStudentFName;
+            this.txtStudentFName.Size = new System.Drawing.Size(457, 36);
+            this.txtStudentFName.TabIndex = 0;
+            this.txtStudentFName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NameKeyPress);
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(135)))), ((int)(((byte)(135)))));
+            this.gunaLabel1.Location = new System.Drawing.Point(472, 62);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(97, 26);
+            this.gunaLabel1.TabIndex = 1;
+            this.gunaLabel1.Text = "Last Name :";
+            // 
+            // txtStudentLName
+            // 
+            this.txtStudentLName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtStudentLName.BorderRadius = 5;
+            this.txtStudentLName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtStudentLName.DefaultText = "";
+            this.txtStudentLName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtStudentLName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtStudentLName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtStudentLName.DisabledState.Parent = this.txtStudentLName;
+            this.txtStudentLName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtStudentLName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtStudentLName.FocusedState.Parent = this.txtStudentLName;
+            this.txtStudentLName.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStudentLName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.txtStudentLName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtStudentLName.HoverState.Parent = this.txtStudentLName;
+            this.txtStudentLName.Location = new System.Drawing.Point(475, 100);
+            this.txtStudentLName.Margin = new System.Windows.Forms.Padding(6);
+            this.txtStudentLName.Name = "txtStudentLName";
+            this.txtStudentLName.PasswordChar = '\0';
+            this.txtStudentLName.PlaceholderText = "";
+            this.txtStudentLName.SelectedText = "";
+            this.txtStudentLName.ShadowDecoration.Parent = this.txtStudentLName;
+            this.txtStudentLName.Size = new System.Drawing.Size(224, 36);
+            this.txtStudentLName.TabIndex = 0;
+            this.txtStudentLName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NameKeyPress);
             // 
             // guna2Panel2
             // 
@@ -864,7 +905,7 @@
             this.txtParent1Email.Margin = new System.Windows.Forms.Padding(6);
             this.txtParent1Email.Name = "txtParent1Email";
             this.txtParent1Email.PasswordChar = '\0';
-            this.txtParent1Email.PlaceholderText = "";
+            this.txtParent1Email.PlaceholderText = "Optional";
             this.txtParent1Email.SelectedText = "";
             this.txtParent1Email.ShadowDecoration.Parent = this.txtParent1Email;
             this.txtParent1Email.Size = new System.Drawing.Size(223, 36);
@@ -890,7 +931,7 @@
             this.txtParent1Job.Margin = new System.Windows.Forms.Padding(6);
             this.txtParent1Job.Name = "txtParent1Job";
             this.txtParent1Job.PasswordChar = '\0';
-            this.txtParent1Job.PlaceholderText = "";
+            this.txtParent1Job.PlaceholderText = "Optional";
             this.txtParent1Job.SelectedText = "";
             this.txtParent1Job.ShadowDecoration.Parent = this.txtParent1Job;
             this.txtParent1Job.Size = new System.Drawing.Size(224, 36);
@@ -1046,7 +1087,7 @@
             this.txtParent2Job.Margin = new System.Windows.Forms.Padding(6);
             this.txtParent2Job.Name = "txtParent2Job";
             this.txtParent2Job.PasswordChar = '\0';
-            this.txtParent2Job.PlaceholderText = "";
+            this.txtParent2Job.PlaceholderText = "Optional";
             this.txtParent2Job.SelectedText = "";
             this.txtParent2Job.ShadowDecoration.Parent = this.txtParent2Job;
             this.txtParent2Job.Size = new System.Drawing.Size(224, 36);
@@ -1151,7 +1192,7 @@
             this.txtParent2Email.Margin = new System.Windows.Forms.Padding(6);
             this.txtParent2Email.Name = "txtParent2Email";
             this.txtParent2Email.PasswordChar = '\0';
-            this.txtParent2Email.PlaceholderText = "";
+            this.txtParent2Email.PlaceholderText = "Optional";
             this.txtParent2Email.SelectedText = "";
             this.txtParent2Email.ShadowDecoration.Parent = this.txtParent2Email;
             this.txtParent2Email.Size = new System.Drawing.Size(223, 36);
@@ -1203,46 +1244,6 @@
             this.btnAccept.Text = "Register";
             this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click_1);
             // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(135)))), ((int)(((byte)(135)))));
-            this.gunaLabel1.Location = new System.Drawing.Point(472, 62);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(97, 26);
-            this.gunaLabel1.TabIndex = 1;
-            this.gunaLabel1.Text = "Last Name :";
-            // 
-            // txtStudentLName
-            // 
-            this.txtStudentLName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtStudentLName.BorderRadius = 5;
-            this.txtStudentLName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtStudentLName.DefaultText = "";
-            this.txtStudentLName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtStudentLName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtStudentLName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtStudentLName.DisabledState.Parent = this.txtStudentLName;
-            this.txtStudentLName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtStudentLName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStudentLName.FocusedState.Parent = this.txtStudentLName;
-            this.txtStudentLName.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStudentLName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.txtStudentLName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStudentLName.HoverState.Parent = this.txtStudentLName;
-            this.txtStudentLName.Location = new System.Drawing.Point(475, 100);
-            this.txtStudentLName.Margin = new System.Windows.Forms.Padding(6);
-            this.txtStudentLName.Name = "txtStudentLName";
-            this.txtStudentLName.PasswordChar = '\0';
-            this.txtStudentLName.PlaceholderText = "";
-            this.txtStudentLName.SelectedText = "";
-            this.txtStudentLName.ShadowDecoration.Parent = this.txtStudentLName;
-            this.txtStudentLName.Size = new System.Drawing.Size(224, 36);
-            this.txtStudentLName.TabIndex = 0;
-            this.txtStudentLName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NameKeyPress);
-            // 
             // DetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1253,6 +1254,7 @@
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DetailForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
             this.Load += new System.EventHandler(this.Register_Load);
             this.guna2Panel1.ResumeLayout(false);
@@ -1335,5 +1337,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtParent2Email;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI2.WinForms.Guna2TextBox txtStudentLName;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
     }
 }

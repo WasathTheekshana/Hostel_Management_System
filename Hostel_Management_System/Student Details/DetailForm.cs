@@ -1,4 +1,5 @@
 ﻿using Hostel_Management_System.Database_Connection;
+using Hostel_Management_System.Popups;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +28,7 @@ namespace Hostel_Management_System
         {
             ComboStudentGender.SelectedIndex = 0;
             DateStudentRegisterDate.Value = DateTime.Today;
+            guna2ShadowForm1.SetShadowForm(this);
         }
 
         #region StudentValidate
@@ -40,7 +42,6 @@ namespace Hostel_Management_System
                 string.IsNullOrEmpty(txtStudentEmail.Text.Trim()) ||
                 string.IsNullOrEmpty(txtStudentContactNo.Text.Trim()) ||
                 string.IsNullOrEmpty(txtStudentAddress.Text.Trim()) ||
-                string.IsNullOrEmpty(txtStudentHomeNo.Text.Trim()) ||
                 string.IsNullOrEmpty(txtStudentKeyMoney.Text.Trim()) ||
                 DateBirthDay.Value == null ||
                 DateStudentRegisterDate.Value == null)
@@ -145,7 +146,7 @@ namespace Hostel_Management_System
 
         private void NameKeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && e.KeyChar != '\b' && e.KeyChar != '\t' && e.KeyChar != '\u007F')
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != '\b' && e.KeyChar != '\t' && e.KeyChar != '\u007F' && e.KeyChar != ' ')
             {
                 e.Handled = true;
             }
@@ -365,15 +366,13 @@ namespace Hostel_Management_System
             // Check if either Mother's/Guardian's or Father's/Guardian's fields are filled
             bool isMotherGuardianFilled = !string.IsNullOrWhiteSpace(txtParent1Name.Text) &&
                                           !string.IsNullOrWhiteSpace(txtParent1No.Text) &&
-                                          !string.IsNullOrWhiteSpace(txtParent1NIC.Text) &&
-                                          !string.IsNullOrWhiteSpace(txtParent1Job.Text) &&
-                                          !string.IsNullOrWhiteSpace(txtParent1Email.Text);
+                                          !string.IsNullOrWhiteSpace(txtParent1NIC.Text);
+
 
             bool isFatherGuardianFilled = !string.IsNullOrWhiteSpace(txtParent2Name.Text) &&
                                           !string.IsNullOrWhiteSpace(txtParent2No.Text) &&
-                                          !string.IsNullOrWhiteSpace(txtParent2NIC.Text) &&
-                                          !string.IsNullOrWhiteSpace(txtParent2Job.Text) &&
-                                          !string.IsNullOrWhiteSpace(txtParent2Email.Text);
+                                          !string.IsNullOrWhiteSpace(txtParent2NIC.Text); 
+     
 
             if (!isMotherGuardianFilled && !isFatherGuardianFilled)
             {
@@ -550,7 +549,12 @@ namespace Hostel_Management_System
                     {
                         conn.Close();
                     }
+
                 }
+
+                Base_Successfull_Popup successfull = new Base_Successfull_Popup();
+                successfull.setPopup("New student added successfully!");
+                successfull.ShowDialog();
             }
         }
         

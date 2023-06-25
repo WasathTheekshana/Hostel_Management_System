@@ -196,7 +196,6 @@
             // 
             this.btn_addNew.BorderColor = System.Drawing.Color.Transparent;
             this.btn_addNew.BorderRadius = 8;
-            this.btn_addNew.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btn_addNew.CheckedState.FillColor = System.Drawing.Color.White;
             this.btn_addNew.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
             this.btn_addNew.CheckedState.Image = global::Hostel_Management_System.Properties.Resources.add_checked_icon;
