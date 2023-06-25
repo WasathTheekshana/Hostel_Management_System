@@ -209,5 +209,21 @@ namespace Hostel_Management_System
         {
 
         }
+
+        private void EditUserPanel_MouseClick(object sender, MouseEventArgs e)
+        {
+            Users popup = new Users();
+
+            // Calculate the position for the popup form to be centered
+            int x = (Screen.PrimaryScreen.WorkingArea.Width - popup.Width) / 2;
+            int y = (Screen.PrimaryScreen.WorkingArea.Height - popup.Height) / 2;
+
+            // Set the position of the popup form
+            popup.StartPosition = FormStartPosition.Manual;
+            popup.Location = new Point(x, y);
+
+            // Show the popup form
+            popup.ShowDialog();
+        }
     }
 }
