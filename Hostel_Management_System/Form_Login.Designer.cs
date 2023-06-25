@@ -109,6 +109,7 @@
             this.gunaControlBox1.Size = new System.Drawing.Size(46, 29);
             this.gunaControlBox1.TabIndex = 0;
             this.gunaControlBox1.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.gunaControlBox1.Click += new System.EventHandler(this.gunaControlBox1_Click);
             // 
             // gunaDragControl1
             // 

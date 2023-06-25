@@ -84,6 +84,7 @@
             this.gunaControlBox1.Animated = true;
             this.gunaControlBox1.AnimationHoverSpeed = 0.07F;
             this.gunaControlBox1.AnimationSpeed = 0.03F;
+            this.gunaControlBox1.CustomClick = true;
             this.gunaControlBox1.IconColor = System.Drawing.Color.Black;
             this.gunaControlBox1.IconSize = 15F;
             this.gunaControlBox1.Location = new System.Drawing.Point(851, 0);

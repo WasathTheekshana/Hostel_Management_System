@@ -94,7 +94,9 @@ namespace Hostel_Management_System
 
         private void gunaControlBox1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Logout_Popup logout = new Logout_Popup();
+            logout.ShowDialog();
+
         }
 
         private void guna2PictureBox4_Click(object sender, EventArgs e)
