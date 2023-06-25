@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Hostel_Management_System.Database_Connection;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -31,7 +33,8 @@ namespace Hostel_Management_System
         private bool ValidateForm()
         {
             //Check if all fields are filled
-            if (string.IsNullOrEmpty(txtStudentName.Text.Trim()) ||
+            if (string.IsNullOrEmpty(txtStudentFName.Text.Trim()) ||
+                string.IsNullOrEmpty(txtStudentLName.Text.Trim()) ||
                 string.IsNullOrEmpty(txtStudentNIC.Text.Trim()) ||
                 string.IsNullOrEmpty(txtStudentBatch.Text.Trim()) ||
                 string.IsNullOrEmpty(txtStudentEmail.Text.Trim()) ||
@@ -210,11 +213,15 @@ namespace Hostel_Management_System
         #region detailsVariables
 
         #region studentDetailVariable
-
-        public string StudentName
+        public string StudentFName
         {
-            get { return txtStudentName.Text; }
-            set { txtStudentName.Text = value; }
+            get { return txtStudentFName.Text; }
+            set { txtStudentFName.Text = value; }
+        }
+        public string StudentLName
+        {
+            get { return txtStudentLName.Text; }
+            set { txtStudentLName.Text = value; }
         }
         public DateTime StudentBirthday
         {
@@ -448,9 +455,15 @@ namespace Hostel_Management_System
         {
             if (ValidateForm() && ValidateParentFields())
             {
+                Connection_Sting objConnectionString = new Connection_Sting();
+                string connStr = objConnectionString.getConnectionString();
+
+                SqlConnection conn = new SqlConnection(connStr);
+
                 MessageBox.Show("All validations passed. Form submitted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 student objstudent = new student
-                    (StudentName, 
+                    (StudentFName,
+                    StudentLName,
                     StudentBirthday, 
                     StudentNIC, 
                     StudentGender, 
@@ -462,13 +475,81 @@ namespace Hostel_Management_System
                     StudentRegisterDate, 
                     StudentKeyMoney);
 
+                string queryStudent = $"INSERT INTO student(NIC,FName,LName,Email,Address,MobileNo,gender,DOB,keymoney,Batch,HomeTeleNo, RegisterDate) VALUES('"+StudentNIC+ "','"+StudentFName+ "','"+StudentLName+"','"+StudentEmail+"','"+StudentAddress+"','"+StudentPhone+"','"+StudentGender+"','"+StudentBirthday+"','"+StudentKeyMoney+"','"+StudentBatch+"','"+ StudentHomePhone + "','"+StudentRegisterDate+"')";
+                SqlCommand commandStudent = new SqlCommand(queryStudent, conn);
+
+
+
+                try
+                {
+                    conn.Open();
+                    commandStudent.ExecuteNonQuery();
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+                finally
+                {
+                    conn.Close();
+                }
+
+
                 if (!string.IsNullOrEmpty(txtParent1NIC.Text))
                 {
                     parent objparent1 = new parent(objstudent, Parent1Name, Parent1ContactNo, Parent1NIC, Parent1Email, Parent1Job);
+
+                    string queryParent1 = "INSERT INTO guardian VALUES('" + Parent1NIC + "','" + Parent1Name + "','" + Parent1ContactNo + "','" + Parent1Email +"','"+Parent1Job+"')";
+                    SqlCommand commandParent1 = new SqlCommand(queryParent1, conn);
+
+                    string queryStudentParent1 = "INSERT INTO student_guardian values('"+StudentNIC+"','"+Parent1NIC+"')";
+                    SqlCommand commandStudentParent1 = new SqlCommand(queryStudentParent1, conn);
+
+                    try
+                    {
+                        conn.Open();
+                        commandParent1.ExecuteNonQuery();
+                        commandStudentParent1.ExecuteNonQuery();
+                    }
+
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 if(!string.IsNullOrEmpty(txtParent2NIC.Text))
                 {
                     parent objparent2 = new parent(objstudent, Parent2Name, Parent2ContactNo, Parent2NIC, Parent2Email, Parent2Job);
+
+                    string queryParent2 = "INSERT INTO guardian VALUES('"+Parent2NIC+"','" + Parent2Name + "','" + Parent2ContactNo + "','" + Parent2Email + "','" + Parent2Job + "')";
+                    SqlCommand commandParent2 = new SqlCommand(queryParent2, conn);
+
+                    string queryStudentParent2 = "INSERT INTO student_guardian values('" + StudentNIC + "','" + Parent2NIC + "')";
+                    SqlCommand commandStudentParent2 = new SqlCommand(queryStudentParent2, conn);
+
+                    try
+                    {
+                        conn.Open();
+                        commandParent2.ExecuteNonQuery();
+                        commandStudentParent2.ExecuteNonQuery();
+                    }
+
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
             }
         }
