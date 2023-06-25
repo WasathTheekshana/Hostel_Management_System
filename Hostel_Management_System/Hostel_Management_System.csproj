@@ -91,11 +91,6 @@
   <ItemGroup>
     <Compile Include="Database Connection\Connection_Sting.cs" />
     <Compile Include="Logged In Users\User_State.cs" />
-    <Compile Include="Student Details\DetailForm_StudentDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Student Details\DetailForm_StudentDetails.Designer.cs">
-      <DependentUpon>DetailForm_StudentDetails.cs</DependentUpon>
     <Compile Include="Form_AddNew.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,7 +177,6 @@
     <EmbeddedResource Include="Student Details\DetailForm.resx">
       <DependentUpon>DetailForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Hostel_Management_System_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
