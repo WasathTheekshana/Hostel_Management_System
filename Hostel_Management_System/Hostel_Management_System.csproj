@@ -68,10 +68,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI">
-      <HintPath>..\..\framwork\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2">
-      <HintPath>..\..\framwork\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -89,41 +89,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-
-    <Compile Include="Settings Details\AddNewUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Settings Details\AddNewUser.Designer.cs">
-      <DependentUpon>AddNewUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Settings Details\AddDeleteFoddItem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Settings Details\AddDeleteFoddItem.Designer.cs">
-      <DependentUpon>AddDeleteFoddItem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Settings Details\EditRental.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Settings Details\EditRental.Designer.cs">
-      <DependentUpon>EditRental.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Settings Details\UserProfile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Settings Details\UserProfile.Designer.cs">
-      <DependentUpon>UserProfile.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Settings Details\Users.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Settings Details\Users.Designer.cs">
-      <DependentUpon>Users.cs</DependentUpon>
-    </Compile>
-
     <Compile Include="Database Connection\Connection_Sting.cs" />
     <Compile Include="Logged In Users\User_State.cs" />
-
     <Compile Include="Student Details\DetailForm_StudentDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,28 +161,7 @@
     <Compile Include="Student Details\DetailForm.Designer.cs">
       <DependentUpon>DetailForm.cs</DependentUpon>
     </Compile>
-
-    <EmbeddedResource Include="Settings Details\AddDeleteFoddItem.resx">
-      <DependentUpon>AddDeleteFoddItem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Settings Details\AddNewUser.resx">
-      <DependentUpon>AddNewUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Settings Details\EditRental.resx">
-      <DependentUpon>EditRental.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Settings Details\UserProfile.resx">
-      <DependentUpon>UserProfile.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Settings Details\Users.resx">
-      <DependentUpon>Users.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Student Details\DetailForm_StudentDetails.resx">
-      <DependentUpon>DetailForm_StudentDetails.cs</DependentUpon>
-    </EmbeddedResource>
-
     <Compile Include="student.cs" />
-
 
     <EmbeddedResource Include="Form_AddNew.resx">
       <DependentUpon>Form_AddNew.cs</DependentUpon>
@@ -359,24 +305,6 @@
     <None Include="Resources\Group 51~21.png" />
   </ItemGroup>
   <ItemGroup>
-
-    <None Include="Resources\personGreenPlusIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\greenPlusIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\wasath3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\purplePen.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Line 6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\nikeSingPerson.png" />
-
     <None Include="Resources\plus-icon.png" />
   </ItemGroup>
   <ItemGroup>
@@ -384,7 +312,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Line blue.png" />
-
 
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

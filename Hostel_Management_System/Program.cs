@@ -18,7 +18,6 @@ namespace Hostel_Management_System
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new form_login());
 
-
         }
     }
 }

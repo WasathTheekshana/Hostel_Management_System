@@ -215,59 +215,6 @@
             this.gunaLabel4.Text = "Please login to the system with the credentials\r\nthat admin  has provided";
             this.gunaLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-
-            // txt_username
-            // 
-            this.txt_username.AcceptsTab = true;
-            this.txt_username.BackColor = System.Drawing.Color.Transparent;
-            this.txt_username.BaseColor = System.Drawing.Color.White;
-            this.txt_username.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
-            this.txt_username.BorderSize = 1;
-            this.txt_username.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_username.FocusedBaseColor = System.Drawing.Color.White;
-            this.txt_username.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txt_username.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txt_username.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
-            this.txt_username.Location = new System.Drawing.Point(669, 261);
-            this.txt_username.Name = "txt_username";
-            this.txt_username.PasswordChar = '\0';
-            this.txt_username.Radius = 8;
-            this.txt_username.SelectedText = "";
-            this.txt_username.Size = new System.Drawing.Size(372, 46);
-            this.txt_username.TabIndex = 10;
-            this.txt_username.Text = "Enter the username";
-            this.txt_username.TextOffsetX = 20;
-            this.txt_username.TextChanged += new System.EventHandler(this.txt_username_TextChanged);
-            this.txt_username.Enter += new System.EventHandler(this.txt_username_Enter);
-            this.txt_username.Leave += new System.EventHandler(this.txt_username_Leave);
-            // 
-            // txt_password
-            // 
-            this.txt_password.AcceptsTab = true;
-            this.txt_password.BackColor = System.Drawing.Color.Transparent;
-            this.txt_password.BaseColor = System.Drawing.Color.White;
-            this.txt_password.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
-            this.txt_password.BorderSize = 1;
-            this.txt_password.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_password.FocusedBaseColor = System.Drawing.Color.White;
-            this.txt_password.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txt_password.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txt_password.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
-            this.txt_password.Location = new System.Drawing.Point(669, 331);
-            this.txt_password.Name = "txt_password";
-            this.txt_password.PasswordChar = '\0';
-            this.txt_password.Radius = 8;
-            this.txt_password.SelectedText = "";
-            this.txt_password.Size = new System.Drawing.Size(372, 46);
-            this.txt_password.TabIndex = 11;
-            this.txt_password.Text = "password";
-            this.txt_password.TextOffsetX = 20;
-            this.txt_password.Enter += new System.EventHandler(this.txt_password_Enter);
-            this.txt_password.Leave += new System.EventHandler(this.txt_password_Leave);
-            // 
-
             // btn_login
             // 
             this.btn_login.Animated = true;
