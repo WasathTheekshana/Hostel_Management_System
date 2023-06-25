@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Hostel_Management_System
 {
-    public partial class DetailForm_ParentDetails : Form
+    public partial class wrong_popup : succussfull_popup
     {
-        public DetailForm_ParentDetails()
+        public wrong_popup()
         {
             InitializeComponent();
         }

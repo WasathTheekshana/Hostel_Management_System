@@ -45,12 +45,12 @@
             this.gunaTransfarantPictureBox1 = new Guna.UI.WinForms.GunaTransfarantPictureBox();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
-            this.txt_username = new Guna.UI.WinForms.GunaTextBox();
-            this.txt_password = new Guna.UI.WinForms.GunaTextBox();
             this.btn_login = new Guna.UI.WinForms.GunaButton();
             this.err_username = new System.Windows.Forms.ErrorProvider(this.components);
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.gunaDragControl3 = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.txt_username = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_password = new Guna.UI2.WinForms.Guna2TextBox();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
@@ -135,7 +135,6 @@
             this.gunaLabel1.Size = new System.Drawing.Size(347, 106);
             this.gunaLabel1.TabIndex = 5;
             this.gunaLabel1.Text = "Welcome!";
-            this.gunaLabel1.Click += new System.EventHandler(this.gunaLabel1_Click);
             // 
             // gunaLabel2
             // 
@@ -147,7 +146,6 @@
             this.gunaLabel2.Size = new System.Drawing.Size(435, 51);
             this.gunaLabel2.TabIndex = 6;
             this.gunaLabel2.Text = "Hostel Management System";
-            this.gunaLabel2.Click += new System.EventHandler(this.gunaLabel2_Click);
             // 
             // gunaPictureBox1
             // 
@@ -181,7 +179,6 @@
             this.gunaPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.gunaPictureBox3.TabIndex = 4;
             this.gunaPictureBox3.TabStop = false;
-            this.gunaPictureBox3.Click += new System.EventHandler(this.gunaPictureBox3_Click);
             // 
             // gunaTransfarantPictureBox1
             // 
@@ -194,7 +191,6 @@
             this.gunaTransfarantPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaTransfarantPictureBox1.TabIndex = 7;
             this.gunaTransfarantPictureBox1.TabStop = false;
-            this.gunaTransfarantPictureBox1.Click += new System.EventHandler(this.gunaTransfarantPictureBox1_Click);
             // 
             // gunaLabel3
             // 
@@ -219,6 +215,7 @@
             this.gunaLabel4.Text = "Please login to the system with the credentials\r\nthat admin  has provided";
             this.gunaLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+
             // txt_username
             // 
             this.txt_username.AcceptsTab = true;
@@ -270,6 +267,7 @@
             this.txt_password.Enter += new System.EventHandler(this.txt_password_Enter);
             this.txt_password.Leave += new System.EventHandler(this.txt_password_Leave);
             // 
+
             // btn_login
             // 
             this.btn_login.Animated = true;
@@ -322,17 +320,78 @@
             // 
             this.gunaDragControl3.TargetControl = this.gunaPictureBox2;
             // 
+            // txt_username
+            // 
+            this.txt_username.BackColor = System.Drawing.Color.Transparent;
+            this.txt_username.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
+            this.txt_username.BorderRadius = 8;
+            this.txt_username.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_username.DefaultText = "";
+            this.txt_username.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_username.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_username.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_username.DisabledState.Parent = this.txt_username;
+            this.txt_username.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_username.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txt_username.FocusedState.Parent = this.txt_username;
+            this.txt_username.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
+            this.txt_username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_username.HoverState.Parent = this.txt_username;
+            this.txt_username.Location = new System.Drawing.Point(669, 261);
+            this.txt_username.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_username.Name = "txt_username";
+            this.txt_username.PasswordChar = '\0';
+            this.txt_username.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
+            this.txt_username.PlaceholderText = "Enter the username";
+            this.txt_username.SelectedText = "";
+            this.txt_username.ShadowDecoration.Parent = this.txt_username;
+            this.txt_username.Size = new System.Drawing.Size(372, 46);
+            this.txt_username.TabIndex = 14;
+            this.txt_username.TextOffset = new System.Drawing.Point(20, 0);
+            // 
+            // txt_password
+            // 
+            this.txt_password.BackColor = System.Drawing.Color.Transparent;
+            this.txt_password.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
+            this.txt_password.BorderRadius = 8;
+            this.txt_password.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_password.DefaultText = "";
+            this.txt_password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_password.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_password.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_password.DisabledState.Parent = this.txt_password;
+            this.txt_password.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_password.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txt_password.FocusedState.Parent = this.txt_password;
+            this.txt_password.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
+            this.txt_password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_password.HoverState.Parent = this.txt_password;
+            this.txt_password.Location = new System.Drawing.Point(669, 337);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '*';
+            this.txt_password.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
+            this.txt_password.PlaceholderText = "Enter the password";
+            this.txt_password.SelectedText = "";
+            this.txt_password.ShadowDecoration.Parent = this.txt_password;
+            this.txt_password.Size = new System.Drawing.Size(372, 46);
+            this.txt_password.TabIndex = 15;
+            this.txt_password.TextOffset = new System.Drawing.Point(20, 0);
+            this.txt_password.UseSystemPasswordChar = true;
+            // 
             // form_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1150, 650);
+            this.Controls.Add(this.txt_password);
+            this.Controls.Add(this.txt_username);
             this.Controls.Add(this.gunaPanel1);
             this.Controls.Add(this.gunaLabel5);
             this.Controls.Add(this.btn_login);
-            this.Controls.Add(this.txt_password);
-            this.Controls.Add(this.txt_username);
             this.Controls.Add(this.gunaLabel4);
             this.Controls.Add(this.gunaLabel3);
             this.Controls.Add(this.gunaTransfarantPictureBox1);
@@ -348,7 +407,6 @@
             this.Name = "form_login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.form_login_Load);
             this.gunaPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).EndInit();
@@ -377,12 +435,12 @@
         private Guna.UI.WinForms.GunaTransfarantPictureBox gunaTransfarantPictureBox1;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
-        private Guna.UI.WinForms.GunaTextBox txt_username;
-        private Guna.UI.WinForms.GunaTextBox txt_password;
         private Guna.UI.WinForms.GunaButton btn_login;
         private System.Windows.Forms.ErrorProvider err_username;
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
         private Guna.UI.WinForms.GunaDragControl gunaDragControl3;
+        private Guna.UI2.WinForms.Guna2TextBox txt_username;
+        private Guna.UI2.WinForms.Guna2TextBox txt_password;
     }
 }
 
