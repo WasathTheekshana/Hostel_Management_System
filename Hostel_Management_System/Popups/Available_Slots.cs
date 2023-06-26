@@ -24,7 +24,7 @@ namespace Hostel_Management_System.Popups
             Connection_Sting objConnectionString = new Connection_Sting();
             string connStr = objConnectionString.getConnectionString();
 
-            string queryGround = @"SELECT s.Room_NO AS Room, s.slotID AS [Slot Number]
+            string queryGround = @"SELECT s.Room_NO AS Room, s.slotID AS [Slot ID]
                 FROM slot s
                 LEFT JOIN student_slot ss ON s.slotID = ss.slotID
                 WHERE ss.slotID IS NULL AND s.Floor = 'g'";
@@ -41,7 +41,7 @@ namespace Hostel_Management_System.Popups
 
                     DataTable dtg = dsg.Tables["unassigned_slots"];
                     dtg.Columns["Room"].ColumnName = "Room";
-                    dtg.Columns["Slot Number"].ColumnName = "Slot Number";
+                    dtg.Columns["Slot ID"].ColumnName = "Slot ID";
 
                     availableSlotDataGrid.DataSource = dtg;
                 }
@@ -62,7 +62,7 @@ namespace Hostel_Management_System.Popups
             Connection_Sting objConnectionString = new Connection_Sting();
             string connStr = objConnectionString.getConnectionString();
 
-            string queryFirst = @"SELECT s.Room_NO AS Room, s.slotID AS [Slot Number]
+            string queryFirst = @"SELECT s.Room_NO AS Room, s.slotID AS [Slot ID]
                 FROM slot s
                 LEFT JOIN student_slot ss ON s.slotID = ss.slotID
                 WHERE ss.slotID IS NULL AND s.Floor = '1'";
@@ -79,7 +79,7 @@ namespace Hostel_Management_System.Popups
 
                     DataTable dt1 = ds1.Tables["unassigned_slots"];
                     dt1.Columns["Room"].ColumnName = "Room";
-                    dt1.Columns["Slot Number"].ColumnName = "Slot Number";
+                    dt1.Columns["Slot ID"].ColumnName = "Slot ID";
 
                     availableSlotDataGrid.DataSource = dt1;
                 }
@@ -99,7 +99,7 @@ namespace Hostel_Management_System.Popups
             Connection_Sting objConnectionString = new Connection_Sting();
             string connStr = objConnectionString.getConnectionString();
 
-            string querySecond = @"SELECT s.Room_NO AS Room, s.slotID AS [Slot Number]
+            string querySecond = @"SELECT s.Room_NO AS Room, s.slotID AS [Slot ID]
                 FROM slot s
                 LEFT JOIN student_slot ss ON s.slotID = ss.slotID
                 WHERE ss.slotID IS NULL AND s.Floor = '2'";
@@ -116,7 +116,7 @@ namespace Hostel_Management_System.Popups
 
                     DataTable dt2 = ds2.Tables["unassigned_slots"];
                     dt2.Columns["Room"].ColumnName = "Room";
-                    dt2.Columns["Slot Number"].ColumnName = "Slot Number";
+                    dt2.Columns["Slot ID"].ColumnName = "Slot ID";
 
                     availableSlotDataGrid.DataSource = dt2;
                 }
@@ -179,5 +179,18 @@ namespace Hostel_Management_System.Popups
 
         }
 
+        private void availableSlotDataGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < availableSlotDataGrid.Rows.Count)
+            {
+                DataGridViewRow selectedRow = availableSlotDataGrid.Rows[e.RowIndex];
+                string slotID = selectedRow.Cells["Slot ID"].Value.ToString();
+
+                Room_Available objroomAvailable = new Room_Available();
+                objroomAvailable.getSlotID(slotID);
+                objroomAvailable.ShowDialog();
+                this.Close();
+            }
+        }
     }
 }

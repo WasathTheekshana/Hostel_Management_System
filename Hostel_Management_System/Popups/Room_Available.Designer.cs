@@ -35,7 +35,8 @@
             this.txt_username = new Guna.UI2.WinForms.Guna2TextBox();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.btn_login = new Guna.UI.WinForms.GunaButton();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_slotID = new System.Windows.Forms.Label();
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.SuspendLayout();
             // 
             // gunaElipse1
@@ -49,9 +50,9 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
             this.label10.Location = new System.Drawing.Point(17, 15);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(116, 37);
+            this.label10.Size = new System.Drawing.Size(85, 37);
             this.label10.TabIndex = 19;
-            this.label10.Text = "Room No:";
+            this.label10.Text = "Slot ID:";
             // 
             // label1
             // 
@@ -123,6 +124,7 @@
             this.gunaButton1.Text = "Cancel";
             this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaButton1.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
             // btn_login
             // 
@@ -152,17 +154,18 @@
             this.btn_login.Text = "Add User";
             this.btn_login.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_login.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
-            // label2
+            // lbl_slotID
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
-            this.label2.Location = new System.Drawing.Point(132, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 37);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "101";
+            this.lbl_slotID.AutoSize = true;
+            this.lbl_slotID.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_slotID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
+            this.lbl_slotID.Location = new System.Drawing.Point(98, 15);
+            this.lbl_slotID.Name = "lbl_slotID";
+            this.lbl_slotID.Size = new System.Drawing.Size(44, 37);
+            this.lbl_slotID.TabIndex = 29;
+            this.lbl_slotID.Text = "101";
             // 
             // Room_Available
             // 
@@ -170,7 +173,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(424, 236);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_slotID);
             this.Controls.Add(this.gunaButton1);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.label1);
@@ -178,7 +181,9 @@
             this.Controls.Add(this.label10);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Room_Available";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Room_Available";
+            this.Load += new System.EventHandler(this.Room_Available_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,6 +197,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_username;
         private Guna.UI.WinForms.GunaButton gunaButton1;
         private Guna.UI.WinForms.GunaButton btn_login;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_slotID;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
     }
 }
