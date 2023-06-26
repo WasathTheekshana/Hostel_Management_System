@@ -34,5 +34,17 @@ namespace Hostel_Management_System.Properties {
                 this["rental"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool rentalAdd {
+            get {
+                return ((bool)(this["rentalAdd"]));
+            }
+            set {
+                this["rentalAdd"] = value;
+            }
+        }
     }
 }

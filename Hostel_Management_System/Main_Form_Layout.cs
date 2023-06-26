@@ -1,10 +1,12 @@
 ﻿using Guna.UI2.WinForms;
+using Hostel_Management_System.Database_Connection;
 using Hostel_Management_System.Logged_In_Users;
 using Hostel_Management_System.Popups;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
@@ -48,6 +50,44 @@ namespace Hostel_Management_System
 
         private void Main_Form_Layout_Load(object sender, EventArgs e)
         {
+            DateTime currentDate = DateTime.Today;
+            int dayOfMonth = currentDate.Day;
+
+            if (dayOfMonth == 1)
+            {
+                if (!Properties.Settings.Default.rentalAdd)
+                {
+                    try
+                    {
+                        Connection_Sting objConnectionString = new Connection_Sting();
+                        string connStr = objConnectionString.getConnectionString();
+
+                        using (SqlConnection conn = new SqlConnection(connStr))
+                        {
+                            conn.Open();
+
+                            string query = @"UPDATE student
+                                SET rental = rental + 1000
+                                WHERE NIC IN (SELECT NIC FROM student_slot)";
+
+                            SqlCommand command = new SqlCommand(query, conn);
+                            command.ExecuteNonQuery();
+
+                            Properties.Settings.Default.rentalAdd = true;
+                            Properties.Settings.Default.Save();
+
+                            MessageBox.Show("Rentals updated successfully.");
+                        }
+                        Properties.Settings.Default.rentalAdd = true;
+                        Properties.Settings.Default.Save();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error updating rentals: " + ex.Message);
+                    }
+                }
+            }
+
             txt_logged_user.Text = loggedInUser;
             lbl_privi.Text = userPrivi;
 
