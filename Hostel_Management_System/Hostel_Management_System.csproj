@@ -66,6 +66,9 @@
   <PropertyGroup>
     <ManifestKeyFile>Hostel_Management_System_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI">
       <HintPath>..\..\..\wnforms\guna\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
@@ -416,6 +419,7 @@
     <None Include="Resources\addadsfad.png" />
     <None Include="Resources\editdddd1.png" />
     <None Include="Resources\foodPopUp.png" />
+    <Content Include="Logo.ico" />
     <Content Include="Resources\FoodVector.png" />
     <None Include="Resources\success.png" />
     <None Include="Resources\success_3.png" />
