@@ -18,6 +18,11 @@ namespace Hostel_Management_System.Popups
         {
             this.description = description;
         }
+
+        public void setFoodImage()
+        {
+            guna2PictureBox1.Image = Properties.Resources.foodPopUp;
+        }
         public Base_Successfull_Popup()
         {
             InitializeComponent();
