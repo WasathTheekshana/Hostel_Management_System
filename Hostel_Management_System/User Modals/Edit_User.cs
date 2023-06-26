@@ -67,12 +67,15 @@ namespace Hostel_Management_System.User_Modals
 
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           
             if (e.ColumnIndex == guna2DataGridView1.Columns["Delete"].Index && e.RowIndex >= 0)
             {
-                string username = guna2DataGridView1.Rows[e.RowIndex].Cells["Username"].Value.ToString(); 
-                DeleteUser(username);
-                RefreshDataGridView();
+                DataGridViewCell cell = guna2DataGridView1.Rows[e.RowIndex].Cells["Username"];
+                if (cell.Value != null)
+                {
+                    string username = cell.Value.ToString();
+                    DeleteUser(username);
+                    RefreshDataGridView();
+                }
             }
         }
 
