@@ -75,7 +75,7 @@ namespace Hostel_Management_System.User_Modals
             connection.Open();
 
             // Retrieve only "type" and "price" columns from the "food" table
-            string query = "SELECT type AS 'Food Item', price AS 'Price (Rs.)' FROM food";
+            string query = "SELECT type AS 'Food Item', meal AS 'Meal', price AS 'Price (Rs.)' FROM food";
             SqlCommand command = new SqlCommand(query, connection);
             SqlDataReader reader = command.ExecuteReader();
 
@@ -116,24 +116,27 @@ namespace Hostel_Management_System.User_Modals
             if (e.RowIndex >= 0 && guna2DataGridView1.Columns[e.ColumnIndex].Name == "Delete")
             {
                 object foodItemValue = guna2DataGridView1.Rows[e.RowIndex].Cells["Food Item"].Value;
+                object mealValue = guna2DataGridView1.Rows[e.RowIndex].Cells["Meal"].Value;
 
-                if (foodItemValue != null && foodItemValue != DBNull.Value)
+                if (foodItemValue != null && mealValue != null && foodItemValue != DBNull.Value && mealValue != DBNull.Value)
                 {
                     string foodItem = foodItemValue.ToString();
-                    DeleteFoodItem(foodItem);
+                    string meal = mealValue.ToString();
+                    DeleteFoodItem(foodItem, meal);
                     RefreshDataGridView();
                 }
             }
         }
 
-        private void DeleteFoodItem(string foodItem)
+        private void DeleteFoodItem(string foodItem, string meal)
         {
             Connection_Sting objConnectionString = new Connection_Sting();
             string connStr = objConnectionString.getConnectionString();
             SqlConnection conn = new SqlConnection(connStr);
-            string deleteQuery = "DELETE FROM food WHERE type = @FoodItem";
+            string deleteQuery = "DELETE FROM food WHERE type = @FoodItem AND meal = @Meal";
             SqlCommand deleteCommand = new SqlCommand(deleteQuery, conn);
             deleteCommand.Parameters.AddWithValue("@FoodItem", foodItem);
+            deleteCommand.Parameters.AddWithValue("@Meal", meal);
             conn.Open();
             deleteCommand.ExecuteNonQuery();
             conn.Close();
@@ -146,7 +149,7 @@ namespace Hostel_Management_System.User_Modals
 
             using (SqlConnection conn = new SqlConnection(connStr))
             {
-                string query = "SELECT type AS 'Food Item', price AS 'Price (Rs.)' FROM food";
+                string query = "SELECT type AS 'Food Item', meal AS 'Meal', price AS 'Price (Rs.)' FROM food";
 
                 try
                 {
@@ -167,7 +170,6 @@ namespace Hostel_Management_System.User_Modals
 
 
 
-
         private void btn_addFood_item_Click(object sender, EventArgs e)
         {
             string foodName = txt_FoodName.Text;
@@ -184,7 +186,8 @@ namespace Hostel_Management_System.User_Modals
             {
                 Connection_Sting conStr = new Connection_Sting();
 
-                string query = "INSERT INTO food VALUES('" + foodName + "','" + meal + "','" + foodPrice + "')";
+               // string query = "INSERT INTO food VALUES('" + foodName + "','" + meal + "','" + foodPrice + "')";
+                string query = "INSERT INTO food (type, meal, price) VALUES('" + foodName + "','" + meal + "','" + foodPrice + "')";
 
                 SqlConnection conn = new SqlConnection(conStr.getConnectionString());
                 SqlCommand cmd = new SqlCommand(query, conn);
