@@ -29,46 +29,46 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_StudentList));
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblCurrentStudentCount = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.secondUnderLine = new Guna.UI2.WinForms.Guna2PictureBox();
             this.secondTab = new Guna.UI.WinForms.GunaLabel();
+            this.FirstUnderLine = new Guna.UI2.WinForms.Guna2PictureBox();
             this.firstTab = new Guna.UI.WinForms.GunaLabel();
+            this.groundUnderLine = new Guna.UI2.WinForms.Guna2PictureBox();
             this.groundTab = new Guna.UI.WinForms.GunaLabel();
+            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.secondUnderLine = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.FirstUnderLine = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.groundUnderLine = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtStudentSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ShadowPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2ShadowPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.guna2ShadowPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondUnderLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FirstUnderLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groundUnderLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaElipse1
@@ -114,6 +114,17 @@
             this.gunaLabel1.TabIndex = 2;
             this.gunaLabel1.Text = "Current Student Count";
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::Hostel_Management_System.Properties.Resources.Group_51_21;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(38, 40);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(31, 24);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 1;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // guna2ShadowPanel2
             // 
             this.guna2ShadowPanel2.BackColor = System.Drawing.Color.Transparent;
@@ -137,6 +148,18 @@
             this.guna2ShadowPanel2.MouseLeave += new System.EventHandler(this.guna2ShadowPanel2_MouseLeave);
             this.guna2ShadowPanel2.MouseHover += new System.EventHandler(this.guna2ShadowPanel2_MouseHover);
             // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.Image = global::Hostel_Management_System.Properties.Resources.plus_icon;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(336, 93);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
+            this.guna2PictureBox3.Size = new System.Drawing.Size(22, 34);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 2;
+            this.guna2PictureBox3.TabStop = false;
+            this.guna2PictureBox3.Click += new System.EventHandler(this.guna2PictureBox3_Click);
+            // 
             // gunaLabel3
             // 
             this.gunaLabel3.AutoSize = true;
@@ -158,6 +181,17 @@
             this.gunaLabel4.Size = new System.Drawing.Size(179, 34);
             this.gunaLabel4.TabIndex = 2;
             this.gunaLabel4.Text = "Add New Student";
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = global::Hostel_Management_System.Properties.Resources.Group_51_21;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(37, 40);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
+            this.guna2PictureBox2.Size = new System.Drawing.Size(31, 24);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 1;
+            this.guna2PictureBox2.TabStop = false;
             // 
             // gunaLabel5
             // 
@@ -197,48 +231,48 @@
             this.guna2DataGridView1.AllowUserToAddRows = false;
             this.guna2DataGridView1.AllowUserToDeleteRows = false;
             this.guna2DataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(20);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(20);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.guna2DataGridView1.ColumnHeadersHeight = 70;
             this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle7;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(48, 100);
             this.guna2DataGridView1.MultiSelect = false;
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(20);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(20);
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowTemplate.Height = 30;
             this.guna2DataGridView1.RowTemplate.ReadOnly = true;
@@ -270,6 +304,18 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.guna2DataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellClick);
             // 
+            // secondUnderLine
+            // 
+            this.secondUnderLine.Image = global::Hostel_Management_System.Properties.Resources.Line_blue;
+            this.secondUnderLine.Location = new System.Drawing.Point(298, 60);
+            this.secondUnderLine.Name = "secondUnderLine";
+            this.secondUnderLine.ShadowDecoration.Parent = this.secondUnderLine;
+            this.secondUnderLine.Size = new System.Drawing.Size(110, 20);
+            this.secondUnderLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.secondUnderLine.TabIndex = 1;
+            this.secondUnderLine.TabStop = false;
+            this.secondUnderLine.Visible = false;
+            // 
             // secondTab
             // 
             this.secondTab.AutoSize = true;
@@ -281,6 +327,18 @@
             this.secondTab.TabIndex = 0;
             this.secondTab.Text = "Second Floor";
             this.secondTab.Click += new System.EventHandler(this.secondTab_Click);
+            // 
+            // FirstUnderLine
+            // 
+            this.FirstUnderLine.Image = global::Hostel_Management_System.Properties.Resources.Line_blue;
+            this.FirstUnderLine.Location = new System.Drawing.Point(178, 60);
+            this.FirstUnderLine.Name = "FirstUnderLine";
+            this.FirstUnderLine.ShadowDecoration.Parent = this.FirstUnderLine;
+            this.FirstUnderLine.Size = new System.Drawing.Size(87, 20);
+            this.FirstUnderLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.FirstUnderLine.TabIndex = 1;
+            this.FirstUnderLine.TabStop = false;
+            this.FirstUnderLine.Visible = false;
             // 
             // firstTab
             // 
@@ -294,6 +352,17 @@
             this.firstTab.Text = "First Floor";
             this.firstTab.Click += new System.EventHandler(this.firstTab_Click);
             // 
+            // groundUnderLine
+            // 
+            this.groundUnderLine.Image = global::Hostel_Management_System.Properties.Resources.Line_blue;
+            this.groundUnderLine.Location = new System.Drawing.Point(45, 60);
+            this.groundUnderLine.Name = "groundUnderLine";
+            this.groundUnderLine.ShadowDecoration.Parent = this.groundUnderLine;
+            this.groundUnderLine.Size = new System.Drawing.Size(109, 20);
+            this.groundUnderLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.groundUnderLine.TabIndex = 1;
+            this.groundUnderLine.TabStop = false;
+            // 
             // groundTab
             // 
             this.groundTab.AutoSize = true;
@@ -305,6 +374,18 @@
             this.groundTab.TabIndex = 0;
             this.groundTab.Text = "Ground Floor";
             this.groundTab.Click += new System.EventHandler(this.groundTab_Click);
+            // 
+            // guna2PictureBox7
+            // 
+            this.guna2PictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox7.Image")));
+            this.guna2PictureBox7.Location = new System.Drawing.Point(48, 60);
+            this.guna2PictureBox7.Name = "guna2PictureBox7";
+            this.guna2PictureBox7.ShadowDecoration.Parent = this.guna2PictureBox7;
+            this.guna2PictureBox7.Size = new System.Drawing.Size(747, 21);
+            this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox7.TabIndex = 2;
+            this.guna2PictureBox7.TabStop = false;
             // 
             // gunaLabel7
             // 
@@ -322,53 +403,6 @@
             // guna2Elipse2
             // 
             this.guna2Elipse2.TargetControl = this.guna2DataGridView1;
-            // 
-            // secondUnderLine
-            // 
-            this.secondUnderLine.Image = global::Hostel_Management_System.Properties.Resources.Line_blue;
-            this.secondUnderLine.Location = new System.Drawing.Point(298, 60);
-            this.secondUnderLine.Name = "secondUnderLine";
-            this.secondUnderLine.ShadowDecoration.Parent = this.secondUnderLine;
-            this.secondUnderLine.Size = new System.Drawing.Size(110, 20);
-            this.secondUnderLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.secondUnderLine.TabIndex = 1;
-            this.secondUnderLine.TabStop = false;
-            this.secondUnderLine.Visible = false;
-            // 
-            // FirstUnderLine
-            // 
-            this.FirstUnderLine.Image = global::Hostel_Management_System.Properties.Resources.Line_blue;
-            this.FirstUnderLine.Location = new System.Drawing.Point(178, 60);
-            this.FirstUnderLine.Name = "FirstUnderLine";
-            this.FirstUnderLine.ShadowDecoration.Parent = this.FirstUnderLine;
-            this.FirstUnderLine.Size = new System.Drawing.Size(87, 20);
-            this.FirstUnderLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.FirstUnderLine.TabIndex = 1;
-            this.FirstUnderLine.TabStop = false;
-            this.FirstUnderLine.Visible = false;
-            // 
-            // groundUnderLine
-            // 
-            this.groundUnderLine.Image = global::Hostel_Management_System.Properties.Resources.Line_blue;
-            this.groundUnderLine.Location = new System.Drawing.Point(45, 60);
-            this.groundUnderLine.Name = "groundUnderLine";
-            this.groundUnderLine.ShadowDecoration.Parent = this.groundUnderLine;
-            this.groundUnderLine.Size = new System.Drawing.Size(109, 20);
-            this.groundUnderLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.groundUnderLine.TabIndex = 1;
-            this.groundUnderLine.TabStop = false;
-            // 
-            // guna2PictureBox7
-            // 
-            this.guna2PictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox7.Image")));
-            this.guna2PictureBox7.Location = new System.Drawing.Point(48, 60);
-            this.guna2PictureBox7.Name = "guna2PictureBox7";
-            this.guna2PictureBox7.ShadowDecoration.Parent = this.guna2PictureBox7;
-            this.guna2PictureBox7.Size = new System.Drawing.Size(747, 21);
-            this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox7.TabIndex = 2;
-            this.guna2PictureBox7.TabStop = false;
             // 
             // txtStudentSearch
             // 
@@ -403,40 +437,6 @@
             this.txtStudentSearch.TabIndex = 3;
             this.txtStudentSearch.TextOffset = new System.Drawing.Point(10, 0);
             // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.Image = global::Hostel_Management_System.Properties.Resources.plus_icon;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(336, 93);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
-            this.guna2PictureBox3.Size = new System.Drawing.Size(22, 34);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 2;
-            this.guna2PictureBox3.TabStop = false;
-            this.guna2PictureBox3.Click += new System.EventHandler(this.guna2PictureBox3_Click);
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = global::Hostel_Management_System.Properties.Resources.Group_51_21;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(37, 40);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(31, 24);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 1;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::Hostel_Management_System.Properties.Resources.Group_51_21;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(38, 40);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(31, 24);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 1;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // Form_StudentList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -455,8 +455,11 @@
             this.Load += new System.EventHandler(this.Form_StudentList_Load);
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2ShadowPanel2.ResumeLayout(false);
             this.guna2ShadowPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.guna2ShadowPanel3.ResumeLayout(false);
             this.guna2ShadowPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
@@ -464,9 +467,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.FirstUnderLine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groundUnderLine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

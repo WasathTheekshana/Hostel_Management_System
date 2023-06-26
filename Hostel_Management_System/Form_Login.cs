@@ -31,6 +31,7 @@ namespace Hostel_Management_System
             User_State userState = new User_State();
             Base_Successfull_Popup logInSuccessfull = new Base_Successfull_Popup();
             Base_Error_Popup error = new Base_Error_Popup();
+            Form_StudentList studentList = new Form_StudentList();
             
 
 
@@ -97,9 +98,10 @@ namespace Hostel_Management_System
                         {
                             userPrivi = "User";
                         }
-                    mainForm.setUserName(userName, userPrivi);
-                    mainForm.Show();
+                        mainForm.setUserName(userName, userPrivi);
+                        mainForm.Show();
                         this.Hide();
+                        
                     }
                     if (!isAuthenticated)
                     {
@@ -119,6 +121,11 @@ namespace Hostel_Management_System
                 }
             }
             
+        }
+
+        private void gunaTransfarantPictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
