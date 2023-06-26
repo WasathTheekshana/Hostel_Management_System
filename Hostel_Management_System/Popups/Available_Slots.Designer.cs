@@ -47,6 +47,7 @@
             this.groundUnderLine = new Guna.UI2.WinForms.Guna2PictureBox();
             this.groundTab = new Guna.UI.WinForms.GunaLabel();
             this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.availableSlotDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondUnderLine)).BeginInit();
@@ -265,6 +266,10 @@
             this.guna2PictureBox7.TabIndex = 42;
             this.guna2PictureBox7.TabStop = false;
             // 
+            // gunaDragControl1
+            // 
+            this.gunaDragControl1.TargetControl = this;
+            // 
             // Available_Slots
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,5 +319,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox groundUnderLine;
         private Guna.UI.WinForms.GunaLabel groundTab;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox7;
+        private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
     }
 }

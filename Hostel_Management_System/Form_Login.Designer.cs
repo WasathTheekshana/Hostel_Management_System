@@ -73,7 +73,7 @@
             this.gunaPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(214, 29);
-            this.gunaPanel1.TabIndex = 0;
+            this.gunaPanel1.TabIndex = 4;
             // 
             // gunaControlBox2
             // 
@@ -107,7 +107,7 @@
             this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
             this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
             this.gunaControlBox1.Size = new System.Drawing.Size(46, 29);
-            this.gunaControlBox1.TabIndex = 0;
+            this.gunaControlBox1.TabIndex = 1;
             this.gunaControlBox1.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
             this.gunaControlBox1.Click += new System.EventHandler(this.gunaControlBox1_Click);
             // 
@@ -120,7 +120,7 @@
             this.gunaPanel2.Location = new System.Drawing.Point(0, 0);
             this.gunaPanel2.Name = "gunaPanel2";
             this.gunaPanel2.Size = new System.Drawing.Size(714, 29);
-            this.gunaPanel2.TabIndex = 3;
+            this.gunaPanel2.TabIndex = 5;
             // 
             // gunaDragControl2
             // 
@@ -260,7 +260,7 @@
             this.gunaLabel5.Location = new System.Drawing.Point(713, 499);
             this.gunaLabel5.Name = "gunaLabel5";
             this.gunaLabel5.Size = new System.Drawing.Size(293, 44);
-            this.gunaLabel5.TabIndex = 13;
+            this.gunaLabel5.TabIndex = 9;
             this.gunaLabel5.Text = "*Forget your password?\r\nPlease contact the Admin for password change.";
             this.gunaLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
