@@ -56,9 +56,74 @@ namespace Hostel_Management_System
 
         private void btn_today_breakfast_view_Click(object sender, EventArgs e)
         {
-            
+            Food_List fdList = new Food_List();
+            fdList.Show();
         }
 
-       
+        private void btn_today_breakfast_add_Click(object sender, EventArgs e)
+        {
+            addFoodPopUp addFoodPop = new addFoodPopUp();
+            addFoodPop.Show();
+        }
+
+        private void btn_today_lunch_add_Click(object sender, EventArgs e)
+        {
+            addFoodPopUp addFoodPop = new addFoodPopUp();
+            addFoodPop.Show();
+        }
+
+        private void btn_today_dinner_add_Click(object sender, EventArgs e)
+        {
+            addFoodPopUp addFoodPop = new addFoodPopUp();
+            addFoodPop.Show();
+        }
+
+        private void btn_tomorrow_breakfast_add_Click(object sender, EventArgs e)
+        {
+            addFoodPopUp addFoodPop = new addFoodPopUp();
+            addFoodPop.Show();
+        }
+
+        private void btn_tomorrow_lunch_add_Click(object sender, EventArgs e)
+        {
+            addFoodPopUp addFoodPop = new addFoodPopUp();
+            addFoodPop.Show();
+        }
+
+        private void btn_tomorrow_dinner_add_Click(object sender, EventArgs e)
+        {
+            addFoodPopUp addFoodPop = new addFoodPopUp();
+            addFoodPop.Show();
+        }
+
+        private void btn_today_lunch_view_Click(object sender, EventArgs e)
+        {
+            Food_List fdList = new Food_List();
+            fdList.Show();
+        }
+
+        private void btn_today_dinner_view_Click(object sender, EventArgs e)
+        {
+            Food_List fdList = new Food_List();
+            fdList.Show();
+        }
+
+        private void btn_tomorrow_breakfast_view_Click(object sender, EventArgs e)
+        {
+            Food_List fdList = new Food_List();
+            fdList.Show();
+        }
+
+        private void btn_tomorrow_lunch_view_Click(object sender, EventArgs e)
+        {
+            Food_List fdList = new Food_List();
+            fdList.Show();
+        }
+
+        private void btn_tomorrow_dinner_view_Click(object sender, EventArgs e)
+        {
+            Food_List fdList = new Food_List();
+            fdList.Show();
+        }
     }
 }

@@ -111,6 +111,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Popups\addFoodPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popups\addFoodPopUp.Designer.cs">
+      <DependentUpon>addFoodPopUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Food Management\Food_List.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -275,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pending_Payments.resx">
       <DependentUpon>Pending_Payments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popups\addFoodPopUp.resx">
+      <DependentUpon>addFoodPopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Popups\Available_Slots.resx">
       <DependentUpon>Available_Slots.cs</DependentUpon>
