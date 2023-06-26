@@ -32,7 +32,7 @@
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_username = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_rental = new Guna.UI2.WinForms.Guna2TextBox();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.btn_login = new Guna.UI.WinForms.GunaButton();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
@@ -66,35 +66,36 @@
             this.label1.TabIndex = 32;
             this.label1.Text = "New Rental:";
             // 
-            // txt_username
+            // txt_rental
             // 
-            this.txt_username.BackColor = System.Drawing.Color.Transparent;
-            this.txt_username.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
-            this.txt_username.BorderRadius = 8;
-            this.txt_username.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_username.DefaultText = "";
-            this.txt_username.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_username.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_username.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_username.DisabledState.Parent = this.txt_username;
-            this.txt_username.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_username.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txt_username.FocusedState.Parent = this.txt_username;
-            this.txt_username.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
-            this.txt_username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_username.HoverState.Parent = this.txt_username;
-            this.txt_username.Location = new System.Drawing.Point(18, 90);
-            this.txt_username.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_username.Name = "txt_username";
-            this.txt_username.PasswordChar = '\0';
-            this.txt_username.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
-            this.txt_username.PlaceholderText = "";
-            this.txt_username.SelectedText = "";
-            this.txt_username.ShadowDecoration.Parent = this.txt_username;
-            this.txt_username.Size = new System.Drawing.Size(310, 35);
-            this.txt_username.TabIndex = 31;
-            this.txt_username.TextOffset = new System.Drawing.Point(8, 0);
+            this.txt_rental.BackColor = System.Drawing.Color.Transparent;
+            this.txt_rental.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
+            this.txt_rental.BorderRadius = 8;
+            this.txt_rental.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_rental.DefaultText = "";
+            this.txt_rental.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_rental.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_rental.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_rental.DisabledState.Parent = this.txt_rental;
+            this.txt_rental.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_rental.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txt_rental.FocusedState.Parent = this.txt_rental;
+            this.txt_rental.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_rental.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
+            this.txt_rental.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_rental.HoverState.Parent = this.txt_rental;
+            this.txt_rental.Location = new System.Drawing.Point(18, 90);
+            this.txt_rental.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_rental.Name = "txt_rental";
+            this.txt_rental.PasswordChar = '\0';
+            this.txt_rental.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
+            this.txt_rental.PlaceholderText = "";
+            this.txt_rental.SelectedText = "";
+            this.txt_rental.ShadowDecoration.Parent = this.txt_rental;
+            this.txt_rental.Size = new System.Drawing.Size(310, 35);
+            this.txt_rental.TabIndex = 31;
+            this.txt_rental.TextOffset = new System.Drawing.Point(8, 0);
+            this.txt_rental.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_rental_KeyPress);
             // 
             // gunaButton1
             // 
@@ -155,6 +156,7 @@
             this.btn_login.Text = "Change Rental";
             this.btn_login.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_login.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // guna2PictureBox3
             // 
@@ -176,7 +178,7 @@
             this.Controls.Add(this.gunaButton1);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txt_username);
+            this.Controls.Add(this.txt_rental);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.guna2PictureBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -196,7 +198,7 @@
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2TextBox txt_username;
+        private Guna.UI2.WinForms.Guna2TextBox txt_rental;
         private Guna.UI.WinForms.GunaButton gunaButton1;
         private Guna.UI.WinForms.GunaButton btn_login;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
