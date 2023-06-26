@@ -60,6 +60,7 @@ namespace Hostel_Management_System
         private void btn_dashboard_Click(object sender, EventArgs e)
         {
             dashboard.setUserName(loggedInUser);
+            dashboard.updateDashBoard();
             container(dashboard);
      
         }

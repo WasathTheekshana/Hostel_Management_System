@@ -135,6 +135,7 @@
             this.availableSlotDataGrid.ThemeStyle.RowsStyle.Height = 30;
             this.availableSlotDataGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.availableSlotDataGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.availableSlotDataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.availableSlotDataGrid_CellClick);
             // 
             // gunaElipse2
             // 

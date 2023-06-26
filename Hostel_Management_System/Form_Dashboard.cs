@@ -27,24 +27,8 @@ namespace Hostel_Management_System
             this.userName = userName;
         }
 
-        private void Form_Dashboard_Load(object sender, EventArgs e)
+        public void updateDashBoard() 
         {
-            DateTime currentTime = DateTime.Now;
-            int hour = currentTime.Hour;
-
-            if (hour < 12)
-            {
-                lbl_greeting.Text = "Good Morning, " + userName;
-            }
-            else if (hour >= 12 && hour < 18)
-            {
-                lbl_greeting.Text = "Good Afternoon, " + userName;
-            }
-            else
-            {
-                lbl_greeting.Text = "Good Evening, " + userName;
-            }
-
             Connection_Sting objConnectionString = new Connection_Sting();
             string connStr = objConnectionString.getConnectionString();
 
@@ -62,7 +46,7 @@ namespace Hostel_Management_System
 
                     SqlCommand totalSlotsCommand = new SqlCommand(totalSlotsQuery, conn);
                     int totalSlotsCount = (int)totalSlotsCommand.ExecuteScalar();
-                    
+
 
                     SqlCommand unassignedSlotsCommand = new SqlCommand(unassignedSlotsQuery, conn);
                     int unassignedSlotsCount = (int)unassignedSlotsCommand.ExecuteScalar();
@@ -75,6 +59,26 @@ namespace Hostel_Management_System
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void Form_Dashboard_Load(object sender, EventArgs e)
+        {
+            DateTime currentTime = DateTime.Now;
+            int hour = currentTime.Hour;
+
+            if (hour < 12)
+            {
+                lbl_greeting.Text = "Good Morning, " + userName;
+            }
+            else if (hour >= 12 && hour < 18)
+            {
+                lbl_greeting.Text = "Good Afternoon, " + userName;
+            }
+            else
+            {
+                lbl_greeting.Text = "Good Evening, " + userName;
+            }
+            updateDashBoard();
 
 
         }

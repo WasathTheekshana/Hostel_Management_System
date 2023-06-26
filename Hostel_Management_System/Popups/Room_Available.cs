@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Hostel_Management_System.Database_Connection;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +17,70 @@ namespace Hostel_Management_System.Popups
         public Room_Available()
         {
             InitializeComponent();
+        }
+
+        string slotID;
+        public void getSlotID(string slotid)
+        {
+            slotID = slotid;
+        }
+
+        private void Room_Available_Load(object sender, EventArgs e)
+        {
+            guna2ShadowForm1.SetShadowForm(this);
+            lbl_slotID.Text = slotID;
+        }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+            string stNIC=txt_username.Text;
+
+            Connection_Sting stconn = new Connection_Sting();
+            string connectionString = stconn.getConnectionString();
+            SqlConnection connection = new SqlConnection(connectionString);
+            
+            string checkquery = @"SELECT COUNT(*) FROM student WHERE NIC = @StudentNIC";
+            SqlCommand checkcommand = new SqlCommand(checkquery, connection);
+            checkcommand.Parameters.AddWithValue("@StudentNIC", stNIC);
+
+            string query = $"INSERT INTO student_slot VALUES('"+stNIC+"','"+slotID+"')";
+            SqlCommand command = new SqlCommand(query, connection);
+
+
+            try
+            {
+                connection.Open();
+                int count = (int)checkcommand.ExecuteScalar();
+                if (count > 0)
+                {
+                    command.ExecuteNonQuery();
+                    Base_Successfull_Popup successfull_Popup = new Base_Successfull_Popup();
+                    successfull_Popup.setPopup("Succesfully assigned with Room;");
+                    successfull_Popup.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    Base_Error_Popup base_Error_Popup = new Base_Error_Popup();
+                    base_Error_Popup.setPopup("Student NIC is not available");
+                    base_Error_Popup.ShowDialog();
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
