@@ -1,9 +1,11 @@
-﻿using Hostel_Management_System.Popups;
+﻿using Hostel_Management_System.Database_Connection;
+using Hostel_Management_System.Popups;
 using Microsoft.VisualBasic.Devices;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -42,6 +44,38 @@ namespace Hostel_Management_System
             {
                 lbl_greeting.Text = "Good Evening, " + userName;
             }
+
+            Connection_Sting objConnectionString = new Connection_Sting();
+            string connStr = objConnectionString.getConnectionString();
+
+            string totalSlotsQuery = @"SELECT COUNT(*) AS TotalCount FROM slot";
+            string unassignedSlotsQuery = @"SELECT COUNT(*) AS TotalCount
+                               FROM slot s
+                               LEFT JOIN student_slot ss ON s.slotID = ss.slotID
+                               WHERE ss.slotID IS NULL";
+
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                try
+                {
+                    conn.Open();
+
+                    SqlCommand totalSlotsCommand = new SqlCommand(totalSlotsQuery, conn);
+                    int totalSlotsCount = (int)totalSlotsCommand.ExecuteScalar();
+                    
+
+                    SqlCommand unassignedSlotsCommand = new SqlCommand(unassignedSlotsQuery, conn);
+                    int unassignedSlotsCount = (int)unassignedSlotsCommand.ExecuteScalar();
+
+
+                    lbl_availableSlotCount.Text = $"{unassignedSlotsCount.ToString()} / {totalSlotsCount.ToString()}";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
 
         }
 

@@ -240,7 +240,7 @@
             this.btn_login.OnPressedColor = System.Drawing.Color.Black;
             this.btn_login.Radius = 8;
             this.btn_login.Size = new System.Drawing.Size(372, 46);
-            this.btn_login.TabIndex = 12;
+            this.btn_login.TabIndex = 2;
             this.btn_login.Text = "Login";
             this.btn_login.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_login.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
@@ -295,7 +295,7 @@
             this.txt_username.SelectedText = "";
             this.txt_username.ShadowDecoration.Parent = this.txt_username;
             this.txt_username.Size = new System.Drawing.Size(372, 46);
-            this.txt_username.TabIndex = 14;
+            this.txt_username.TabIndex = 0;
             this.txt_username.TextOffset = new System.Drawing.Point(20, 0);
             // 
             // txt_password
@@ -325,7 +325,7 @@
             this.txt_password.SelectedText = "";
             this.txt_password.ShadowDecoration.Parent = this.txt_password;
             this.txt_password.Size = new System.Drawing.Size(372, 46);
-            this.txt_password.TabIndex = 15;
+            this.txt_password.TabIndex = 1;
             this.txt_password.TextOffset = new System.Drawing.Point(20, 0);
             this.txt_password.UseSystemPasswordChar = true;
             // 
