@@ -120,22 +120,5 @@ namespace Hostel_Management_System
             }
             
         }
-
-        private void gunaControlBox1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-
-
-
-
-
-
-
-
-        //hello yasith
-
-
     }
 }
