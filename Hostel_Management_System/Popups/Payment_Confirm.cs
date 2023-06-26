@@ -26,14 +26,16 @@ namespace Hostel_Management_System.Popups
             studentNIC = NIC;
         }
 
-        private void txt_username_TextChanged(object sender, EventArgs e)
-        {
 
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        private void btn_login_Click(object sender, EventArgs e)
         {
-            int payemnt = int.Parse(txt_payment.Text);
+
+            int payment = int.Parse(txt_payment.Text);
 
             Connection_Sting objConnectionString = new Connection_Sting();
             string connStr = objConnectionString.getConnectionString();
@@ -43,18 +45,34 @@ namespace Hostel_Management_System.Popups
                 conn.Open();
 
                 string query = @"UPDATE student
-                SET rental = rental + @Payment
-                WHERE NIC IN (SELECT NIC FROM student_slot)";
+                         SET rental = rental + @Payment
+                         WHERE NIC = @StudentNIC";
 
                 SqlCommand command = new SqlCommand(query, conn);
-                command.Parameters.AddWithValue("@Payment", payemnt);
+                command.Parameters.AddWithValue("@Payment", payment);
+                command.Parameters.AddWithValue("@StudentNIC", studentNIC); // Add the studentNIC parameter
                 command.ExecuteNonQuery();
 
                 Properties.Settings.Default.rentalAdd = true;
                 Properties.Settings.Default.Save();
 
                 MessageBox.Show("Rentals updated successfully.");
+                this.Close();
             }
+        }
+
+        private void txt_payment_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b' && e.KeyChar != '\u007F')
+            {
+                // Suppress the key press event
+                e.Handled = true;
+            }
+        }
+
+        private void Payment_Confirm_Load(object sender, EventArgs e)
+        {
+            guna2ShadowForm1.SetShadowForm(this);
         }
     }
 }

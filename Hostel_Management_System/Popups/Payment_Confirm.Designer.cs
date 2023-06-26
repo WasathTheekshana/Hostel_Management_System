@@ -36,6 +36,7 @@
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.btn_login = new Guna.UI.WinForms.GunaButton();
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,7 +84,7 @@
             this.txt_payment.Size = new System.Drawing.Size(386, 35);
             this.txt_payment.TabIndex = 22;
             this.txt_payment.TextOffset = new System.Drawing.Point(8, 0);
-            this.txt_payment.TextChanged += new System.EventHandler(this.txt_username_TextChanged);
+            this.txt_payment.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_payment_KeyPress);
             // 
             // label10
             // 
@@ -136,6 +137,7 @@
             this.gunaButton1.Text = "Cancel";
             this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaButton1.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
             // btn_login
             // 
@@ -165,6 +167,7 @@
             this.btn_login.Text = "Confirm";
             this.btn_login.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_login.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // Payment_Confirm
             // 
@@ -180,7 +183,9 @@
             this.Controls.Add(this.guna2PictureBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Payment_Confirm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Payment_Confirm";
+            this.Load += new System.EventHandler(this.Payment_Confirm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -196,5 +201,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Guna.UI.WinForms.GunaButton gunaButton1;
         private Guna.UI.WinForms.GunaButton btn_login;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
     }
 }
