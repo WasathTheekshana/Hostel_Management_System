@@ -2,7 +2,7 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Hostel_Management_System.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="rental" Type="System.Int32" Scope="Application">
+    <Setting Name="rental" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">12000</Value>
     </Setting>
   </Settings>
