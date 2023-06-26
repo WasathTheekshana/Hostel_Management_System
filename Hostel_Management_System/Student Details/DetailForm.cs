@@ -156,7 +156,7 @@ namespace Hostel_Management_System
 
         private void NICKeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != 'x' && e.KeyChar != 'v')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && char.ToLower(e.KeyChar) != 'x' && char.ToLower(e.KeyChar) != 'v')
             {
                 e.Handled = true;
             }
@@ -457,7 +457,6 @@ namespace Hostel_Management_System
 
                 SqlConnection conn = new SqlConnection(connStr);
 
-                MessageBox.Show("All validations passed. Form submitted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 student objstudent = new student
                     (StudentFName,
                     StudentLName,

@@ -29,20 +29,30 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Available_Slots));
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.label10 = new System.Windows.Forms.Label();
-            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.room = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.slot = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.availableSlotDataGrid = new Guna.UI2.WinForms.Guna2DataGridView();
             this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            this.secondUnderLine = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.secondTab = new Guna.UI.WinForms.GunaLabel();
+            this.FirstUnderLine = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.firstTab = new Guna.UI.WinForms.GunaLabel();
+            this.groundUnderLine = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.groundTab = new Guna.UI.WinForms.GunaLabel();
+            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.availableSlotDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.secondUnderLine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FirstUnderLine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groundUnderLine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaElipse1
@@ -60,83 +70,75 @@
             this.label10.TabIndex = 17;
             this.label10.Text = "Available Slots";
             // 
-            // guna2DataGridView1
+            // availableSlotDataGrid
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.guna2DataGridView1.ColumnHeadersHeight = 40;
-            this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.room,
-            this.slot});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
-            this.guna2DataGridView1.EnableHeadersVisualStyles = false;
-            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(20, 69);
-            this.guna2DataGridView1.Name = "guna2DataGridView1";
-            this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.RowTemplate.Height = 30;
-            this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(479, 290);
-            this.guna2DataGridView1.TabIndex = 34;
-            this.guna2DataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 40;
-            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 30;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // room
-            // 
-            this.room.HeaderText = "Room";
-            this.room.Name = "room";
-            this.room.ReadOnly = true;
-            // 
-            // slot
-            // 
-            this.slot.HeaderText = "Slot Number";
-            this.slot.Name = "slot";
-            this.slot.ReadOnly = true;
+            this.availableSlotDataGrid.AllowUserToAddRows = false;
+            this.availableSlotDataGrid.AllowUserToDeleteRows = false;
+            this.availableSlotDataGrid.AllowUserToOrderColumns = true;
+            this.availableSlotDataGrid.AllowUserToResizeColumns = false;
+            this.availableSlotDataGrid.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.availableSlotDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.availableSlotDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.availableSlotDataGrid.BackgroundColor = System.Drawing.Color.White;
+            this.availableSlotDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.availableSlotDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.availableSlotDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.availableSlotDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.availableSlotDataGrid.ColumnHeadersHeight = 40;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.availableSlotDataGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            this.availableSlotDataGrid.EnableHeadersVisualStyles = false;
+            this.availableSlotDataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.availableSlotDataGrid.Location = new System.Drawing.Point(20, 129);
+            this.availableSlotDataGrid.MultiSelect = false;
+            this.availableSlotDataGrid.Name = "availableSlotDataGrid";
+            this.availableSlotDataGrid.ReadOnly = true;
+            this.availableSlotDataGrid.RowHeadersVisible = false;
+            this.availableSlotDataGrid.RowTemplate.Height = 30;
+            this.availableSlotDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.availableSlotDataGrid.Size = new System.Drawing.Size(479, 290);
+            this.availableSlotDataGrid.TabIndex = 34;
+            this.availableSlotDataGrid.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.availableSlotDataGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.availableSlotDataGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.availableSlotDataGrid.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.availableSlotDataGrid.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.availableSlotDataGrid.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.availableSlotDataGrid.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.availableSlotDataGrid.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.availableSlotDataGrid.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.availableSlotDataGrid.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.availableSlotDataGrid.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.availableSlotDataGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
+            this.availableSlotDataGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.availableSlotDataGrid.ThemeStyle.HeaderStyle.Height = 40;
+            this.availableSlotDataGrid.ThemeStyle.ReadOnly = true;
+            this.availableSlotDataGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.availableSlotDataGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.availableSlotDataGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.availableSlotDataGrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.availableSlotDataGrid.ThemeStyle.RowsStyle.Height = 30;
+            this.availableSlotDataGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.availableSlotDataGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // gunaElipse2
             // 
             this.gunaElipse2.Radius = 6;
-            this.gunaElipse2.TargetControl = this.guna2DataGridView1;
+            this.gunaElipse2.TargetControl = this.availableSlotDataGrid;
             // 
             // gunaButton1
             // 
@@ -154,7 +156,7 @@
             this.gunaButton1.Image = null;
             this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaButton1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.gunaButton1.Location = new System.Drawing.Point(382, 389);
+            this.gunaButton1.Location = new System.Drawing.Point(382, 449);
             this.gunaButton1.Name = "gunaButton1";
             this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(73)))), ((int)(((byte)(240)))));
             this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Transparent;
@@ -180,14 +182,104 @@
             this.guna2PictureBox3.TabIndex = 16;
             this.guna2PictureBox3.TabStop = false;
             // 
+            // secondUnderLine
+            // 
+            this.secondUnderLine.Image = global::Hostel_Management_System.Properties.Resources.Line_blue;
+            this.secondUnderLine.Location = new System.Drawing.Point(270, 92);
+            this.secondUnderLine.Name = "secondUnderLine";
+            this.secondUnderLine.ShadowDecoration.Parent = this.secondUnderLine;
+            this.secondUnderLine.Size = new System.Drawing.Size(114, 20);
+            this.secondUnderLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.secondUnderLine.TabIndex = 39;
+            this.secondUnderLine.TabStop = false;
+            this.secondUnderLine.Visible = false;
+            // 
+            // secondTab
+            // 
+            this.secondTab.AutoSize = true;
+            this.secondTab.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.secondTab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
+            this.secondTab.Location = new System.Drawing.Point(270, 73);
+            this.secondTab.Name = "secondTab";
+            this.secondTab.Size = new System.Drawing.Size(114, 28);
+            this.secondTab.TabIndex = 36;
+            this.secondTab.Text = "Second Floor";
+            this.secondTab.Click += new System.EventHandler(this.secondTab_Click);
+            // 
+            // FirstUnderLine
+            // 
+            this.FirstUnderLine.Image = global::Hostel_Management_System.Properties.Resources.Line_blue;
+            this.FirstUnderLine.Location = new System.Drawing.Point(150, 92);
+            this.FirstUnderLine.Name = "FirstUnderLine";
+            this.FirstUnderLine.ShadowDecoration.Parent = this.FirstUnderLine;
+            this.FirstUnderLine.Size = new System.Drawing.Size(87, 20);
+            this.FirstUnderLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.FirstUnderLine.TabIndex = 40;
+            this.FirstUnderLine.TabStop = false;
+            this.FirstUnderLine.Visible = false;
+            // 
+            // firstTab
+            // 
+            this.firstTab.AutoSize = true;
+            this.firstTab.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstTab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
+            this.firstTab.Location = new System.Drawing.Point(151, 73);
+            this.firstTab.Name = "firstTab";
+            this.firstTab.Size = new System.Drawing.Size(86, 28);
+            this.firstTab.TabIndex = 37;
+            this.firstTab.Text = "First Floor";
+            this.firstTab.Click += new System.EventHandler(this.firstTab_Click);
+            // 
+            // groundUnderLine
+            // 
+            this.groundUnderLine.Image = global::Hostel_Management_System.Properties.Resources.Line_blue;
+            this.groundUnderLine.Location = new System.Drawing.Point(17, 92);
+            this.groundUnderLine.Name = "groundUnderLine";
+            this.groundUnderLine.ShadowDecoration.Parent = this.groundUnderLine;
+            this.groundUnderLine.Size = new System.Drawing.Size(112, 20);
+            this.groundUnderLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.groundUnderLine.TabIndex = 41;
+            this.groundUnderLine.TabStop = false;
+            // 
+            // groundTab
+            // 
+            this.groundTab.AutoSize = true;
+            this.groundTab.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groundTab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
+            this.groundTab.Location = new System.Drawing.Point(16, 73);
+            this.groundTab.Name = "groundTab";
+            this.groundTab.Size = new System.Drawing.Size(113, 28);
+            this.groundTab.TabIndex = 38;
+            this.groundTab.Text = "Ground Floor";
+            this.groundTab.Click += new System.EventHandler(this.groundTab_Click);
+            // 
+            // guna2PictureBox7
+            // 
+            this.guna2PictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox7.Image")));
+            this.guna2PictureBox7.Location = new System.Drawing.Point(20, 92);
+            this.guna2PictureBox7.Name = "guna2PictureBox7";
+            this.guna2PictureBox7.ShadowDecoration.Parent = this.guna2PictureBox7;
+            this.guna2PictureBox7.Size = new System.Drawing.Size(479, 21);
+            this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox7.TabIndex = 42;
+            this.guna2PictureBox7.TabStop = false;
+            // 
             // Available_Slots
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(521, 451);
+            this.ClientSize = new System.Drawing.Size(521, 515);
+            this.Controls.Add(this.secondUnderLine);
+            this.Controls.Add(this.secondTab);
+            this.Controls.Add(this.FirstUnderLine);
+            this.Controls.Add(this.firstTab);
+            this.Controls.Add(this.groundUnderLine);
+            this.Controls.Add(this.groundTab);
+            this.Controls.Add(this.guna2PictureBox7);
             this.Controls.Add(this.gunaButton1);
-            this.Controls.Add(this.guna2DataGridView1);
+            this.Controls.Add(this.availableSlotDataGrid);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.guna2PictureBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -195,8 +287,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Available_Slots";
             this.Load += new System.EventHandler(this.Available_Slots_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.availableSlotDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.secondUnderLine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FirstUnderLine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groundUnderLine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,11 +303,16 @@
         private Guna.UI.WinForms.GunaElipse gunaElipse1;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn room;
-        private System.Windows.Forms.DataGridViewTextBoxColumn slot;
+        private Guna.UI2.WinForms.Guna2DataGridView availableSlotDataGrid;
         private Guna.UI.WinForms.GunaElipse gunaElipse2;
         private Guna.UI.WinForms.GunaButton gunaButton1;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
+        private Guna.UI2.WinForms.Guna2PictureBox secondUnderLine;
+        private Guna.UI.WinForms.GunaLabel secondTab;
+        private Guna.UI2.WinForms.Guna2PictureBox FirstUnderLine;
+        private Guna.UI.WinForms.GunaLabel firstTab;
+        private Guna.UI2.WinForms.Guna2PictureBox groundUnderLine;
+        private Guna.UI.WinForms.GunaLabel groundTab;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox7;
     }
 }
