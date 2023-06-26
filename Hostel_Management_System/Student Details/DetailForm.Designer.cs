@@ -95,6 +95,7 @@
             this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.btnAccept = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.btn_Update = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -1270,6 +1271,7 @@
             // 
             // guna2Panel4
             // 
+            this.guna2Panel4.Controls.Add(this.btn_Update);
             this.guna2Panel4.Controls.Add(this.btnBack);
             this.guna2Panel4.Controls.Add(this.btnAccept);
             this.guna2Panel4.Location = new System.Drawing.Point(43, 1231);
@@ -1313,6 +1315,24 @@
             this.btnAccept.TabIndex = 0;
             this.btnAccept.Text = "Register";
             this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click_1);
+            // 
+            // btn_Update
+            // 
+            this.btn_Update.BorderRadius = 5;
+            this.btn_Update.CheckedState.Parent = this.btn_Update;
+            this.btn_Update.CustomImages.Parent = this.btn_Update;
+            this.btn_Update.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(73)))), ((int)(((byte)(240)))));
+            this.btn_Update.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Update.ForeColor = System.Drawing.Color.White;
+            this.btn_Update.HoverState.Parent = this.btn_Update;
+            this.btn_Update.Location = new System.Drawing.Point(566, 28);
+            this.btn_Update.Name = "btn_Update";
+            this.btn_Update.ShadowDecoration.Parent = this.btn_Update;
+            this.btn_Update.Size = new System.Drawing.Size(139, 45);
+            this.btn_Update.TabIndex = 2;
+            this.btn_Update.Text = "Update";
+            this.btn_Update.Visible = false;
+            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
             // 
             // DetailForm
             // 
@@ -1410,5 +1430,6 @@
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI.WinForms.GunaButton btn_Delete;
         private Guna.UI.WinForms.GunaButton btn_Edit;
+        private Guna.UI2.WinForms.Guna2Button btn_Update;
     }
 }

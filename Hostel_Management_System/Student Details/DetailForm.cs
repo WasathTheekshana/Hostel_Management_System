@@ -66,6 +66,8 @@ namespace Hostel_Management_System
             txtStudentNIC.Enabled = false;
             txtParent1NIC.Enabled = false;
             txtParent2NIC.Enabled = false;
+
+            btn_Update.Visible = true;
         }
         string studentNIC;
         public void getNIC(string nic)
@@ -715,27 +717,129 @@ namespace Hostel_Management_System
 
             using (SqlConnection conn = new SqlConnection(connStr))
             {
-                conn.Open();
+                try
+                {
+                    conn.Open();
 
-                //Delete the record from the student_guardian table
-                string deleteStudentGuardianQuery = "DELETE FROM student_guardian WHERE studentNIC = @studentNIC";
-                SqlCommand deleteStudentGuardianCommand = new SqlCommand(deleteStudentGuardianQuery, conn);
-                deleteStudentGuardianCommand.Parameters.AddWithValue("@studentNIC", studentNIC);
-                deleteStudentGuardianCommand.ExecuteNonQuery();
+                    // Delete the record from the student_slot table
+                    string deleteStudentSlotQuery = "DELETE FROM student_slot WHERE NIC = @studentNIC";
+                    SqlCommand deleteStudentSlotCommand = new SqlCommand(deleteStudentSlotQuery, conn);
+                    deleteStudentSlotCommand.Parameters.AddWithValue("@studentNIC", studentNIC);
+                    deleteStudentSlotCommand.ExecuteNonQuery();
 
-                //Delete the record from the student table
-                string deleteStudentQuery = "DELETE FROM student WHERE NIC = @studentNIC";
-                SqlCommand deleteStudentCommand = new SqlCommand(deleteStudentQuery, conn);
-                deleteStudentCommand.Parameters.AddWithValue("@studentNIC", studentNIC);
-                deleteStudentCommand.ExecuteNonQuery();
+                    // Delete the record from the student_guardian table
+                    string deleteStudentGuardianQuery = "DELETE FROM student_guardian WHERE studentNIC = @studentNIC";
+                    SqlCommand deleteStudentGuardianCommand = new SqlCommand(deleteStudentGuardianQuery, conn);
+                    deleteStudentGuardianCommand.Parameters.AddWithValue("@studentNIC", studentNIC);
+                    deleteStudentGuardianCommand.ExecuteNonQuery();
 
-                //Delete the record from the guardian table (if needed)
-                string deleteGuardianQuery = "DELETE FROM guardian WHERE NIC NOT IN (SELECT guardianNIC FROM student_guardian)";
-                SqlCommand deleteGuardianCommand = new SqlCommand(deleteGuardianQuery, conn);
-                deleteGuardianCommand.ExecuteNonQuery();
+                    // Delete the record from the student table
+                    string deleteStudentQuery = "DELETE FROM student WHERE NIC = @studentNIC";
+                    SqlCommand deleteStudentCommand = new SqlCommand(deleteStudentQuery, conn);
+                    deleteStudentCommand.Parameters.AddWithValue("@studentNIC", studentNIC);
+                    deleteStudentCommand.ExecuteNonQuery();
 
-                conn.Close();
+                    // Delete the record from the guardian table (if needed)
+                    string deleteGuardianQuery = "DELETE FROM guardian WHERE NIC NOT IN (SELECT guardianNIC FROM student_guardian)";
+                    SqlCommand deleteGuardianCommand = new SqlCommand(deleteGuardianQuery, conn);
+                    deleteGuardianCommand.ExecuteNonQuery();
+
+                    Base_Successfull_Popup successfull = new Base_Successfull_Popup();
+                    successfull.setPopup("Student deleted successfully!");
+                    this.Close();
+                    successfull.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+
             }
+        }
+
+        private void btn_Update_Click(object sender, EventArgs e)
+        {
+            if (ValidateForm() && ValidateParentFields())
+            {
+                Connection_Sting objConnectionString = new Connection_Sting();
+                string connStr = objConnectionString.getConnectionString();
+
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+
+                    // Update student details
+                    string queryStudent = $"UPDATE student SET FName = '{StudentFName}', LName = '{StudentLName}', Email = '{StudentEmail}', Address = '{StudentAddress}', MobileNo = '{StudentPhone}', gender = '{StudentGender}', DOB = '{StudentBirthday}', keymoney = '{StudentKeyMoney}', Batch = '{StudentBatch}', HomeTeleNo = '{StudentHomePhone}', RegisterDate = '{StudentRegisterDate}' WHERE NIC = '{StudentNIC}'";
+                    SqlCommand commandStudent = new SqlCommand(queryStudent, conn);
+
+                    try
+                    {
+                        conn.Open();
+                        commandStudent.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
+
+                    // Update parent details
+                    if (!string.IsNullOrEmpty(txtParent1NIC.Text))
+                    {
+                        
+
+                        string queryParent1 = $"UPDATE guardian SET Name = '{Parent1Name}', ContactNo = '{Parent1ContactNo}', Email = '{Parent1Email}', Job = '{Parent1Job}' WHERE NIC = '{Parent1NIC}'";
+                        SqlCommand commandParent1 = new SqlCommand(queryParent1, conn);
+
+                        try
+                        {
+                            conn.Open();
+                            commandParent1.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        finally
+                        {
+                            conn.Close();
+                        }
+                    }
+
+                    if (!string.IsNullOrEmpty(txtParent2NIC.Text))
+                    {
+
+                        string queryParent2 = $"UPDATE guardian SET Name = '{Parent2Name}', ContactNo = '{Parent2ContactNo}', Email = '{Parent2Email}', Job = '{Parent2Job}' WHERE NIC = '{Parent2NIC}'";
+                        SqlCommand commandParent2 = new SqlCommand(queryParent2, conn);
+
+                        try
+                        {
+                            conn.Open();
+                            commandParent2.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        finally
+                        {
+                            conn.Close();
+                        }
+                    }
+                }
+
+                Base_Successfull_Popup successfull = new Base_Successfull_Popup();
+                successfull.setPopup("Student details updated successfully!");
+                this.Close();
+                successfull.ShowDialog();
+            }
+
         }
     }
 }
