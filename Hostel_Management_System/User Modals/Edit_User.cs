@@ -63,6 +63,8 @@ namespace Hostel_Management_System.User_Modals
                     MessageBox.Show(ex.Message);
                 }
             }
+
+
         }
 
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -118,12 +120,24 @@ namespace Hostel_Management_System.User_Modals
             }
         }
 
-
         private void gunaButton1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        
+        private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridViewCell cell = guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
+
+                if (cell.OwningColumn.Name == "Username") // Assuming the username is in the "Username" column
+                {
+                    string username = cell.Value.ToString();
+                    Edit_User_Profile userProfile = new Edit_User_Profile(username);
+                    userProfile.ShowDialog();
+                }
+            }
+        }
     }
 }
