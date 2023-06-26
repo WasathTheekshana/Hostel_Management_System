@@ -34,12 +34,11 @@
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel2 = new Guna.UI.WinForms.GunaShadowPanel();
             this.btn_today_dinner_view = new Guna.UI2.WinForms.Guna2Button();
-            this.lbl_today_dinner_food = new System.Windows.Forms.Label();
+            this.lbl_availableSlotCount = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
@@ -56,6 +55,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.gunaShadowPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.gunaShadowPanel1.SuspendLayout();
@@ -100,7 +100,7 @@
             this.gunaShadowPanel2.BackColor = System.Drawing.Color.Transparent;
             this.gunaShadowPanel2.BaseColor = System.Drawing.Color.White;
             this.gunaShadowPanel2.Controls.Add(this.btn_today_dinner_view);
-            this.gunaShadowPanel2.Controls.Add(this.lbl_today_dinner_food);
+            this.gunaShadowPanel2.Controls.Add(this.lbl_availableSlotCount);
             this.gunaShadowPanel2.Controls.Add(this.label10);
             this.gunaShadowPanel2.Controls.Add(this.guna2PictureBox3);
             this.gunaShadowPanel2.Location = new System.Drawing.Point(39, 121);
@@ -134,16 +134,17 @@
             this.btn_today_dinner_view.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_today_dinner_view.Click += new System.EventHandler(this.btn_today_dinner_view_Click);
             // 
-            // lbl_today_dinner_food
+            // lbl_availableSlotCount
             // 
-            this.lbl_today_dinner_food.AutoSize = true;
-            this.lbl_today_dinner_food.Font = new System.Drawing.Font("Poppins", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_today_dinner_food.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
-            this.lbl_today_dinner_food.Location = new System.Drawing.Point(51, 86);
-            this.lbl_today_dinner_food.Name = "lbl_today_dinner_food";
-            this.lbl_today_dinner_food.Size = new System.Drawing.Size(115, 51);
-            this.lbl_today_dinner_food.TabIndex = 14;
-            this.lbl_today_dinner_food.Text = "10/225";
+            this.lbl_availableSlotCount.AutoSize = true;
+            this.lbl_availableSlotCount.Font = new System.Drawing.Font("Poppins", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_availableSlotCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
+            this.lbl_availableSlotCount.Location = new System.Drawing.Point(51, 86);
+            this.lbl_availableSlotCount.Name = "lbl_availableSlotCount";
+            this.lbl_availableSlotCount.Size = new System.Drawing.Size(115, 51);
+            this.lbl_availableSlotCount.TabIndex = 14;
+            this.lbl_availableSlotCount.Text = "10/225";
+            this.lbl_availableSlotCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label10
             // 
@@ -205,17 +206,6 @@
             this.guna2Button1.Text = "View More";
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
-            this.label1.Location = new System.Drawing.Point(51, 86);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 51);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "10/225";
             // 
             // label2
             // 
@@ -405,6 +395,17 @@
             this.guna2PictureBox1.TabIndex = 2;
             this.guna2PictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Poppins", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
+            this.label1.Location = new System.Drawing.Point(51, 86);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 51);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "10/225";
+            // 
             // Form_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -453,12 +454,11 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel2;
         private Guna.UI2.WinForms.Guna2Button btn_today_dinner_view;
-        private System.Windows.Forms.Label lbl_today_dinner_food;
+        private System.Windows.Forms.Label lbl_availableSlotCount;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
@@ -474,5 +474,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
+        private System.Windows.Forms.Label label1;
     }
 }
