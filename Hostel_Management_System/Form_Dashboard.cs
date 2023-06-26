@@ -2,6 +2,7 @@
 using Hostel_Management_System.Popups;
 using Microsoft.VisualBasic.Devices;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -59,6 +60,32 @@ namespace Hostel_Management_System
                     MessageBox.Show(ex.Message);
                 }
             }
+
+            string querypendingCount = "SELECT COUNT(*) FROM student WHERE rental < 0";
+
+            string queryTotal = "SELECT COUNT(*) FROM student";
+
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand commandPending = new SqlCommand(querypendingCount, conn);
+                    int countPending = (int)commandPending.ExecuteScalar();
+
+                    SqlCommand commandTotal = new SqlCommand(queryTotal, conn);
+                    int countTotal = (int)commandTotal.ExecuteScalar();
+
+                    lbl_pendingPayment.Text = $"{countPending} / {countTotal}";
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+
         }
 
         private void Form_Dashboard_Load(object sender, EventArgs e)

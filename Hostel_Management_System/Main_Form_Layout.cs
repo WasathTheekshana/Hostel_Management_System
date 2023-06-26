@@ -70,10 +70,11 @@ namespace Hostel_Management_System
                             conn.Open();
 
                             string query = @"UPDATE student
-                                SET rental = rental + 1000
-                                WHERE NIC IN (SELECT NIC FROM student_slot)";
+                SET rental = rental + @RentalValue
+                WHERE NIC IN (SELECT NIC FROM student_slot)";
 
                             SqlCommand command = new SqlCommand(query, conn);
+                            command.Parameters.AddWithValue("@RentalValue", Properties.Settings.Default.rental);
                             command.ExecuteNonQuery();
 
                             Properties.Settings.Default.rentalAdd = true;
