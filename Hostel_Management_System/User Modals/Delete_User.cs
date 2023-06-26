@@ -113,12 +113,16 @@ namespace Hostel_Management_System.User_Modals
 
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            if (e.ColumnIndex == guna2DataGridView1.Columns["Delete"].Index && e.RowIndex >= 0)
+            if (e.RowIndex >= 0 && guna2DataGridView1.Columns[e.ColumnIndex].Name == "Delete")
             {
-                string foodItem = guna2DataGridView1.Rows[e.RowIndex].Cells["Food Item"].Value.ToString();
-                DeleteFoodItem(foodItem);
-                RefreshDataGridView();
+                object foodItemValue = guna2DataGridView1.Rows[e.RowIndex].Cells["Food Item"].Value;
+
+                if (foodItemValue != null && foodItemValue != DBNull.Value)
+                {
+                    string foodItem = foodItemValue.ToString();
+                    DeleteFoodItem(foodItem);
+                    RefreshDataGridView();
+                }
             }
         }
 
