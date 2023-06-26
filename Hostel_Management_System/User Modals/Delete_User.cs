@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,16 @@ namespace Hostel_Management_System.User_Modals
         private void Delete_User_Load(object sender, EventArgs e)
         {
             guna2ShadowForm1.SetShadowForm(this);
+
+            try
+            {
+                LoadFoodDataIntoDataGridView();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void gunaButton1_Click(object sender, EventArgs e)
@@ -55,6 +66,107 @@ namespace Hostel_Management_System.User_Modals
 
            
         }
+
+        private void LoadFoodDataIntoDataGridView()
+        {
+            // Connect to the database
+            Connection_Sting connString = new Connection_Sting();
+            SqlConnection connection = new SqlConnection(connString.getConnectionString());
+            connection.Open();
+
+            // Retrieve only "type" and "price" columns from the "food" table
+            string query = "SELECT type AS 'Food Item', price AS 'Price (Rs.)' FROM food";
+            SqlCommand command = new SqlCommand(query, connection);
+            SqlDataReader reader = command.ExecuteReader();
+
+            // Create a DataTable to store the retrieved data
+            DataTable dataTable = new DataTable();
+            dataTable.Load(reader);
+
+            // Set the DataTable as the DataSource of the Guna2DataGridView control
+            guna2DataGridView1.DataSource = dataTable;
+
+            bool deleteColumnExists = false;
+            foreach (DataGridViewColumn column in guna2DataGridView1.Columns)
+            {
+                if (column.Name == "Delete")
+                {
+                    deleteColumnExists = true;
+                    break;
+                }
+            }
+            if (!deleteColumnExists)
+            {
+                DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn();
+                deleteButtonColumn.Name = "Delete";
+                deleteButtonColumn.HeaderText = "Delete";
+                deleteButtonColumn.Text = "Delete";
+                deleteButtonColumn.UseColumnTextForButtonValue = true;
+                guna2DataGridView1.Columns.Add(deleteButtonColumn);
+            }
+            guna2DataGridView1.CellClick += DataGridView1_CellClick;
+
+            // Close the connections
+            reader.Close();
+            connection.Close();
+        }
+
+        private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && guna2DataGridView1.Columns[e.ColumnIndex].Name == "Delete")
+            {
+                object foodItemValue = guna2DataGridView1.Rows[e.RowIndex].Cells["Food Item"].Value;
+
+                if (foodItemValue != null && foodItemValue != DBNull.Value)
+                {
+                    string foodItem = foodItemValue.ToString();
+                    DeleteFoodItem(foodItem);
+                    RefreshDataGridView();
+                }
+            }
+        }
+
+        private void DeleteFoodItem(string foodItem)
+        {
+            Connection_Sting objConnectionString = new Connection_Sting();
+            string connStr = objConnectionString.getConnectionString();
+            SqlConnection conn = new SqlConnection(connStr);
+            string deleteQuery = "DELETE FROM food WHERE type = @FoodItem";
+            SqlCommand deleteCommand = new SqlCommand(deleteQuery, conn);
+            deleteCommand.Parameters.AddWithValue("@FoodItem", foodItem);
+            conn.Open();
+            deleteCommand.ExecuteNonQuery();
+            conn.Close();
+        }
+
+        private void RefreshDataGridView()
+        {
+            Connection_Sting objConnectionString = new Connection_Sting();
+            string connStr = objConnectionString.getConnectionString();
+
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                string query = "SELECT type AS 'Food Item', price AS 'Price (Rs.)' FROM food";
+
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                    DataSet ds = new DataSet();
+
+                    adapter.Fill(ds, "food");
+
+                    guna2DataGridView1.DataSource = ds.Tables["food"];
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+
+
 
         private void btn_addFood_item_Click(object sender, EventArgs e)
         {
