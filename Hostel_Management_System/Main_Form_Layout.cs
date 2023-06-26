@@ -10,6 +10,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -33,6 +34,8 @@ namespace Hostel_Management_System
             this.userPrivi = userPrivi;
         } 
 
+        Form_StudentList std = new Form_StudentList();
+        
        public void container(object _form)
         {
             Form fm = _form as Form;
@@ -95,6 +98,14 @@ namespace Hostel_Management_System
             dashboard.setUserName(loggedInUser);
             btn_dashboard.Checked = true;
             container(dashboard);
+
+            if(userPrivi == "User")
+            {
+                btn_settings.Enabled = false;
+                btn_addNew.Enabled = false;
+            }
+
+            std.setUserPrivi(userPrivi);
         }
 
       

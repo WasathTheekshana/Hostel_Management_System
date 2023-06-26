@@ -19,9 +19,16 @@ namespace Hostel_Management_System
             InitializeComponent();
         }
 
+        public string userPrivi;
+        public void setUserPrivi(string userPrivi)
+        {
+            this.userPrivi = userPrivi;
+        }
+
         int studentCount;
         private void Form_StudentList_Load(object sender, EventArgs e)
         {
+            MessageBox.Show(userPrivi);
             Connection_Sting objConnectionString = new Connection_Sting();
             string connStr = objConnectionString.getConnectionString();
 
