@@ -19,35 +19,47 @@ namespace Hostel_Management_System
             InitializeComponent();
         }
 
+        int studentCount;
         private void Form_StudentList_Load(object sender, EventArgs e)
         {
             Connection_Sting objConnectionString = new Connection_Sting();
             string connStr = objConnectionString.getConnectionString();
 
             SqlConnection conn = new SqlConnection(connStr);
-            string query = "SELECT NIC,FName,Lname,MobileNo,DOB from student";
+            string query = @"SELECT s.Room_No AS Room, st.NIC, st.FName, st.Batch, st.MobileNo
+                 FROM slot s
+                 INNER JOIN student_slot ss ON s.slotID = ss.slotID
+                 INNER JOIN student st ON ss.NIC = st.NIC";
 
+
+            string queryCount = @"SELECT COUNT(*) FROM student";
 
             try
             {
                 conn.Open();
+
+                SqlCommand commandCount = new SqlCommand(queryCount, conn);
+
+                int studentCount = (int)commandCount.ExecuteScalar();
+                lblCurrentStudentCount.Text = studentCount.ToString();
+
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                 DataSet ds = new DataSet();
 
                 adapter.Fill(ds, "student");
                 guna2DataGridView1.DataSource = ds.Tables["student"];
 
+                
             }
-
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
             finally
             {
                 conn.Close();
             }
+
         }
 
         private void hideAllUnderLines()
@@ -109,5 +121,19 @@ namespace Hostel_Management_System
             detailForm.ShowDialog();
 
         }
+
+        private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < guna2DataGridView1.Rows.Count)
+            {
+                DataGridViewRow selectedRow = guna2DataGridView1.Rows[e.RowIndex];
+                string studentNIC = selectedRow.Cells["NIC"].Value.ToString();
+                DetailForm details = new DetailForm();
+                details.getNIC(studentNIC);
+                details.changetoUpdate();
+                details.Show();
+            }
+        }
+
     }
 }

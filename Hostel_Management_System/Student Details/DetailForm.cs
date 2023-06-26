@@ -1,6 +1,7 @@
 ﻿using Hostel_Management_System.Database_Connection;
 using Hostel_Management_System.Popups;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +10,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Net.Mail;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -24,11 +26,157 @@ namespace Hostel_Management_System
             InitializeComponent();
         }
 
+        #region editMode
+        private void DisableAllTextBoxes(Control control)
+        {
+            foreach (Control childControl in control.Controls)
+            {
+                if (childControl is TextBox textBox)
+                {
+                    textBox.Enabled = false;
+                    
+                }
+                else
+                {
+                    DisableAllTextBoxes(childControl);
+                }
+            }
+
+            DateBirthDay.Enabled = false;
+            DateStudentRegisterDate.Enabled = false;
+            btnAccept.Text = "Update";
+            btnAccept.Enabled=false;
+        }
+
+        private void EnableAllTextBoxes(Control control)
+        {
+            foreach (Control childControl in control.Controls)
+            {
+                if (childControl is TextBox textBox)
+                {
+                    textBox.Enabled = true;
+                }
+                else
+                {
+                    EnableAllTextBoxes(childControl);
+                }
+            }
+            DateBirthDay.Enabled = true;
+            DateStudentRegisterDate.Enabled = true;
+            txtStudentNIC.Enabled = false;
+            txtParent1NIC.Enabled = false;
+            txtParent2NIC.Enabled = false;
+        }
+        string studentNIC;
+        public void getNIC(string nic)
+        {
+            studentNIC = nic;
+        }
+
+        
+
+        public void changetoUpdate()
+        {
+            lblDetailTitle.Text = "Detail Form";
+            btn_Edit.Visible=true;
+            btn_Delete.Visible = true;
+
+            // Call the method to disable all textboxes
+            DisableAllTextBoxes(this);
+
+            
+
+
+            Connection_Sting connection = new Connection_Sting();
+            string connStr = connection.getConnectionString();
+
+            string query = "SELECT NIC, FName, LName, Email, Address, MobileNo, gender, DOB, keymoney, HomeTeleNO, Registerdate, Batch FROM student WHERE NIC = @NIC";
+
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                SqlCommand command = new SqlCommand(query, conn);
+                command.Parameters.AddWithValue("@NIC", studentNIC);
+
+                try
+                {
+                    conn.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        StudentNIC = reader["NIC"].ToString();
+                        StudentFName = reader["FName"].ToString();
+                        StudentLName = reader["LName"].ToString();
+                        StudentEmail = reader["Email"].ToString();
+                        StudentAddress = reader["Address"].ToString();
+                        StudentPhone = reader["MobileNo"].ToString();
+                        StudentGender = Convert.ToChar(reader["gender"]);
+                        StudentBirthday = Convert.ToDateTime(reader["DOB"]);
+                        StudentKeyMoney = Convert.ToInt32(reader["keymoney"]);
+                        StudentHomePhone = reader["HomeTeleNO"].ToString();
+                        StudentRegisterDate = Convert.ToDateTime(reader["Registerdate"]);
+                        StudentBatch = Convert.ToDouble(reader["Batch"]);
+                    }
+
+                    reader.Close();
+
+                    string parent1Query = @"SELECT TOP 1 g.NIC AS Parent1NIC, g.Name AS Parent1Name, g.ContactNo AS Parent1ContactNo, g.Email AS Parent1Email, g.Job AS Parent1Job
+                            FROM student_guardian sg
+                            INNER JOIN guardian g ON sg.GuardianNIC = g.NIC
+                            WHERE sg.studentNIC = @studentNIC
+                            ORDER BY (SELECT NULL)";
+
+                    SqlCommand parent1Command = new SqlCommand(parent1Query, conn);
+                    parent1Command.Parameters.AddWithValue("@studentNIC", studentNIC);
+
+                    SqlDataReader parent1Reader = parent1Command.ExecuteReader();
+                    if (parent1Reader.Read())
+                    {
+                        Parent1NIC = parent1Reader["Parent1NIC"].ToString();
+                        Parent1Name = parent1Reader["Parent1Name"].ToString();
+                        Parent1ContactNo = parent1Reader["Parent1ContactNo"].ToString();
+                        Parent1Email = parent1Reader["Parent1Email"].ToString();
+                        Parent1Job = parent1Reader["Parent1Job"].ToString();
+                    }
+                    parent1Reader.Close();
+
+                    string parent2Query = @"SELECT g.NIC AS Parent2NIC, g.Name AS Parent2Name, g.ContactNo AS Parent2ContactNo, g.Email AS Parent2Email, g.Job AS Parent2Job
+                            FROM student_guardian sg
+                            INNER JOIN guardian g ON sg.GuardianNIC = g.NIC
+                            WHERE sg.studentNIC = @studentNIC
+                            AND g.NIC <> @parent1NIC";
+
+                    SqlCommand parent2Command = new SqlCommand(parent2Query, conn);
+                    parent2Command.Parameters.AddWithValue("@studentNIC", studentNIC);
+                    parent2Command.Parameters.AddWithValue("@parent1NIC", Parent1NIC);
+
+                    SqlDataReader parent2Reader = parent2Command.ExecuteReader();
+                    if (parent2Reader.Read())
+                    {
+                        Parent2NIC = parent2Reader["Parent2NIC"].ToString();
+                        Parent2Name = parent2Reader["Parent2Name"].ToString();
+                        Parent2ContactNo = parent2Reader["Parent2ContactNo"].ToString();
+                        Parent2Email = parent2Reader["Parent2Email"].ToString();
+                        Parent2Job = parent2Reader["Parent2Job"].ToString();
+                    }
+                    parent2Reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+        }
+
+        #endregion
+
         private void Register_Load(object sender, EventArgs e)
         {
             ComboStudentGender.SelectedIndex = 0;
             DateStudentRegisterDate.Value = DateTime.Today;
             guna2ShadowForm1.SetShadowForm(this);
+
         }
 
         #region StudentValidate
@@ -448,7 +596,7 @@ namespace Hostel_Management_System
         }
         #endregion
 
-        private void btnAccept_Click_1(object sender, EventArgs e)
+        public virtual void btnAccept_Click_1(object sender, EventArgs e)
         {
             if (ValidateForm() && ValidateParentFields())
             {
@@ -554,6 +702,40 @@ namespace Hostel_Management_System
                 successfull.ShowDialog();
             }
         }
-        
+
+        private void btn_Edit_Click(object sender, EventArgs e)
+        {
+            EnableAllTextBoxes(this);
+        }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            Connection_Sting connection = new Connection_Sting();
+            string connStr = connection.getConnectionString();
+
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+
+                //Delete the record from the student_guardian table
+                string deleteStudentGuardianQuery = "DELETE FROM student_guardian WHERE studentNIC = @studentNIC";
+                SqlCommand deleteStudentGuardianCommand = new SqlCommand(deleteStudentGuardianQuery, conn);
+                deleteStudentGuardianCommand.Parameters.AddWithValue("@studentNIC", studentNIC);
+                deleteStudentGuardianCommand.ExecuteNonQuery();
+
+                //Delete the record from the student table
+                string deleteStudentQuery = "DELETE FROM student WHERE NIC = @studentNIC";
+                SqlCommand deleteStudentCommand = new SqlCommand(deleteStudentQuery, conn);
+                deleteStudentCommand.Parameters.AddWithValue("@studentNIC", studentNIC);
+                deleteStudentCommand.ExecuteNonQuery();
+
+                //Delete the record from the guardian table (if needed)
+                string deleteGuardianQuery = "DELETE FROM guardian WHERE NIC NOT IN (SELECT guardianNIC FROM student_guardian)";
+                SqlCommand deleteGuardianCommand = new SqlCommand(deleteGuardianQuery, conn);
+                deleteGuardianCommand.ExecuteNonQuery();
+
+                conn.Close();
+            }
+        }
     }
 }
