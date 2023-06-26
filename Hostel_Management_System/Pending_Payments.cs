@@ -31,7 +31,12 @@ namespace Hostel_Management_System
 
 
             SqlConnection conn = new SqlConnection(connStr);
-            string query = "SELECT s.Room_No, st.NIC AS StudentNIC, st.FName, st.rental FROM slot s INNER JOIN student_slot ss ON s.slotID = ss.slotID INNER JOIN student st ON ss.NIC = st.NIC";
+            string query = @"SELECT s.Room_No, st.NIC AS StudentNIC, st.FName, st.rental 
+                FROM slot s 
+                INNER JOIN student_slot ss ON s.slotID = ss.slotID 
+                INNER JOIN student st ON ss.NIC = st.NIC
+                WHERE st.rental < 0";
+
 
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
@@ -74,6 +79,8 @@ namespace Hostel_Management_System
 
                 Payment_Confirm pay = new Payment_Confirm();
                 pay.getNIC(studentNIC);
+                this.Close();
+                pay.Show();
                 }   
         }
     }
