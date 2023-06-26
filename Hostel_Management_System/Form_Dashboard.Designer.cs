@@ -39,6 +39,7 @@
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.lbl_pendingPayment = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
@@ -55,7 +56,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.gunaShadowPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.gunaShadowPanel1.SuspendLayout();
@@ -173,7 +173,7 @@
             this.gunaShadowPanel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaShadowPanel1.BaseColor = System.Drawing.Color.White;
             this.gunaShadowPanel1.Controls.Add(this.guna2Button1);
-            this.gunaShadowPanel1.Controls.Add(this.label1);
+            this.gunaShadowPanel1.Controls.Add(this.lbl_pendingPayment);
             this.gunaShadowPanel1.Controls.Add(this.label2);
             this.gunaShadowPanel1.Controls.Add(this.guna2PictureBox2);
             this.gunaShadowPanel1.Location = new System.Drawing.Point(450, 121);
@@ -206,6 +206,17 @@
             this.guna2Button1.Text = "View More";
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // lbl_pendingPayment
+            // 
+            this.lbl_pendingPayment.AutoSize = true;
+            this.lbl_pendingPayment.Font = new System.Drawing.Font("Poppins", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_pendingPayment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
+            this.lbl_pendingPayment.Location = new System.Drawing.Point(51, 86);
+            this.lbl_pendingPayment.Name = "lbl_pendingPayment";
+            this.lbl_pendingPayment.Size = new System.Drawing.Size(115, 51);
+            this.lbl_pendingPayment.TabIndex = 14;
+            this.lbl_pendingPayment.Text = "10/225";
             // 
             // label2
             // 
@@ -395,17 +406,6 @@
             this.guna2PictureBox1.TabIndex = 2;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
-            this.label1.Location = new System.Drawing.Point(51, 86);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 51);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "10/225";
-            // 
             // Form_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -474,6 +474,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_pendingPayment;
     }
 }

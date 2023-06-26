@@ -1,4 +1,5 @@
 ﻿using Hostel_Management_System.Database_Connection;
+using Hostel_Management_System.Popups;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,7 +31,7 @@ namespace Hostel_Management_System
 
 
             SqlConnection conn = new SqlConnection(connStr);
-            string query = "SELECT s.Room_No, st.FName, st.rental FROM slot s INNER JOIN student_slot ss ON s.slotID = ss.slotID INNER JOIN student st ON ss.NIC = st.NIC";
+            string query = "SELECT s.Room_No, st.NIC AS StudentNIC, st.FName, st.rental FROM slot s INNER JOIN student_slot ss ON s.slotID = ss.slotID INNER JOIN student st ON ss.NIC = st.NIC";
 
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
@@ -62,6 +63,18 @@ namespace Hostel_Management_System
             }
 
             table_payments.DataSource = filteredData;
+        }
+
+        private void table_payments_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+                {
+                    // Get the value of the StudentNIC column in the clicked row
+                    string studentNIC = table_payments.Rows[e.RowIndex].Cells["StudentNIC"].Value.ToString();
+
+                Payment_Confirm pay = new Payment_Confirm();
+                pay.getNIC(studentNIC);
+                }   
         }
     }
 }

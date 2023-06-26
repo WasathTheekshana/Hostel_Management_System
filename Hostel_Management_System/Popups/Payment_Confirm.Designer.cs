@@ -30,10 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_username = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_payment = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
@@ -44,47 +42,6 @@
             // gunaElipse1
             // 
             this.gunaElipse1.TargetControl = this;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
-            this.label2.Location = new System.Drawing.Point(19, 145);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 22);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "Confirmation Pin :";
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
-            this.guna2TextBox1.BorderRadius = 8;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(23, 171);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(386, 35);
-            this.guna2TextBox1.TabIndex = 24;
-            this.guna2TextBox1.TextOffset = new System.Drawing.Point(8, 0);
             // 
             // label1
             // 
@@ -97,35 +54,36 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "Payment Amount :";
             // 
-            // txt_username
+            // txt_payment
             // 
-            this.txt_username.BackColor = System.Drawing.Color.Transparent;
-            this.txt_username.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
-            this.txt_username.BorderRadius = 8;
-            this.txt_username.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_username.DefaultText = "";
-            this.txt_username.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_username.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_username.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_username.DisabledState.Parent = this.txt_username;
-            this.txt_username.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_username.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txt_username.FocusedState.Parent = this.txt_username;
-            this.txt_username.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
-            this.txt_username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_username.HoverState.Parent = this.txt_username;
-            this.txt_username.Location = new System.Drawing.Point(23, 97);
-            this.txt_username.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_username.Name = "txt_username";
-            this.txt_username.PasswordChar = '\0';
-            this.txt_username.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
-            this.txt_username.PlaceholderText = "";
-            this.txt_username.SelectedText = "";
-            this.txt_username.ShadowDecoration.Parent = this.txt_username;
-            this.txt_username.Size = new System.Drawing.Size(386, 35);
-            this.txt_username.TabIndex = 22;
-            this.txt_username.TextOffset = new System.Drawing.Point(8, 0);
+            this.txt_payment.BackColor = System.Drawing.Color.Transparent;
+            this.txt_payment.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
+            this.txt_payment.BorderRadius = 8;
+            this.txt_payment.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_payment.DefaultText = "";
+            this.txt_payment.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_payment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_payment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_payment.DisabledState.Parent = this.txt_payment;
+            this.txt_payment.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_payment.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txt_payment.FocusedState.Parent = this.txt_payment;
+            this.txt_payment.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_payment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
+            this.txt_payment.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_payment.HoverState.Parent = this.txt_payment;
+            this.txt_payment.Location = new System.Drawing.Point(23, 97);
+            this.txt_payment.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_payment.Name = "txt_payment";
+            this.txt_payment.PasswordChar = '\0';
+            this.txt_payment.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(86)))), ((int)(((byte)(120)))));
+            this.txt_payment.PlaceholderText = "";
+            this.txt_payment.SelectedText = "";
+            this.txt_payment.ShadowDecoration.Parent = this.txt_payment;
+            this.txt_payment.Size = new System.Drawing.Size(386, 35);
+            this.txt_payment.TabIndex = 22;
+            this.txt_payment.TextOffset = new System.Drawing.Point(8, 0);
+            this.txt_payment.TextChanged += new System.EventHandler(this.txt_username_TextChanged);
             // 
             // label10
             // 
@@ -165,7 +123,7 @@
             this.gunaButton1.Image = null;
             this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaButton1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.gunaButton1.Location = new System.Drawing.Point(155, 227);
+            this.gunaButton1.Location = new System.Drawing.Point(155, 164);
             this.gunaButton1.Name = "gunaButton1";
             this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(73)))), ((int)(((byte)(240)))));
             this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Transparent;
@@ -194,7 +152,7 @@
             this.btn_login.Image = null;
             this.btn_login.ImageSize = new System.Drawing.Size(20, 20);
             this.btn_login.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_login.Location = new System.Drawing.Point(23, 227);
+            this.btn_login.Location = new System.Drawing.Point(23, 164);
             this.btn_login.Name = "btn_login";
             this.btn_login.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_login.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -213,13 +171,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(447, 287);
+            this.ClientSize = new System.Drawing.Size(447, 231);
             this.Controls.Add(this.gunaButton1);
             this.Controls.Add(this.btn_login);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txt_username);
+            this.Controls.Add(this.txt_payment);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.guna2PictureBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -234,10 +190,8 @@
         #endregion
 
         private Guna.UI.WinForms.GunaElipse gunaElipse1;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2TextBox txt_username;
+        private Guna.UI2.WinForms.Guna2TextBox txt_payment;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Guna.UI.WinForms.GunaButton gunaButton1;
