@@ -90,12 +90,14 @@ namespace Hostel_Management_System
                 MessageBox.Show("Invalid Mobile Number for Student", "Validation Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-
-            string homePhoneNumber = txtStudentHomeNo.Text.Trim();
-            if (!Regex.IsMatch(homePhoneNumber, @"^0\d{9}$"))
+            if (string.IsNullOrEmpty(txtStudentEmail.Text.Trim()))
             {
-                MessageBox.Show("Invalid Home Phone Number", "Validation Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                string homePhoneNumber = txtStudentHomeNo.Text.Trim();
+                if (!Regex.IsMatch(homePhoneNumber, @"^0\d{9}$"))
+                {
+                    MessageBox.Show("Invalid Home Phone Number", "Validation Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
             }
 
             return true;
@@ -384,9 +386,7 @@ namespace Hostel_Management_System
             if (isMotherGuardianFilled &&
                 (string.IsNullOrWhiteSpace(txtParent1Name.Text) ||
                  string.IsNullOrWhiteSpace(txtParent1No.Text) ||
-                 string.IsNullOrWhiteSpace(txtParent1NIC.Text) ||
-                 string.IsNullOrWhiteSpace(txtParent1Job.Text) ||
-                 string.IsNullOrWhiteSpace(txtParent1Email.Text)))
+                 string.IsNullOrWhiteSpace(txtParent1NIC.Text)))
             {
                 MessageBox.Show("Please fill all fields of Mother's/Guardian's.", "Validation Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -396,9 +396,7 @@ namespace Hostel_Management_System
             if (isFatherGuardianFilled &&
                 (string.IsNullOrWhiteSpace(txtParent2Name.Text) ||
                  string.IsNullOrWhiteSpace(txtParent2No.Text) ||
-                 string.IsNullOrWhiteSpace(txtParent2NIC.Text) ||
-                 string.IsNullOrWhiteSpace(txtParent2Job.Text) ||
-                 string.IsNullOrWhiteSpace(txtParent2Email.Text)))
+                 string.IsNullOrWhiteSpace(txtParent2NIC.Text)))
             {
                 MessageBox.Show("Please fill all fields of Father's/Guardian's.", "Validation Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
