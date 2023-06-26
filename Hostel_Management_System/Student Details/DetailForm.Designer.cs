@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetailForm));
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_Delete = new Guna.UI.WinForms.GunaButton();
+            this.btn_Edit = new Guna.UI.WinForms.GunaButton();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
             this.lblDetailTitle = new Guna.UI.WinForms.GunaLabel();
@@ -40,6 +42,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
@@ -68,6 +71,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.gunaLabel13 = new Guna.UI.WinForms.GunaLabel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.gunaLabel14 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel15 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel16 = new Guna.UI.WinForms.GunaLabel();
@@ -91,19 +95,15 @@
             this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.btnAccept = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btn_Delete = new Guna.UI.WinForms.GunaButton();
-            this.btn_Edit = new Guna.UI.WinForms.GunaButton();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.guna2Panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            this.guna2Panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaElipse1
@@ -124,6 +124,70 @@
             this.guna2Panel1.Size = new System.Drawing.Size(796, 111);
             this.guna2Panel1.TabIndex = 0;
             // 
+            // btn_Delete
+            // 
+            this.btn_Delete.Animated = true;
+            this.btn_Delete.AnimationHoverSpeed = 0.07F;
+            this.btn_Delete.AnimationSpeed = 0.03F;
+            this.btn_Delete.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Delete.BaseColor = System.Drawing.Color.Transparent;
+            this.btn_Delete.BorderColor = System.Drawing.Color.Salmon;
+            this.btn_Delete.BorderSize = 1;
+            this.btn_Delete.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Delete.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Delete.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Delete.ForeColor = System.Drawing.Color.Salmon;
+            this.btn_Delete.Image = null;
+            this.btn_Delete.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Delete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btn_Delete.Location = new System.Drawing.Point(667, 45);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_Delete.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Delete.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Delete.OnHoverImage = null;
+            this.btn_Delete.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Delete.Radius = 8;
+            this.btn_Delete.Size = new System.Drawing.Size(117, 39);
+            this.btn_Delete.TabIndex = 46;
+            this.btn_Delete.Text = "Delete";
+            this.btn_Delete.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_Delete.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.btn_Delete.Visible = false;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
+            // 
+            // btn_Edit
+            // 
+            this.btn_Edit.Animated = true;
+            this.btn_Edit.AnimationHoverSpeed = 0.07F;
+            this.btn_Edit.AnimationSpeed = 0.03F;
+            this.btn_Edit.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Edit.BaseColor = System.Drawing.Color.Transparent;
+            this.btn_Edit.BorderColor = System.Drawing.Color.White;
+            this.btn_Edit.BorderSize = 1;
+            this.btn_Edit.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Edit.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Edit.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Edit.ForeColor = System.Drawing.Color.White;
+            this.btn_Edit.Image = null;
+            this.btn_Edit.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Edit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btn_Edit.Location = new System.Drawing.Point(539, 45);
+            this.btn_Edit.Name = "btn_Edit";
+            this.btn_Edit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_Edit.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Edit.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Edit.OnHoverImage = null;
+            this.btn_Edit.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Edit.Radius = 8;
+            this.btn_Edit.Size = new System.Drawing.Size(117, 39);
+            this.btn_Edit.TabIndex = 45;
+            this.btn_Edit.Text = "Edit";
+            this.btn_Edit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_Edit.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.btn_Edit.Visible = false;
+            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
+            // 
             // guna2Panel3
             // 
             this.guna2Panel3.Controls.Add(this.gunaControlBox1);
@@ -140,8 +204,8 @@
             this.gunaControlBox1.Animated = true;
             this.gunaControlBox1.AnimationHoverSpeed = 0.07F;
             this.gunaControlBox1.AnimationSpeed = 0.03F;
-            this.gunaControlBox1.BackColor = System.Drawing.Color.White;
-            this.gunaControlBox1.IconColor = System.Drawing.Color.Black;
+            this.gunaControlBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(73)))), ((int)(((byte)(240)))));
+            this.gunaControlBox1.IconColor = System.Drawing.Color.White;
             this.gunaControlBox1.IconSize = 15F;
             this.gunaControlBox1.Location = new System.Drawing.Point(750, 0);
             this.gunaControlBox1.Name = "gunaControlBox1";
@@ -256,6 +320,18 @@
             this.gunaLabel2.Size = new System.Drawing.Size(99, 26);
             this.gunaLabel2.TabIndex = 1;
             this.gunaLabel2.Text = "First Name :";
+            // 
+            // guna2PictureBox1
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.guna2PictureBox1, 3);
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.Location = new System.Drawing.Point(3, 36);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(699, 17);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 1;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // gunaLabel3
             // 
@@ -803,6 +879,18 @@
             this.gunaLabel13.TabIndex = 1;
             this.gunaLabel13.Text = "Mother’s / Father\'s/Guardian’s Name :";
             // 
+            // guna2PictureBox2
+            // 
+            this.tableLayoutPanel2.SetColumnSpan(this.guna2PictureBox2, 3);
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.Location = new System.Drawing.Point(3, 36);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
+            this.guna2PictureBox2.Size = new System.Drawing.Size(699, 17);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 1;
+            this.guna2PictureBox2.TabStop = false;
+            // 
             // gunaLabel14
             // 
             this.gunaLabel14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -1226,94 +1314,6 @@
             this.btnAccept.Text = "Register";
             this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click_1);
             // 
-            // guna2PictureBox1
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.guna2PictureBox1, 3);
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.Location = new System.Drawing.Point(3, 36);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(699, 17);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 1;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // guna2PictureBox2
-            // 
-            this.tableLayoutPanel2.SetColumnSpan(this.guna2PictureBox2, 3);
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.Location = new System.Drawing.Point(3, 36);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(699, 17);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 1;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // btn_Delete
-            // 
-            this.btn_Delete.Animated = true;
-            this.btn_Delete.AnimationHoverSpeed = 0.07F;
-            this.btn_Delete.AnimationSpeed = 0.03F;
-            this.btn_Delete.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Delete.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(112)))), ((int)(((byte)(107)))));
-            this.btn_Delete.BorderColor = System.Drawing.Color.LightCoral;
-            this.btn_Delete.BorderSize = 1;
-            this.btn_Delete.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_Delete.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Delete.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Delete.ForeColor = System.Drawing.Color.White;
-            this.btn_Delete.Image = null;
-            this.btn_Delete.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Delete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_Delete.Location = new System.Drawing.Point(631, 68);
-            this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_Delete.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_Delete.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_Delete.OnHoverImage = null;
-            this.btn_Delete.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Delete.Radius = 8;
-            this.btn_Delete.Size = new System.Drawing.Size(117, 39);
-            this.btn_Delete.TabIndex = 46;
-            this.btn_Delete.Text = "Delete";
-            this.btn_Delete.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_Delete.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
-            this.btn_Delete.Visible = false;
-            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
-            // 
-            // btn_Edit
-            // 
-            this.btn_Edit.Animated = true;
-            this.btn_Edit.AnimationHoverSpeed = 0.07F;
-            this.btn_Edit.AnimationSpeed = 0.03F;
-            this.btn_Edit.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Edit.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btn_Edit.BorderColor = System.Drawing.Color.White;
-            this.btn_Edit.BorderSize = 1;
-            this.btn_Edit.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_Edit.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Edit.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Edit.ForeColor = System.Drawing.Color.White;
-            this.btn_Edit.Image = null;
-            this.btn_Edit.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Edit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_Edit.Location = new System.Drawing.Point(486, 68);
-            this.btn_Edit.Name = "btn_Edit";
-            this.btn_Edit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_Edit.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_Edit.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_Edit.OnHoverImage = null;
-            this.btn_Edit.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Edit.Radius = 8;
-            this.btn_Edit.Size = new System.Drawing.Size(117, 39);
-            this.btn_Edit.TabIndex = 45;
-            this.btn_Edit.Text = "Edit";
-            this.btn_Edit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_Edit.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
-            this.btn_Edit.Visible = false;
-            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
-            // 
             // DetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1333,12 +1333,12 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            this.guna2Panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            this.guna2Panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
