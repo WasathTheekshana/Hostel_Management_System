@@ -433,6 +433,7 @@
             this.btn_tomorrow_dinner_view.TabIndex = 13;
             this.btn_tomorrow_dinner_view.Text = "View More";
             this.btn_tomorrow_dinner_view.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_tomorrow_dinner_view.Click += new System.EventHandler(this.btn_tomorrow_dinner_view_Click);
             // 
             // btn_tomorrow_dinner_add
             // 
@@ -456,6 +457,7 @@
             this.btn_tomorrow_dinner_add.OnPressedColor = System.Drawing.Color.Black;
             this.btn_tomorrow_dinner_add.Size = new System.Drawing.Size(25, 25);
             this.btn_tomorrow_dinner_add.TabIndex = 15;
+            this.btn_tomorrow_dinner_add.Click += new System.EventHandler(this.btn_tomorrow_dinner_add_Click);
             // 
             // guna2PictureBox4
             // 
@@ -487,6 +489,7 @@
             this.btn_today_dinner_view.TabIndex = 13;
             this.btn_today_dinner_view.Text = "View More";
             this.btn_today_dinner_view.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_today_dinner_view.Click += new System.EventHandler(this.btn_today_dinner_view_Click);
             // 
             // btn_today_dinner_add
             // 
@@ -510,6 +513,7 @@
             this.btn_today_dinner_add.OnPressedColor = System.Drawing.Color.Black;
             this.btn_today_dinner_add.Size = new System.Drawing.Size(25, 25);
             this.btn_today_dinner_add.TabIndex = 15;
+            this.btn_today_dinner_add.Click += new System.EventHandler(this.btn_today_dinner_add_Click);
             // 
             // guna2PictureBox3
             // 
@@ -541,6 +545,7 @@
             this.btn_tomorrow_lunch_view.TabIndex = 13;
             this.btn_tomorrow_lunch_view.Text = "View More";
             this.btn_tomorrow_lunch_view.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_tomorrow_lunch_view.Click += new System.EventHandler(this.btn_tomorrow_lunch_view_Click);
             // 
             // btn_tomorrow_lunch_add
             // 
@@ -564,6 +569,7 @@
             this.btn_tomorrow_lunch_add.OnPressedColor = System.Drawing.Color.Black;
             this.btn_tomorrow_lunch_add.Size = new System.Drawing.Size(25, 25);
             this.btn_tomorrow_lunch_add.TabIndex = 15;
+            this.btn_tomorrow_lunch_add.Click += new System.EventHandler(this.btn_tomorrow_lunch_add_Click);
             // 
             // guna2PictureBox5
             // 
@@ -595,6 +601,7 @@
             this.btn_tomorrow_breakfast_view.TabIndex = 13;
             this.btn_tomorrow_breakfast_view.Text = "View More";
             this.btn_tomorrow_breakfast_view.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_tomorrow_breakfast_view.Click += new System.EventHandler(this.btn_tomorrow_breakfast_view_Click);
             // 
             // btn_tomorrow_breakfast_add
             // 
@@ -618,6 +625,7 @@
             this.btn_tomorrow_breakfast_add.OnPressedColor = System.Drawing.Color.Black;
             this.btn_tomorrow_breakfast_add.Size = new System.Drawing.Size(25, 25);
             this.btn_tomorrow_breakfast_add.TabIndex = 15;
+            this.btn_tomorrow_breakfast_add.Click += new System.EventHandler(this.btn_tomorrow_breakfast_add_Click);
             // 
             // guna2PictureBox6
             // 
@@ -649,6 +657,7 @@
             this.btn_today_lunch_view.TabIndex = 13;
             this.btn_today_lunch_view.Text = "View More";
             this.btn_today_lunch_view.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_today_lunch_view.Click += new System.EventHandler(this.btn_today_lunch_view_Click);
             // 
             // btn_today_lunch_add
             // 
@@ -672,6 +681,7 @@
             this.btn_today_lunch_add.OnPressedColor = System.Drawing.Color.Black;
             this.btn_today_lunch_add.Size = new System.Drawing.Size(25, 25);
             this.btn_today_lunch_add.TabIndex = 15;
+            this.btn_today_lunch_add.Click += new System.EventHandler(this.btn_today_lunch_add_Click);
             // 
             // guna2PictureBox2
             // 
@@ -727,6 +737,7 @@
             this.btn_today_breakfast_add.OnPressedColor = System.Drawing.Color.Black;
             this.btn_today_breakfast_add.Size = new System.Drawing.Size(25, 25);
             this.btn_today_breakfast_add.TabIndex = 15;
+            this.btn_today_breakfast_add.Click += new System.EventHandler(this.btn_today_breakfast_add_Click);
             // 
             // guna2PictureBox1
             // 
