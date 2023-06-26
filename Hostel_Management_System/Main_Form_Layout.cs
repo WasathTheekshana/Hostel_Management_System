@@ -54,6 +54,12 @@ namespace Hostel_Management_System
             dashboard.setUserName(loggedInUser);
             btn_dashboard.Checked = true;
             container(dashboard);
+
+            if(userPrivi == "User")
+            {
+                btn_settings.Enabled = false;
+                btn_addNew.Enabled = false;
+            }
         }
 
       

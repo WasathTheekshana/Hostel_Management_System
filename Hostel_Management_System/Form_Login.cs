@@ -95,7 +95,7 @@ namespace Hostel_Management_System
                         }
                         else
                         {
-                            userPrivi = "Modarate";
+                            userPrivi = "User";
                         }
                     mainForm.setUserName(userName, userPrivi);
                     mainForm.Show();
