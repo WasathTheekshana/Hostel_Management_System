@@ -44,19 +44,35 @@ namespace Hostel_Management_System.User_Modals
         private void btn_login_Click(object sender, EventArgs e)
         {
             Base_Error_Popup error = new Base_Error_Popup();
+            Base_Successfull_Popup success = new Base_Successfull_Popup();
+            success.setPopup("Password Updated Succuessfully!");
             error.setPopup("Password doesn't match!");
 
             if(txt_passwod.Text == txt_confirmPass.Text)
             {
-                error.ShowDialog();
-            }
-            else
-            {
+               
                 Connection_Sting objConn = new Connection_Sting();
                 string connStr = objConn.getConnectionString();
 
                 SqlConnection conn = new SqlConnection(connStr);
-                string qry = "";
+                string qry = "UPDATE admin set password= '" + txt_confirmPass.Text + "' WHERE username = '" + username + "'";
+                SqlCommand cmd = new SqlCommand(qry, conn);
+
+                try
+                {
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    success.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally { conn.Close(); }
+            }
+            else
+            {
+                error.ShowDialog();
             }
         }
     }
