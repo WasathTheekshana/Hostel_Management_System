@@ -48,11 +48,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.gunaShadowPanel4 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_today_lunch_food = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.gunaShadowPanel5 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbl_today_dinner_food = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -303,7 +303,7 @@
             // 
             this.gunaShadowPanel4.BackColor = System.Drawing.Color.Transparent;
             this.gunaShadowPanel4.BaseColor = System.Drawing.Color.White;
-            this.gunaShadowPanel4.Controls.Add(this.label3);
+            this.gunaShadowPanel4.Controls.Add(this.lbl_today_lunch_food);
             this.gunaShadowPanel4.Controls.Add(this.label4);
             this.gunaShadowPanel4.Controls.Add(this.guna2PictureBox5);
             this.gunaShadowPanel4.Location = new System.Drawing.Point(313, 418);
@@ -315,16 +315,16 @@
             this.gunaShadowPanel4.Size = new System.Drawing.Size(269, 179);
             this.gunaShadowPanel4.TabIndex = 57;
             // 
-            // label3
+            // lbl_today_lunch_food
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Poppins SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
-            this.label3.Location = new System.Drawing.Point(46, 96);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 42);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "10";
+            this.lbl_today_lunch_food.AutoSize = true;
+            this.lbl_today_lunch_food.Font = new System.Drawing.Font("Poppins SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_today_lunch_food.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
+            this.lbl_today_lunch_food.Location = new System.Drawing.Point(46, 96);
+            this.lbl_today_lunch_food.Name = "lbl_today_lunch_food";
+            this.lbl_today_lunch_food.Size = new System.Drawing.Size(43, 42);
+            this.lbl_today_lunch_food.TabIndex = 14;
+            this.lbl_today_lunch_food.Text = "10";
             // 
             // label4
             // 
@@ -351,7 +351,7 @@
             // 
             this.gunaShadowPanel5.BackColor = System.Drawing.Color.Transparent;
             this.gunaShadowPanel5.BaseColor = System.Drawing.Color.White;
-            this.gunaShadowPanel5.Controls.Add(this.label6);
+            this.gunaShadowPanel5.Controls.Add(this.lbl_today_dinner_food);
             this.gunaShadowPanel5.Controls.Add(this.label7);
             this.gunaShadowPanel5.Controls.Add(this.guna2PictureBox6);
             this.gunaShadowPanel5.Location = new System.Drawing.Point(586, 418);
@@ -363,16 +363,16 @@
             this.gunaShadowPanel5.Size = new System.Drawing.Size(269, 179);
             this.gunaShadowPanel5.TabIndex = 57;
             // 
-            // label6
+            // lbl_today_dinner_food
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Poppins SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
-            this.label6.Location = new System.Drawing.Point(46, 96);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 42);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "10";
+            this.lbl_today_dinner_food.AutoSize = true;
+            this.lbl_today_dinner_food.Font = new System.Drawing.Font("Poppins SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_today_dinner_food.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
+            this.lbl_today_dinner_food.Location = new System.Drawing.Point(46, 96);
+            this.lbl_today_dinner_food.Name = "lbl_today_dinner_food";
+            this.lbl_today_dinner_food.Size = new System.Drawing.Size(43, 42);
+            this.lbl_today_dinner_food.TabIndex = 14;
+            this.lbl_today_dinner_food.Text = "10";
             // 
             // label7
             // 
@@ -467,11 +467,11 @@
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbl_today_dinner_food;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox6;
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_today_lunch_food;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
         private System.Windows.Forms.Label lbl_pendingPayment;
