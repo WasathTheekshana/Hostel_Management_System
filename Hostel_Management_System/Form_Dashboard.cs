@@ -107,6 +107,35 @@ namespace Hostel_Management_System
             }
             updateDashBoard();
 
+            Connection_Sting objConnectionString = new Connection_Sting();
+            string connStr = objConnectionString.getConnectionString();
+
+            string queryBreakfast = @"SELECT COUNT(*) FROM food_order WHERE meal = 'Breakfast' AND CONVERT(DATE, orderDate) = CONVERT(DATE, GETDATE())";
+            string queryLunch = @"SELECT COUNT(*) FROM food_order WHERE meal = 'Lunch' AND CONVERT(DATE, orderDate) = CONVERT(DATE, GETDATE())";
+            string queryDinner = @"SELECT COUNT(*) FROM food_order WHERE meal = 'Dinner' AND CONVERT(DATE, orderDate) = CONVERT(DATE, GETDATE())";
+
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand commandb = new SqlCommand(queryBreakfast, conn);
+                    SqlCommand commandl = new SqlCommand(queryLunch, conn);
+                    SqlCommand commandd = new SqlCommand(queryDinner, conn);
+
+                    int countb = (int)commandb.ExecuteScalar();
+                    int countl = (int)commandl.ExecuteScalar();
+                    int countd = (int)commandd.ExecuteScalar();
+
+                    lbl_today_breakfast_food.Text = Convert.ToString(countb);
+                    lbl_today_lunch_food.Text = Convert.ToString(countl);
+                    lbl_today_dinner_food.Text = Convert.ToString(countd);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
 
         }
 
