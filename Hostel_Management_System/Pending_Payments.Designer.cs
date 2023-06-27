@@ -81,7 +81,7 @@
             this.table_payments.EnableHeadersVisualStyles = false;
             this.table_payments.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.table_payments.Location = new System.Drawing.Point(92, 371);
-            this.table_payments.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.table_payments.Margin = new System.Windows.Forms.Padding(6);
             this.table_payments.Name = "table_payments";
             this.table_payments.ReadOnly = true;
             this.table_payments.RowHeadersVisible = false;
@@ -112,6 +112,7 @@
             this.table_payments.ThemeStyle.RowsStyle.Height = 30;
             this.table_payments.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.table_payments.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.table_payments.Visible = false;
             this.table_payments.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_payments_CellClick);
             // 
             // guna2Panel2
@@ -119,7 +120,7 @@
             this.guna2Panel2.Controls.Add(this.gunaControlBox1);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(6);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(1794, 56);
@@ -134,7 +135,7 @@
             this.gunaControlBox1.IconColor = System.Drawing.Color.Black;
             this.gunaControlBox1.IconSize = 15F;
             this.gunaControlBox1.Location = new System.Drawing.Point(1702, 0);
-            this.gunaControlBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gunaControlBox1.Margin = new System.Windows.Forms.Padding(6);
             this.gunaControlBox1.Name = "gunaControlBox1";
             this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.Red;
             this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
@@ -179,7 +180,7 @@
             this.txtStudentSearch.IconLeft = global::Hostel_Management_System.Properties.Resources.search;
             this.txtStudentSearch.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtStudentSearch.Location = new System.Drawing.Point(92, 254);
-            this.txtStudentSearch.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.txtStudentSearch.Margin = new System.Windows.Forms.Padding(8);
             this.txtStudentSearch.Name = "txtStudentSearch";
             this.txtStudentSearch.PasswordChar = '\0';
             this.txtStudentSearch.PlaceholderText = "Search student";
@@ -219,7 +220,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Pending_Payments";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pending_Payments";
