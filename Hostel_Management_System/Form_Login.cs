@@ -100,6 +100,7 @@ namespace Hostel_Management_System
                         }
                         mainForm.setUserName(userName, userPrivi);
                         mainForm.setaddStudentPrivi(isStudentSettings);
+                        mainForm.setRental(isRental);
                         mainForm.Show();
                         this.Hide();
                         

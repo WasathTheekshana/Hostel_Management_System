@@ -28,6 +28,11 @@ namespace Hostel_Management_System
             this.userName = userName;
         }
 
+        private bool rentprivi;
+        public void setRentalPrivi(bool rentalprivi)
+        {
+            rentprivi = rentalprivi;
+        }
         
 
         public void updateDashBoard() 
@@ -144,6 +149,7 @@ namespace Hostel_Management_System
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             Pending_Payments pendingPayments = new Pending_Payments();
+            pendingPayments.setRentalPrivi(rentprivi);
             pendingPayments.ShowDialog();
         }
 

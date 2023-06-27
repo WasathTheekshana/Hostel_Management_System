@@ -22,8 +22,19 @@ namespace Hostel_Management_System
         }
         private DataTable originalData;
 
+        private bool checkedRentalPrivi;
+
+        public void setRentalPrivi(bool rentPrivi)
+        {
+            checkedRentalPrivi = rentPrivi;
+        }
+
         private void Pending_Payments_Load(object sender, EventArgs e)
         {
+            if (checkedRentalPrivi)
+            {
+                gunaLabel7.Visible = true;
+            }
             guna2ShadowForm1.SetShadowForm(this);
 
             Connection_Sting objConnection = new Connection_Sting();
@@ -72,16 +83,19 @@ namespace Hostel_Management_System
 
         private void table_payments_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            if (checkedRentalPrivi)
+            {
+                if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
                 {
                     // Get the value of the StudentNIC column in the clicked row
                     string studentNIC = table_payments.Rows[e.RowIndex].Cells["StudentNIC"].Value.ToString();
 
-                Payment_Confirm pay = new Payment_Confirm();
-                pay.getNIC(studentNIC);
-                this.Close();
-                pay.Show();
-                }   
+                    Payment_Confirm pay = new Payment_Confirm();
+                    pay.getNIC(studentNIC);
+                    this.Close();
+                    pay.ShowDialog();
+                }
+            }
         }
     }
 }

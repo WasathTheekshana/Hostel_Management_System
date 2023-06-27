@@ -28,6 +28,13 @@ namespace Hostel_Management_System
 
         public string loggedInUser;
         public string userPrivi;
+
+        private bool checkRental;
+
+        public void setRental(bool isRenatl)
+        {
+            checkRental = isRenatl;
+        }
         public void setUserName(string loggedInUser, string userPrivi)
         {
             this.loggedInUser = loggedInUser;
@@ -102,6 +109,7 @@ namespace Hostel_Management_System
             lbl_privi.Text = userPrivi;
 
             dashboard.setUserName(loggedInUser);
+            dashboard.setRentalPrivi(checkRental);
             btn_dashboard.Checked = true;
             container(dashboard);
 
@@ -119,6 +127,7 @@ namespace Hostel_Management_System
         {
             dashboard.setUserName(loggedInUser);
             dashboard.updateDashBoard();
+            dashboard.setRentalPrivi(checkRental);
             container(dashboard);
      
         }
