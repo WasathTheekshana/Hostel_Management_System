@@ -28,11 +28,24 @@ namespace Hostel_Management_System
 
         public string loggedInUser;
         public string userPrivi;
+
+        private bool checkRental;
+
+        public void setRental(bool isRenatl)
+        {
+            checkRental = isRenatl;
+        }
         public void setUserName(string loggedInUser, string userPrivi)
         {
             this.loggedInUser = loggedInUser;
             this.userPrivi = userPrivi;
-        } 
+        }
+
+        bool addStudentPrivi;
+        public void setaddStudentPrivi(bool privi)
+        {
+            addStudentPrivi = privi;
+        }
 
         Form_StudentList std = new Form_StudentList();
         
@@ -96,6 +109,7 @@ namespace Hostel_Management_System
             lbl_privi.Text = userPrivi;
 
             dashboard.setUserName(loggedInUser);
+            dashboard.setRentalPrivi(checkRental);
             btn_dashboard.Checked = true;
             container(dashboard);
 
@@ -113,6 +127,7 @@ namespace Hostel_Management_System
         {
             dashboard.setUserName(loggedInUser);
             dashboard.updateDashBoard();
+            dashboard.setRentalPrivi(checkRental);
             container(dashboard);
      
         }
@@ -125,7 +140,9 @@ namespace Hostel_Management_System
 
         private void btn_studnetList_Click(object sender, EventArgs e)
         {
-            container(new Form_StudentList());
+            Form_StudentList form_StudentList = new Form_StudentList();
+            form_StudentList.getpermission(addStudentPrivi);
+            container(form_StudentList);
         }
 
         private void btn_addNew_Click(object sender, EventArgs e)

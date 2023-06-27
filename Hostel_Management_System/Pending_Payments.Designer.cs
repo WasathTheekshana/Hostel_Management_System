@@ -40,6 +40,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.txtStudentSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             ((System.ComponentModel.ISupportInitialize)(this.table_payments)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -79,13 +80,15 @@
             this.table_payments.DefaultCellStyle = dataGridViewCellStyle3;
             this.table_payments.EnableHeadersVisualStyles = false;
             this.table_payments.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.table_payments.Location = new System.Drawing.Point(46, 193);
+            this.table_payments.Location = new System.Drawing.Point(92, 371);
+            this.table_payments.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.table_payments.Name = "table_payments";
             this.table_payments.ReadOnly = true;
             this.table_payments.RowHeadersVisible = false;
+            this.table_payments.RowHeadersWidth = 82;
             this.table_payments.RowTemplate.Height = 30;
             this.table_payments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.table_payments.Size = new System.Drawing.Size(814, 364);
+            this.table_payments.Size = new System.Drawing.Size(1628, 700);
             this.table_payments.TabIndex = 34;
             this.table_payments.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.table_payments.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -116,9 +119,10 @@
             this.guna2Panel2.Controls.Add(this.gunaControlBox1);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(897, 29);
+            this.guna2Panel2.Size = new System.Drawing.Size(1794, 56);
             this.guna2Panel2.TabIndex = 7;
             // 
             // gunaControlBox1
@@ -129,12 +133,13 @@
             this.gunaControlBox1.AnimationSpeed = 0.03F;
             this.gunaControlBox1.IconColor = System.Drawing.Color.Black;
             this.gunaControlBox1.IconSize = 15F;
-            this.gunaControlBox1.Location = new System.Drawing.Point(851, 0);
+            this.gunaControlBox1.Location = new System.Drawing.Point(1702, 0);
+            this.gunaControlBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.gunaControlBox1.Name = "gunaControlBox1";
             this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.Red;
             this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
             this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox1.Size = new System.Drawing.Size(46, 29);
+            this.gunaControlBox1.Size = new System.Drawing.Size(92, 56);
             this.gunaControlBox1.TabIndex = 0;
             this.gunaControlBox1.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
             // 
@@ -143,9 +148,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poppins", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
-            this.label1.Location = new System.Drawing.Point(36, 49);
+            this.label1.Location = new System.Drawing.Point(72, 94);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(325, 56);
+            this.label1.Size = new System.Drawing.Size(645, 113);
             this.label1.TabIndex = 8;
             this.label1.Text = "Pending Payments";
             // 
@@ -172,8 +178,8 @@
             this.txtStudentSearch.HoverState.Parent = this.txtStudentSearch;
             this.txtStudentSearch.IconLeft = global::Hostel_Management_System.Properties.Resources.search;
             this.txtStudentSearch.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtStudentSearch.Location = new System.Drawing.Point(46, 132);
-            this.txtStudentSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtStudentSearch.Location = new System.Drawing.Point(92, 254);
+            this.txtStudentSearch.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.txtStudentSearch.Name = "txtStudentSearch";
             this.txtStudentSearch.PasswordChar = '\0';
             this.txtStudentSearch.PlaceholderText = "Search student";
@@ -182,22 +188,38 @@
             this.txtStudentSearch.ShadowDecoration.Depth = 1;
             this.txtStudentSearch.ShadowDecoration.Enabled = true;
             this.txtStudentSearch.ShadowDecoration.Parent = this.txtStudentSearch;
-            this.txtStudentSearch.Size = new System.Drawing.Size(814, 36);
+            this.txtStudentSearch.Size = new System.Drawing.Size(1628, 69);
             this.txtStudentSearch.TabIndex = 35;
             this.txtStudentSearch.TextOffset = new System.Drawing.Point(10, 0);
             this.txtStudentSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStudentSearch_KeyPress);
             // 
+            // gunaLabel7
+            // 
+            this.gunaLabel7.AutoSize = true;
+            this.gunaLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.gunaLabel7.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel7.ForeColor = System.Drawing.Color.Red;
+            this.gunaLabel7.Location = new System.Drawing.Point(1230, 119);
+            this.gunaLabel7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.gunaLabel7.Name = "gunaLabel7";
+            this.gunaLabel7.Size = new System.Drawing.Size(434, 42);
+            this.gunaLabel7.TabIndex = 36;
+            this.gunaLabel7.Text = "*Only admin can collect Payments";
+            this.gunaLabel7.Visible = false;
+            // 
             // Pending_Payments
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(897, 651);
+            this.ClientSize = new System.Drawing.Size(1794, 1252);
+            this.Controls.Add(this.gunaLabel7);
             this.Controls.Add(this.txtStudentSearch);
             this.Controls.Add(this.table_payments);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Pending_Payments";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pending_Payments";
@@ -219,5 +241,6 @@
         private Guna.UI2.WinForms.Guna2DataGridView table_payments;
         private Guna.UI.WinForms.GunaElipse gunaElipse2;
         private Guna.UI2.WinForms.Guna2TextBox txtStudentSearch;
+        private Guna.UI.WinForms.GunaLabel gunaLabel7;
     }
 }
