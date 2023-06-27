@@ -99,6 +99,7 @@ namespace Hostel_Management_System
                             userPrivi = "User";
                         }
                         mainForm.setUserName(userName, userPrivi);
+                        mainForm.setaddStudentPrivi(isStudentSettings);
                         mainForm.Show();
                         this.Hide();
                         

@@ -32,7 +32,13 @@ namespace Hostel_Management_System
         {
             this.loggedInUser = loggedInUser;
             this.userPrivi = userPrivi;
-        } 
+        }
+
+        bool addStudentPrivi;
+        public void setaddStudentPrivi(bool privi)
+        {
+            addStudentPrivi = privi;
+        }
 
         Form_StudentList std = new Form_StudentList();
         
@@ -125,7 +131,9 @@ namespace Hostel_Management_System
 
         private void btn_studnetList_Click(object sender, EventArgs e)
         {
-            container(new Form_StudentList());
+            Form_StudentList form_StudentList = new Form_StudentList();
+            form_StudentList.getpermission(addStudentPrivi);
+            container(form_StudentList);
         }
 
         private void btn_addNew_Click(object sender, EventArgs e)

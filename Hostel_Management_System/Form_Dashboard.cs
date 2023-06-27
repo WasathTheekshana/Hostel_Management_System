@@ -28,6 +28,8 @@ namespace Hostel_Management_System
             this.userName = userName;
         }
 
+        
+
         public void updateDashBoard() 
         {
             Connection_Sting objConnectionString = new Connection_Sting();

@@ -26,6 +26,12 @@ namespace Hostel_Management_System
             InitializeComponent();
         }
 
+        private bool editPrivi;
+        public void setprivi(bool edit)
+        {
+            editPrivi = edit;
+        }
+
         #region editMode
         private void DisableAllTextBoxes(Control control)
         {
@@ -80,14 +86,16 @@ namespace Hostel_Management_System
         public void changetoUpdate()
         {
             lblDetailTitle.Text = "Detail Form";
-            btn_Edit.Visible=true;
-            btn_Delete.Visible = true;
+
+            if (editPrivi)
+            {
+                btn_Edit.Visible=true;
+                btn_Delete.Visible = true;
+            }
+
 
             // Call the method to disable all textboxes
             DisableAllTextBoxes(this);
-
-            
-
 
             Connection_Sting connection = new Connection_Sting();
             string connStr = connection.getConnectionString();

@@ -33,19 +33,22 @@ namespace Hostel_Management_System.Popups
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            string stNIC=txt_username.Text;
+            string stNIC = txt_username.Text;
 
             Connection_Sting stconn = new Connection_Sting();
             string connectionString = stconn.getConnectionString();
             SqlConnection connection = new SqlConnection(connectionString);
-            
-            string checkquery = @"SELECT COUNT(*) FROM student WHERE NIC = @StudentNIC";
+
+            string checkquery = @"SELECT COUNT(*) FROM student_slot WHERE NIC = @StudentNIC";
             SqlCommand checkcommand = new SqlCommand(checkquery, connection);
             checkcommand.Parameters.AddWithValue("@StudentNIC", stNIC);
 
-            string query = $"INSERT INTO student_slot VALUES('"+stNIC+"','"+slotID+"')";
-            SqlCommand command = new SqlCommand(query, connection);
+            string deletequery = @"DELETE FROM student_slot WHERE NIC = @StudentNIC";
+            SqlCommand deletecommand = new SqlCommand(deletequery, connection);
+            deletecommand.Parameters.AddWithValue("@StudentNIC", stNIC);
 
+            string query = $"INSERT INTO student_slot VALUES('" + stNIC + "','" + slotID + "')";
+            SqlCommand command = new SqlCommand(query, connection);
 
             try
             {
@@ -53,30 +56,33 @@ namespace Hostel_Management_System.Popups
                 int count = (int)checkcommand.ExecuteScalar();
                 if (count > 0)
                 {
-                    command.ExecuteNonQuery();
+                    deletecommand.ExecuteNonQuery(); // Delete the existing record
+
                     Base_Successfull_Popup successfull_Popup = new Base_Successfull_Popup();
-                    successfull_Popup.setPopup("Succesfully assigned with Room;");
+                    successfull_Popup.setPopup("Successfully changed Room;");
                     successfull_Popup.ShowDialog();
-                    this.Close();
                 }
                 else
                 {
-                    Base_Error_Popup base_Error_Popup = new Base_Error_Popup();
-                    base_Error_Popup.setPopup("Student NIC is not available");
-                    base_Error_Popup.ShowDialog();
-                }
-            }
+                    command.ExecuteNonQuery(); // Insert the new record
 
+                    Base_Successfull_Popup successfull_Popup = new Base_Successfull_Popup();
+                    successfull_Popup.setPopup("Successfully assigned with Room;");
+                    successfull_Popup.ShowDialog();
+                }
+
+                this.Close();
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
             finally
             {
                 connection.Close();
             }
         }
+
 
         private void gunaButton1_Click(object sender, EventArgs e)
         {
