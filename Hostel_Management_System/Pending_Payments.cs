@@ -33,7 +33,7 @@ namespace Hostel_Management_System
         {
             if (checkedRentalPrivi)
             {
-                gunaLabel7.Visible = true;
+                gunaLabel7.Visible = false;
             }
             guna2ShadowForm1.SetShadowForm(this);
 
