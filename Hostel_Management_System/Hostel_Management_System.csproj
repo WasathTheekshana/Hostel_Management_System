@@ -71,10 +71,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI">
-      <HintPath>..\..\..\wnforms\guna\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2">
-      <HintPath>..\..\..\wnforms\guna\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -111,6 +111,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Popups\addFoodPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popups\addFoodPopUp.Designer.cs">
+      <DependentUpon>addFoodPopUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Food Management\Food_List.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -275,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pending_Payments.resx">
       <DependentUpon>Pending_Payments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popups\addFoodPopUp.resx">
+      <DependentUpon>addFoodPopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Popups\Available_Slots.resx">
       <DependentUpon>Available_Slots.cs</DependentUpon>

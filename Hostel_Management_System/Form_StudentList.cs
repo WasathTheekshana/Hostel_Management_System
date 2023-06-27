@@ -1,4 +1,4 @@
-﻿using Hostel_Management_System.Database_Connection;
+using Hostel_Management_System.Database_Connection;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -252,5 +252,22 @@ namespace Hostel_Management_System
             }
         }
 
+        private void txtStudentSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string searchTerm = txtStudentSearch.Text.Trim(); // Get the search term from the TextBox
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                // Filter the DataGridView based on the search term
+                DataView dv = ((DataTable)guna2DataGridView1.DataSource).DefaultView;
+                dv.RowFilter = $"FName LIKE '%{searchTerm}%'";
+                guna2DataGridView1.DataSource = dv.ToTable();
+            }
+            else
+            {
+                // If the search term is empty, show all the records
+                ((DataTable)guna2DataGridView1.DataSource).DefaultView.RowFilter = string.Empty;
+            }
+        }
     }
 }
