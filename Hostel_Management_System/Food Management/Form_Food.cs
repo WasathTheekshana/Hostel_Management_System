@@ -58,9 +58,14 @@ namespace Hostel_Management_System
             updateFoodCounts();
         }
 
+        DateTime today = DateTime.Today;
+
+        DateTime tomorrow = DateTime.Today.AddDays(1);
+
         private void btn_today_breakfast_view_Click(object sender, EventArgs e)
         {
             Food_List fdList = new Food_List();
+            fdList.getOrderDay(today);
             fdList.Show();
         }
 
@@ -103,30 +108,35 @@ namespace Hostel_Management_System
         private void btn_today_lunch_view_Click(object sender, EventArgs e)
         {
             Food_List fdList = new Food_List();
+            fdList.getOrderDay(today);
             fdList.Show();
         }
 
         private void btn_today_dinner_view_Click(object sender, EventArgs e)
         {
             Food_List fdList = new Food_List();
+            fdList.getOrderDay(today);
             fdList.Show();
         }
 
         private void btn_tomorrow_breakfast_view_Click(object sender, EventArgs e)
         {
             Food_List fdList = new Food_List();
+            fdList.getOrderDay(tomorrow);
             fdList.Show();
         }
 
         private void btn_tomorrow_lunch_view_Click(object sender, EventArgs e)
         {
             Food_List fdList = new Food_List();
+            fdList.getOrderDay(tomorrow);
             fdList.Show();
         }
 
         private void btn_tomorrow_dinner_view_Click(object sender, EventArgs e)
         {
             Food_List fdList = new Food_List();
+            fdList.getOrderDay(tomorrow);
             fdList.Show();
         }
 
