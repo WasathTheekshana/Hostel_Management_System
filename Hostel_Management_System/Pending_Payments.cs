@@ -31,9 +31,9 @@ namespace Hostel_Management_System
 
         private void Pending_Payments_Load(object sender, EventArgs e)
         {
-            if (checkedRentalPrivi)
+            if (!checkedRentalPrivi)
             {
-                gunaLabel7.Visible = false;
+                gunaLabel7.Visible = true;
             }
             guna2ShadowForm1.SetShadowForm(this);
 

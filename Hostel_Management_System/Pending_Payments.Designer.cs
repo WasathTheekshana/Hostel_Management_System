@@ -88,7 +88,7 @@
             this.table_payments.RowHeadersWidth = 82;
             this.table_payments.RowTemplate.Height = 30;
             this.table_payments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.table_payments.Size = new System.Drawing.Size(1628, 700);
+            this.table_payments.Size = new System.Drawing.Size(1555, 700);
             this.table_payments.TabIndex = 34;
             this.table_payments.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.table_payments.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -112,7 +112,6 @@
             this.table_payments.ThemeStyle.RowsStyle.Height = 30;
             this.table_payments.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.table_payments.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.table_payments.Visible = false;
             this.table_payments.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_payments_CellClick);
             // 
             // guna2Panel2
@@ -189,7 +188,7 @@
             this.txtStudentSearch.ShadowDecoration.Depth = 1;
             this.txtStudentSearch.ShadowDecoration.Enabled = true;
             this.txtStudentSearch.ShadowDecoration.Parent = this.txtStudentSearch;
-            this.txtStudentSearch.Size = new System.Drawing.Size(1628, 69);
+            this.txtStudentSearch.Size = new System.Drawing.Size(1555, 69);
             this.txtStudentSearch.TabIndex = 35;
             this.txtStudentSearch.TextOffset = new System.Drawing.Point(10, 0);
             this.txtStudentSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStudentSearch_KeyPress);
