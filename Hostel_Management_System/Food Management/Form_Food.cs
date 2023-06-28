@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Hostel_Management_System.Database_Connection;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -52,6 +54,8 @@ namespace Hostel_Management_System
 
             lbl_Today.Text = "| " + formattedTodayDate;
             lbl_Tomorrow.Text = "| " + formattedTomorrowDate;
+
+            updateFoodCounts();
         }
 
         private void btn_today_breakfast_view_Click(object sender, EventArgs e)
@@ -125,5 +129,52 @@ namespace Hostel_Management_System
             Food_List fdList = new Food_List();
             fdList.Show();
         }
+
+        public void updateFoodCounts()
+        {
+            Connection_Sting connection_Sting = new Connection_Sting();
+            string connStr = connection_Sting.getConnectionString();
+
+            // Get today's and tomorrow's breakfast counts
+            string query = "SELECT " +
+                "(SELECT COUNT(*) FROM food_order WHERE OrderDate = CAST(GETDATE() AS DATE) AND meal = 'breakfast') AS TodayBreakfastCount, " +
+                "(SELECT COUNT(*) FROM food_order WHERE OrderDate = CAST(GETDATE() AS DATE) AND meal = 'lunch') AS TodayLunchCount, " +
+                "(SELECT COUNT(*) FROM food_order WHERE OrderDate = CAST(GETDATE() AS DATE) AND meal = 'dinner') AS TodayDinnerCount, " +
+                "(SELECT COUNT(*) FROM food_order WHERE OrderDate = DATEADD(DAY, 1, CAST(GETDATE() AS DATE)) AND meal = 'breakfast') AS TomorrowBreakfastCount, " +
+                "(SELECT COUNT(*) FROM food_order WHERE OrderDate = DATEADD(DAY, 1, CAST(GETDATE() AS DATE)) AND meal = 'lunch') AS TomorrowLunchCount, " +
+                "(SELECT COUNT(*) FROM food_order WHERE OrderDate = DATEADD(DAY, 1, CAST(GETDATE() AS DATE)) AND meal = 'dinner') AS TomorrowDinnerCount";
+
+            int todayBreakfastCount = 0;
+            int todayLunchCount = 0;
+            int todayDinnerCount = 0;
+            int tomorrowBreakfastCount = 0;
+            int tomorrowLunchCount = 0;
+            int tomorrowDinnerCount = 0;
+
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                SqlCommand command = new SqlCommand(query, conn);
+                conn.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        todayBreakfastCount = reader.GetInt32(0);
+                        todayLunchCount = reader.GetInt32(1);
+                        todayDinnerCount = reader.GetInt32(2);
+                        tomorrowBreakfastCount = reader.GetInt32(3);
+                        tomorrowLunchCount = reader.GetInt32(4);
+                        tomorrowDinnerCount = reader.GetInt32(5);
+                    }
+                }
+            }
+
+            lbl_today_breakfast_food.Text = todayBreakfastCount.ToString();
+            lbl_today_lunch_food.Text = todayLunchCount.ToString();
+            lbl_today_dinner_food.Text = todayDinnerCount.ToString();
+            lbl_tomorrow_breakfast_food.Text = tomorrowBreakfastCount.ToString();
+            lbl_tomorrow_lunch_food.Text = tomorrowLunchCount.ToString();
+            lbl_tomorrow_dinner_food.Text = tomorrowDinnerCount.ToString();
+        }
     }
-}
+    }

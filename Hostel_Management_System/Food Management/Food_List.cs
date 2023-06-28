@@ -19,34 +19,34 @@ namespace Hostel_Management_System
 
         private void hideAllUnderLines()
         {
-            groundUnderLine.Visible = false;
-            FirstUnderLine.Visible = false;
-            secondUnderLine.Visible = false;
-            thirdUnderLine.Visible = false;
+            chickenUnderLine.Visible = false;
+            fishUnderLine.Visible = false;
+            eggUnderLine.Visible = false;
+            vegUnderLine.Visible = false;
         }
 
         private void groundTab_Click(object sender, EventArgs e)
         {
             hideAllUnderLines();
-            groundUnderLine.Visible = true;
+            chickenUnderLine.Visible = true;
         }
 
         private void firstTab_Click(object sender, EventArgs e)
         {
             hideAllUnderLines();
-            FirstUnderLine.Visible = true;
+            fishUnderLine.Visible = true;
         }
 
         private void secondTab_Click(object sender, EventArgs e)
         {
             hideAllUnderLines();
-            secondUnderLine.Visible = true;
+            eggUnderLine.Visible = true;
         }
 
         private void thirdTab_Click(object sender, EventArgs e)
         {
             hideAllUnderLines();
-            thirdUnderLine.Visible = true;
+            vegUnderLine.Visible = true;
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)
