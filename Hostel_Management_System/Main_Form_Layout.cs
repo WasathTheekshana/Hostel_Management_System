@@ -134,8 +134,9 @@ namespace Hostel_Management_System
 
         private void btn_food_Click(object sender, EventArgs e)
         {
-            container(new Form_Food());
-
+            Form_Food food = new Form_Food();
+            food.updateFoodCounts();
+            container(food);
         }
 
         private void btn_studnetList_Click(object sender, EventArgs e)

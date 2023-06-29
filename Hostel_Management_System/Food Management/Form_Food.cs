@@ -61,83 +61,90 @@ namespace Hostel_Management_System
         DateTime today = DateTime.Today;
 
         DateTime tomorrow = DateTime.Today.AddDays(1);
+        string meal;
 
         private void btn_today_breakfast_view_Click(object sender, EventArgs e)
         {
             Food_List fdList = new Food_List();
-            fdList.getOrderDay(today);
-            fdList.Show();
+            fdList.getOrderDayandMeal(today, "Breakfast");
+            fdList.ShowDialog();
         }
 
         private void btn_today_breakfast_add_Click(object sender, EventArgs e)
         {
             addFoodPopUp addFoodPop = new addFoodPopUp();
-            addFoodPop.Show();
+            addFoodPop.setDayandMeal("Breakfast",today);
+            addFoodPop.ShowDialog();
         }
 
         private void btn_today_lunch_add_Click(object sender, EventArgs e)
         {
             addFoodPopUp addFoodPop = new addFoodPopUp();
-            addFoodPop.Show();
+            addFoodPop.setDayandMeal("Lunch", today);
+            addFoodPop.ShowDialog();
         }
 
         private void btn_today_dinner_add_Click(object sender, EventArgs e)
         {
             addFoodPopUp addFoodPop = new addFoodPopUp();
-            addFoodPop.Show();
+            addFoodPop.setDayandMeal("Dinner", today);
+            addFoodPop.ShowDialog();
         }
 
         private void btn_tomorrow_breakfast_add_Click(object sender, EventArgs e)
         {
             addFoodPopUp addFoodPop = new addFoodPopUp();
-            addFoodPop.Show();
+            addFoodPop.setDayandMeal("Breakfast", tomorrow);
+            addFoodPop.ShowDialog();
         }
 
         private void btn_tomorrow_lunch_add_Click(object sender, EventArgs e)
         {
             addFoodPopUp addFoodPop = new addFoodPopUp();
-            addFoodPop.Show();
+            addFoodPop.setDayandMeal("Lunch", today);
+            addFoodPop.ShowDialog();
         }
 
         private void btn_tomorrow_dinner_add_Click(object sender, EventArgs e)
         {
             addFoodPopUp addFoodPop = new addFoodPopUp();
-            addFoodPop.Show();
+            addFoodPop.setDayandMeal("Dinenr", today);
+            addFoodPop.ShowDialog();
         }
 
         private void btn_today_lunch_view_Click(object sender, EventArgs e)
         {
             Food_List fdList = new Food_List();
-            fdList.getOrderDay(today);
-            fdList.Show();
+            fdList.getOrderDayandMeal(today, "Lunch");
+            fdList.ShowDialog();
         }
 
         private void btn_today_dinner_view_Click(object sender, EventArgs e)
         {
             Food_List fdList = new Food_List();
-            fdList.getOrderDay(today);
-            fdList.Show();
+            fdList.getOrderDayandMeal(today, "Dinenr");
+            fdList.ShowDialog();
         }
 
         private void btn_tomorrow_breakfast_view_Click(object sender, EventArgs e)
         {
             Food_List fdList = new Food_List();
-            fdList.getOrderDay(tomorrow);
-            fdList.Show();
+            fdList.getOrderDayandMeal(tomorrow, "Breakfast");
+            fdList.ShowDialog();
         }
 
         private void btn_tomorrow_lunch_view_Click(object sender, EventArgs e)
         {
             Food_List fdList = new Food_List();
-            fdList.getOrderDay(tomorrow);
-            fdList.Show();
+            fdList.getOrderDayandMeal(tomorrow, "Lunch");
+            fdList.ShowDialog();
         }
 
         private void btn_tomorrow_dinner_view_Click(object sender, EventArgs e)
         {
             Food_List fdList = new Food_List();
-            fdList.getOrderDay(tomorrow);
-            fdList.Show();
+            fdList.getOrderDayandMeal(tomorrow, "Dinner");
+            fdList.ShowDialog();
         }
 
         public void updateFoodCounts()
@@ -150,9 +157,9 @@ namespace Hostel_Management_System
                 "(SELECT COUNT(*) FROM food_order WHERE OrderDate = CAST(GETDATE() AS DATE) AND meal = 'breakfast') AS TodayBreakfastCount, " +
                 "(SELECT COUNT(*) FROM food_order WHERE OrderDate = CAST(GETDATE() AS DATE) AND meal = 'lunch') AS TodayLunchCount, " +
                 "(SELECT COUNT(*) FROM food_order WHERE OrderDate = CAST(GETDATE() AS DATE) AND meal = 'dinner') AS TodayDinnerCount, " +
-                "(SELECT COUNT(*) FROM food_order WHERE OrderDate = DATEADD(DAY, 1, CAST(GETDATE() AS DATE)) AND meal = 'breakfast') AS TomorrowBreakfastCount, " +
-                "(SELECT COUNT(*) FROM food_order WHERE OrderDate = DATEADD(DAY, 1, CAST(GETDATE() AS DATE)) AND meal = 'lunch') AS TomorrowLunchCount, " +
-                "(SELECT COUNT(*) FROM food_order WHERE OrderDate = DATEADD(DAY, 1, CAST(GETDATE() AS DATE)) AND meal = 'dinner') AS TomorrowDinnerCount";
+                "(SELECT COUNT(*) FROM food_order WHERE OrderDate = DATEADD(DAY, 1, CAST(GETDATE() AS DATE)) AND meal = 'Breakfast') AS TomorrowBreakfastCount, " +
+                "(SELECT COUNT(*) FROM food_order WHERE OrderDate = DATEADD(DAY, 1, CAST(GETDATE() AS DATE)) AND meal = 'Lunch') AS TomorrowLunchCount, " +
+                "(SELECT COUNT(*) FROM food_order WHERE OrderDate = DATEADD(DAY, 1, CAST(GETDATE() AS DATE)) AND meal = 'Dinner') AS TomorrowDinnerCount";
 
             int todayBreakfastCount = 0;
             int todayLunchCount = 0;

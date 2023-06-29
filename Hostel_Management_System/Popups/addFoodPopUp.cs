@@ -20,6 +20,23 @@ namespace Hostel_Management_System
             InitializeComponent();
         }
 
+        private string meal;
+        private DateTime day;
+
+        public void setDayandMeal(string Meal, DateTime Day)
+        {
+            meal=Meal;
+            day=Day;
+        }
+
+        private string checkTodayTommorow()
+        {
+            if (day == DateTime.Today)
+                return "Today";
+            else 
+                return "Tomorrow";
+        }
+
         private void btn_addFood_addToList_Click(object sender, EventArgs e)
         {
             Connection_Sting connection_Sting = new Connection_Sting();
@@ -47,7 +64,7 @@ namespace Hostel_Management_System
 
             bool payment = chckBox_addFood_paid.Checked;
 
-            string query = "INSERT INTO food_order(NIC, type, meal, OrderDate, paid) VALUES('"+NIC+"','"+foodType+"','"+meal+"','"+date+"','"+payment+"')";
+            string query = "INSERT INTO food_order(NIC, type, meal, OrderDate, paid, given) VALUES('"+NIC+"','"+foodType+"','"+meal+"','"+date+"','"+payment+"',0)";
 
             SqlConnection conn = new SqlConnection(connString);
             SqlCommand cmd = new SqlCommand(query, conn);
@@ -61,17 +78,33 @@ namespace Hostel_Management_System
                 successPop.setFoodImage();
                 successPop.ShowDialog();
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
-                MessageBox.Show(ex.Message);
+                if (ex.Message.Contains("Violation of PRIMARY KEY constraint"))
+                {
+                    MessageBox.Show("Can't buy two for one meal");
+                }
+                else
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
             finally
-            { conn.Close(); }
+            {
+                conn.Close();
+            }
         }
 
         private void addFood_popUp_cancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void addFoodPopUp_Load(object sender, EventArgs e)
+        {
+            guna2ShadowForm1.SetShadowForm(this);
+            cmbBox_meal.SelectedIndex= cmbBox_meal.FindStringExact(meal);
+            comBox_addFood_date.SelectedIndex = comBox_addFood_date.FindStringExact(checkTodayTommorow());
         }
     }
 }
