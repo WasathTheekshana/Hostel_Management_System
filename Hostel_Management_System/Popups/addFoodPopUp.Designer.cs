@@ -34,14 +34,14 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.comBox_addFood_date = new Guna.UI2.WinForms.Guna2ComboBox();
             this.comBox_addFood_food = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.comBox_addFood_name = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txtBox_addFood_room = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtBox_addFood_NIC = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.btn_cancel = new Guna.UI2.WinForms.Guna2Button();
+            this.cmbBox_meal = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.addFood_popUp_cancel = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,13 +54,14 @@
             this.btn_addFood_addToList.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_addFood_addToList.ForeColor = System.Drawing.Color.White;
             this.btn_addFood_addToList.HoverState.Parent = this.btn_addFood_addToList;
-            this.btn_addFood_addToList.Location = new System.Drawing.Point(144, 139);
+            this.btn_addFood_addToList.Location = new System.Drawing.Point(29, 139);
             this.btn_addFood_addToList.Name = "btn_addFood_addToList";
             this.btn_addFood_addToList.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(73)))), ((int)(((byte)(240)))));
             this.btn_addFood_addToList.ShadowDecoration.Parent = this.btn_addFood_addToList;
             this.btn_addFood_addToList.Size = new System.Drawing.Size(100, 40);
             this.btn_addFood_addToList.TabIndex = 23;
             this.btn_addFood_addToList.Text = "Add To List";
+            this.btn_addFood_addToList.Click += new System.EventHandler(this.btn_addFood_addToList_Click);
             // 
             // chckBox_addFood_paid
             // 
@@ -70,7 +71,7 @@
             this.chckBox_addFood_paid.CheckedState.BorderThickness = 0;
             this.chckBox_addFood_paid.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.chckBox_addFood_paid.CheckedState.Parent = this.chckBox_addFood_paid;
-            this.chckBox_addFood_paid.Location = new System.Drawing.Point(50, 150);
+            this.chckBox_addFood_paid.Location = new System.Drawing.Point(783, 88);
             this.chckBox_addFood_paid.Name = "chckBox_addFood_paid";
             this.chckBox_addFood_paid.ShadowDecoration.Parent = this.chckBox_addFood_paid;
             this.chckBox_addFood_paid.Size = new System.Drawing.Size(17, 17);
@@ -91,7 +92,7 @@
             this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
             this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(29, 139);
+            this.guna2Button1.Location = new System.Drawing.Point(772, 78);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
@@ -116,9 +117,10 @@
             this.comBox_addFood_date.HoverState.Parent = this.comBox_addFood_date;
             this.comBox_addFood_date.ItemHeight = 30;
             this.comBox_addFood_date.Items.AddRange(new object[] {
-            "Date"});
+            "Today",
+            "Tomorrow"});
             this.comBox_addFood_date.ItemsAppearance.Parent = this.comBox_addFood_date;
-            this.comBox_addFood_date.Location = new System.Drawing.Point(539, 79);
+            this.comBox_addFood_date.Location = new System.Drawing.Point(621, 79);
             this.comBox_addFood_date.Name = "comBox_addFood_date";
             this.comBox_addFood_date.ShadowDecoration.Parent = this.comBox_addFood_date;
             this.comBox_addFood_date.Size = new System.Drawing.Size(145, 36);
@@ -139,67 +141,45 @@
             this.comBox_addFood_food.HoverState.Parent = this.comBox_addFood_food;
             this.comBox_addFood_food.ItemHeight = 30;
             this.comBox_addFood_food.Items.AddRange(new object[] {
-            "Food"});
+            "Chicken",
+            "Fish",
+            "Egg",
+            "Veg"});
             this.comBox_addFood_food.ItemsAppearance.Parent = this.comBox_addFood_food;
-            this.comBox_addFood_food.Location = new System.Drawing.Point(388, 79);
+            this.comBox_addFood_food.Location = new System.Drawing.Point(319, 79);
             this.comBox_addFood_food.Name = "comBox_addFood_food";
             this.comBox_addFood_food.ShadowDecoration.Parent = this.comBox_addFood_food;
             this.comBox_addFood_food.Size = new System.Drawing.Size(145, 36);
             this.comBox_addFood_food.StartIndex = 0;
             this.comBox_addFood_food.TabIndex = 18;
             // 
-            // comBox_addFood_name
+            // txtBox_addFood_NIC
             // 
-            this.comBox_addFood_name.BackColor = System.Drawing.Color.Transparent;
-            this.comBox_addFood_name.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.comBox_addFood_name.BorderRadius = 10;
-            this.comBox_addFood_name.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comBox_addFood_name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comBox_addFood_name.FocusedColor = System.Drawing.Color.Empty;
-            this.comBox_addFood_name.FocusedState.Parent = this.comBox_addFood_name;
-            this.comBox_addFood_name.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comBox_addFood_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(135)))), ((int)(((byte)(135)))));
-            this.comBox_addFood_name.FormattingEnabled = true;
-            this.comBox_addFood_name.HoverState.Parent = this.comBox_addFood_name;
-            this.comBox_addFood_name.ItemHeight = 30;
-            this.comBox_addFood_name.Items.AddRange(new object[] {
-            "Name"});
-            this.comBox_addFood_name.ItemsAppearance.Parent = this.comBox_addFood_name;
-            this.comBox_addFood_name.Location = new System.Drawing.Point(151, 79);
-            this.comBox_addFood_name.Name = "comBox_addFood_name";
-            this.comBox_addFood_name.ShadowDecoration.Parent = this.comBox_addFood_name;
-            this.comBox_addFood_name.Size = new System.Drawing.Size(231, 36);
-            this.comBox_addFood_name.StartIndex = 0;
-            this.comBox_addFood_name.TabIndex = 17;
-            // 
-            // txtBox_addFood_room
-            // 
-            this.txtBox_addFood_room.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.txtBox_addFood_room.BorderRadius = 10;
-            this.txtBox_addFood_room.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBox_addFood_room.DefaultText = "Room";
-            this.txtBox_addFood_room.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtBox_addFood_room.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtBox_addFood_room.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBox_addFood_room.DisabledState.Parent = this.txtBox_addFood_room;
-            this.txtBox_addFood_room.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBox_addFood_room.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBox_addFood_room.FocusedState.Parent = this.txtBox_addFood_room;
-            this.txtBox_addFood_room.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_addFood_room.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(135)))), ((int)(((byte)(135)))));
-            this.txtBox_addFood_room.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBox_addFood_room.HoverState.Parent = this.txtBox_addFood_room;
-            this.txtBox_addFood_room.Location = new System.Drawing.Point(29, 79);
-            this.txtBox_addFood_room.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtBox_addFood_room.Name = "txtBox_addFood_room";
-            this.txtBox_addFood_room.PasswordChar = '\0';
-            this.txtBox_addFood_room.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtBox_addFood_room.PlaceholderText = "";
-            this.txtBox_addFood_room.SelectedText = "";
-            this.txtBox_addFood_room.SelectionStart = 4;
-            this.txtBox_addFood_room.ShadowDecoration.Parent = this.txtBox_addFood_room;
-            this.txtBox_addFood_room.Size = new System.Drawing.Size(115, 36);
-            this.txtBox_addFood_room.TabIndex = 16;
+            this.txtBox_addFood_NIC.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtBox_addFood_NIC.BorderRadius = 10;
+            this.txtBox_addFood_NIC.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBox_addFood_NIC.DefaultText = "";
+            this.txtBox_addFood_NIC.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBox_addFood_NIC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBox_addFood_NIC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBox_addFood_NIC.DisabledState.Parent = this.txtBox_addFood_NIC;
+            this.txtBox_addFood_NIC.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBox_addFood_NIC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBox_addFood_NIC.FocusedState.Parent = this.txtBox_addFood_NIC;
+            this.txtBox_addFood_NIC.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_addFood_NIC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(135)))), ((int)(((byte)(135)))));
+            this.txtBox_addFood_NIC.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBox_addFood_NIC.HoverState.Parent = this.txtBox_addFood_NIC;
+            this.txtBox_addFood_NIC.Location = new System.Drawing.Point(29, 79);
+            this.txtBox_addFood_NIC.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBox_addFood_NIC.Name = "txtBox_addFood_NIC";
+            this.txtBox_addFood_NIC.PasswordChar = '\0';
+            this.txtBox_addFood_NIC.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(135)))), ((int)(((byte)(135)))));
+            this.txtBox_addFood_NIC.PlaceholderText = "Student NIC";
+            this.txtBox_addFood_NIC.SelectedText = "";
+            this.txtBox_addFood_NIC.ShadowDecoration.Parent = this.txtBox_addFood_NIC;
+            this.txtBox_addFood_NIC.Size = new System.Drawing.Size(283, 36);
+            this.txtBox_addFood_NIC.TabIndex = 16;
             // 
             // label5
             // 
@@ -230,41 +210,78 @@
             // 
             this.guna2DragControl1.TargetControl = this;
             // 
-            // btn_cancel
+            // cmbBox_meal
             // 
-            this.btn_cancel.BorderRadius = 10;
-            this.btn_cancel.CheckedState.Parent = this.btn_cancel;
-            this.btn_cancel.CustomImages.Parent = this.btn_cancel;
-            this.btn_cancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.btn_cancel.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(156)))));
-            this.btn_cancel.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.btn_cancel.HoverState.Parent = this.btn_cancel;
-            this.btn_cancel.Location = new System.Drawing.Point(260, 139);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.btn_cancel.ShadowDecoration.Parent = this.btn_cancel;
-            this.btn_cancel.Size = new System.Drawing.Size(100, 40);
-            this.btn_cancel.TabIndex = 24;
-            this.btn_cancel.Text = "Cancel";
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            this.cmbBox_meal.BackColor = System.Drawing.Color.Transparent;
+            this.cmbBox_meal.BorderRadius = 10;
+            this.cmbBox_meal.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbBox_meal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBox_meal.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbBox_meal.FocusedState.Parent = this.cmbBox_meal;
+            this.cmbBox_meal.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBox_meal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(135)))), ((int)(((byte)(135)))));
+            this.cmbBox_meal.FormattingEnabled = true;
+            this.cmbBox_meal.HoverState.Parent = this.cmbBox_meal;
+            this.cmbBox_meal.ItemHeight = 30;
+            this.cmbBox_meal.Items.AddRange(new object[] {
+            "Breakfast",
+            "Lunch",
+            "Dinner"});
+            this.cmbBox_meal.ItemsAppearance.Parent = this.cmbBox_meal;
+            this.cmbBox_meal.Location = new System.Drawing.Point(470, 79);
+            this.cmbBox_meal.Name = "cmbBox_meal";
+            this.cmbBox_meal.ShadowDecoration.Parent = this.cmbBox_meal;
+            this.cmbBox_meal.Size = new System.Drawing.Size(145, 36);
+            this.cmbBox_meal.StartIndex = 0;
+            this.cmbBox_meal.TabIndex = 25;
+            // 
+            // addFood_popUp_cancel
+            // 
+            this.addFood_popUp_cancel.Animated = true;
+            this.addFood_popUp_cancel.AnimationHoverSpeed = 0.07F;
+            this.addFood_popUp_cancel.AnimationSpeed = 0.03F;
+            this.addFood_popUp_cancel.BackColor = System.Drawing.Color.Transparent;
+            this.addFood_popUp_cancel.BaseColor = System.Drawing.Color.Transparent;
+            this.addFood_popUp_cancel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(73)))), ((int)(((byte)(240)))));
+            this.addFood_popUp_cancel.BorderSize = 1;
+            this.addFood_popUp_cancel.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.addFood_popUp_cancel.FocusedColor = System.Drawing.Color.Empty;
+            this.addFood_popUp_cancel.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addFood_popUp_cancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(73)))), ((int)(((byte)(240)))));
+            this.addFood_popUp_cancel.Image = null;
+            this.addFood_popUp_cancel.ImageSize = new System.Drawing.Size(20, 20);
+            this.addFood_popUp_cancel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.addFood_popUp_cancel.Location = new System.Drawing.Point(135, 140);
+            this.addFood_popUp_cancel.Name = "addFood_popUp_cancel";
+            this.addFood_popUp_cancel.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(73)))), ((int)(((byte)(240)))));
+            this.addFood_popUp_cancel.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.addFood_popUp_cancel.OnHoverForeColor = System.Drawing.Color.White;
+            this.addFood_popUp_cancel.OnHoverImage = null;
+            this.addFood_popUp_cancel.OnPressedColor = System.Drawing.Color.Black;
+            this.addFood_popUp_cancel.Radius = 8;
+            this.addFood_popUp_cancel.Size = new System.Drawing.Size(117, 39);
+            this.addFood_popUp_cancel.TabIndex = 42;
+            this.addFood_popUp_cancel.Text = "Cancel";
+            this.addFood_popUp_cancel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.addFood_popUp_cancel.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.addFood_popUp_cancel.Click += new System.EventHandler(this.addFood_popUp_cancel_Click);
             // 
             // addFoodPopUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(715, 225);
-            this.Controls.Add(this.btn_cancel);
+            this.ClientSize = new System.Drawing.Size(899, 225);
+            this.Controls.Add(this.addFood_popUp_cancel);
+            this.Controls.Add(this.cmbBox_meal);
             this.Controls.Add(this.btn_addFood_addToList);
             this.Controls.Add(this.chckBox_addFood_paid);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.comBox_addFood_date);
-            this.Controls.Add(this.comBox_addFood_name);
             this.Controls.Add(this.comBox_addFood_food);
-            this.Controls.Add(this.txtBox_addFood_room);
+            this.Controls.Add(this.txtBox_addFood_NIC);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "addFoodPopUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -282,13 +299,13 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2ComboBox comBox_addFood_date;
         private Guna.UI2.WinForms.Guna2ComboBox comBox_addFood_food;
-        private Guna.UI2.WinForms.Guna2ComboBox comBox_addFood_name;
-        private Guna.UI2.WinForms.Guna2TextBox txtBox_addFood_room;
+        private Guna.UI2.WinForms.Guna2TextBox txtBox_addFood_NIC;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
-        private Guna.UI2.WinForms.Guna2Button btn_cancel;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbBox_meal;
+        private Guna.UI.WinForms.GunaButton addFood_popUp_cancel;
     }
 }
