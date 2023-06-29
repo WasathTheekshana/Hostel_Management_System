@@ -19,24 +19,25 @@ namespace Hostel_Management_System
             InitializeComponent();
         }
 
-        private void UpdateFoodList(DateTime orderDate, string type)
+        public void UpdateFoodList(DateTime orderDate, string type)
         {
             Connection_Sting connection_Sting = new Connection_Sting();
             string connStr = connection_Sting.getConnectionString();
 
-            // Retrieve the data from the database for the given OrderDate
+            // Retrieve the data from the database for the given OrderDate and meal
             string query = "SELECT s.Room_No, st.FName, fo.OrderDate, fo.paid, fo.given " +
                            "FROM student_slot ss " +
                            "INNER JOIN student st ON ss.NIC = st.NIC " +
                            "INNER JOIN food_order fo ON ss.NIC = fo.NIC " +
                            "INNER JOIN slot s ON ss.slotID = s.slotID " +
-                           "WHERE fo.type = @Type AND CONVERT(date, fo.OrderDate) = @OrderDate " +
+                           "WHERE fo.type = @Type AND fo.meal = @Meal AND CONVERT(date, fo.OrderDate) = @OrderDate " +
                            "ORDER BY fo.OrderDate";
 
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 SqlCommand command = new SqlCommand(query, conn);
                 command.Parameters.AddWithValue("@Type", type);
+                command.Parameters.AddWithValue("@Meal", Meal); // Specify the meal you want to display
                 command.Parameters.AddWithValue("@OrderDate", orderDate.Date);
                 conn.Open();
 
@@ -47,6 +48,8 @@ namespace Hostel_Management_System
                 // Bind the DataTable to the GunaDataGridView
                 guna2DataGridView1_FoodList.DataSource = dt;
             }
+
+
         }
 
 
@@ -95,28 +98,28 @@ namespace Hostel_Management_System
         {
             hideAllUnderLines();
             chickenUnderLine.Visible = true;
-            UpdateFoodList(orderDay, "chicken");
+            UpdateFoodList(orderDay, "Chicken");
         }
 
         private void firstTab_Click(object sender, EventArgs e)
         {
             hideAllUnderLines();
             fishUnderLine.Visible = true;
-            UpdateFoodList(orderDay, "fish");
+            UpdateFoodList(orderDay, "Fish");
         }
 
         private void secondTab_Click(object sender, EventArgs e)
         {
             hideAllUnderLines();
             eggUnderLine.Visible = true;
-            UpdateFoodList(orderDay, "egg");
+            UpdateFoodList(orderDay, "Egg");
         }
 
         private void thirdTab_Click(object sender, EventArgs e)
         {
             hideAllUnderLines();
             vegUnderLine.Visible = true;
-            UpdateFoodList(orderDay, "veg");
+            UpdateFoodList(orderDay, "Veg");
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)
@@ -125,13 +128,16 @@ namespace Hostel_Management_System
         }
 
         private DateTime orderDay;
-        public void getOrderDay(DateTime orderDate)
+        private string Meal;
+        public void getOrderDayandMeal(DateTime orderDate,string meal)
         {
+            Meal=meal;
             orderDay = orderDate;
         }
+        
         private void Food_List_Load(object sender, EventArgs e)
         {
-            UpdateFoodList(orderDay,"chicken");
+            UpdateFoodList(orderDay,"Chicken");
         }
     }
 }
